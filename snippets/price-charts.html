@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0/dist/chartjs-plugin-datalabels.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" type="text/javascript"></script>
+<title>Sandbox</title>
+
+<style>
+
+.price-chart-container {
+    padding: 0 0 4em 0;
+    height: 400px;
+    width: 75%;
+}
+@media (max-width: 600px) {
+    .price-chart-container {
+        width: 100%
+    }
+}
+
+</style>
+</head>
+
+<body>
+<div class="price-chart-selector">
+    <label class="radio-inline">
+        <input type="radio" name="myRadios" value="price1" onclick="handleClick(this);" checked/>Osprey Atmos
+    </label>
+    <label class="radio-inline">
+        <input type="radio" name="myRadios" value="price2" onclick="handleClick(this);"/>Osprey Aether
+    </label>
+</div>
+
+<div id="price1" class="price-chart-container">
+    <canvas id="priceHistory1"></canvas>
+</div>
+<div id="price2" class="price-chart-container" style="display: none">
+    <canvas id="priceHistory2"></canvas>
+</div>
+<script>
+
+var currentValue = 'price1';
+function handleClick(myRadio) {
+    var hide = document.getElementById(currentValue);
+    hide.style.display = 'none';
+
+    var show = document.getElementById(myRadio.value);
+    show.style.display = 'block';
+
+    currentValue = myRadio.value;
+}
+
+const atmos = JSON.parse('{"rei":{"data":[{"t":"2017-11-30","y":"240.00"},{"t":"2018-11-18","y":"179.99"},{"t":"2018-11-29","y":"240.00"},{"t":"2019-05-18","y":"179.99"},{"t":"2019-05-29","y":"240.00"},{"t":"2019-06-22","y":"179.99"},{"t":"2019-07-06","y":"240.00"},{"t":"2020-05-02","y":"179.99"},{"t":"2020-05-27","y":"240.00"},{"t":"2020-08-28","y":"179.99"},{"t":"2020-09-09","y":"240.00"}],"labels":["2017-11-30","2018-11-18","2018-11-29","2019-05-18","2019-05-29","2019-06-22","2019-07-06","2020-05-02","2020-05-27","2020-08-28","2020-09-09"]},"backcountry":{"data":[{"t":"2018-01-05","y":"270.00"},{"t":"2018-05-18","y":"202.50"},{"t":"2018-05-29","y":"270.00"},{"t":"2018-08-24","y":"202.50"},{"t":"2018-09-04","y":"270.00"},{"t":"2018-09-20","y":"216.00"},{"t":"2018-09-26","y":"270.00"},{"t":"2018-10-04","y":"216.00"},{"t":"2018-10-20","y":"270.00"},{"t":"2018-11-17","y":"201.95"},{"t":"2018-11-28","y":"270.00"},{"t":"2019-05-17","y":"201.95"},{"t":"2019-05-29","y":"270.00"},{"t":"2019-06-21","y":"201.95"},{"t":"2019-07-05","y":"270.00"},{"t":"2019-08-21","y":"269.95"},{"t":"2020-01-01","y":"270.00"},{"t":"2020-01-14","y":"269.95"},{"t":"2020-03-20","y":"202.46"},{"t":"2020-03-21","y":"269.95"},{"t":"2020-05-02","y":"201.95"},{"t":"2020-05-26","y":"269.95"},{"t":"2020-07-01","y":"270.00"},{"t":"2020-08-28","y":"201.95"},{"t":"2020-09-08","y":"270.00"},{"t":"2021-01-01","y":"269.95"}],"labels":["2018-01-05","2018-05-18","2018-05-29","2018-08-24","2018-09-04","2018-09-20","2018-09-26","2018-10-04","2018-10-20","2018-11-17","2018-11-28","2019-05-17","2019-05-29","2019-06-21","2019-07-05","2019-08-21","2020-01-01","2020-01-14","2020-03-20","2020-03-21","2020-05-02","2020-05-26","2020-07-01","2020-08-28","2020-09-08","2021-01-01"]},"osprey":{"data":[{"t":"2020-01-14","y":"270.00"},{"t":"2020-05-08","y":"201.95"},{"t":"2020-05-26","y":"270.00"},{"t":"2020-08-28","y":"201.95"},{"t":"2020-09-09","y":"270.00"}],"labels":["2020-01-14","2020-05-08","2020-05-26","2020-08-28","2020-09-09"]}}');
+
+const priceHistoryCtx1 = document.getElementById('priceHistory1').getContext("2d");
+var priceHistoryChart1 = new Chart(priceHistoryCtx1, {
+    type: 'line',
+    label: "Osprey Atmos Men's Pack",
+    data: {
+        datasets: [
+            {
+                label: 'REI',
+                data: atmos.rei.data,
+                borderColor: 'green',
+                borderWidth: 2,
+                fill: false,
+                steppedLine: true,
+                datalabels: {
+                    display: false
+                }
+            },
+            {
+                label: 'Backcountry',
+                data: atmos.backcountry.data,
+                borderColor: 'blue',
+                borderWidth: 2,
+                fill: false,
+                steppedLine: true,
+                datalabels: {
+                    display: false
+                }
+            },
+            {
+                label: 'Osprey',
+                data: atmos.osprey.data,
+                borderColor: 'red',
+                borderWidth: 2,
+                fill: false,
+                steppedLine: true,
+                datalabels: {
+                    display: false
+                }
+            },
+        ]
+    },
+    options: {
+        title: {
+            display: true,
+            text: "Osprey Atmos 65 Pack - Men's",
+            position: 'bottom',
+            fontSize: 20,
+            fontStyle: 'bold',
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+            position: 'top'
+        },
+        scales: {
+            xAxes: [{
+                type: 'time',
+                time: {
+                    unit: 'month',
+                    unitStepSize: 3,
+                    displayFormats: {
+                        'month': 'MMM YY'
+                    }
+                }
+            }]
+        }
+    }
+});
+
+const priceHistoryCtx2 = document.getElementById('priceHistory2').getContext("2d");
+var priceHistoryChart2 = new Chart(priceHistoryCtx2, {
+    type: 'line',
+    label: "Osprey Aether Men's Pack",
+    data: {
+        datasets: [
+            {
+                label: 'REI',
+                data: atmos.rei.data,
+                borderColor: 'green',
+                borderWidth: 2,
+                fill: false,
+                steppedLine: true,
+                datalabels: {
+                    display: false
+                }
+            },
+            {
+                label: 'Backcountry',
+                data: atmos.backcountry.data,
+                borderColor: 'blue',
+                borderWidth: 2,
+                fill: false,
+                steppedLine: true,
+                datalabels: {
+                    display: false
+                }
+            },
+            {
+                label: 'Osprey',
+                data: atmos.osprey.data,
+                borderColor: 'red',
+                borderWidth: 2,
+                fill: false,
+                steppedLine: true,
+                datalabels: {
+                    display: false
+                }
+            },
+        ]
+    },
+    options: {
+        title: {
+            display: true,
+            text: "Osprey Aether 65 Pack - Men's",
+            position: 'bottom',
+            fontSize: 20,
+            fontStyle: 'bold',
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+            position: 'top'
+        },
+        scales: {
+            xAxes: [{
+                type: 'time',
+                time: {
+                    unit: 'month',
+                    unitStepSize: 3,
+                    displayFormats: {
+                        'month': 'MMM YY'
+                    }
+                }
+            }]
+        }
+    }
+});
+
+</script>
+</body>
+</html>

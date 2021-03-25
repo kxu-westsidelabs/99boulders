@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0/dist/chartjs-plugin-datalabels.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" type="text/javascript"></script>
+<title>Sandbox</title>
+
+<style>
+
+.bar-chart-container {
+    display: flex;
+    justify-content: space-between;
+}
+.bar-chart-col {
+    height: 200px;
+    flex: 0 0 auto;
+    width: 50%;
+}
+@media (max-width: 600px) {
+  .bar-chart-container {
+      flex-wrap: wrap;
+  }
+  .bar-chart-col {
+      width: 100%
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bar-chart-container">
+    <div class="bar-chart-col">
+        <canvas id="volume-bar-chart"></canvas>
+    </div>
+    <div class="bar-chart-col">
+        <canvas id="weight-bar-chart"></canvas>
+    </div>
+</div>
+
+<script>
+const volumeCtx = document.getElementById('volume-bar-chart').getContext("2d");
+var volumeChart = new Chart(volumeCtx, {
+    type: 'bar',
+    data: {
+        labels: ["Osprey Atmos 65 Pack", "Osprey Aether 50 Pack"],
+        datasets: [
+            {
+                label: 'SM',
+                data: [55, 60],
+                backgroundColor: 'lightblue',
+                datalabels: {
+                    align: 'end',
+                    anchor: 'end',
+                },
+            },
+            {
+                label: 'MD',
+                data: [60, 65],
+                backgroundColor: 'blue',
+                datalabels: {
+                    align: 'end',
+                    anchor: 'end',
+                },
+            },
+            {
+                label: 'LG',
+                data: [65, 70],
+                backgroundColor: 'green',
+                datalabels: {
+                    align: 'end',
+                    anchor: 'end',
+                },
+            },
+        ]
+    },
+    options: {
+        title: {
+            display: true,
+            text: 'Volume Comparison'
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+            display: false
+        },
+        layout: {
+            padding: {
+                top: 20
+            }
+        },
+        scales: {
+            xAxes: [{
+                ticks: {
+                    suggestedMin: 50,
+                    suggestedMax: 75,
+                },
+            }],
+            yAxes: [{
+                ticks: {
+                    display: false
+                },
+                gridLines: {
+                    display: false
+                }
+            }],
+        },
+    },
+});
+
+const weightCtx = document.getElementById('weight-bar-chart').getContext("2d");
+var weightChart = new Chart(weightCtx, {
+    type: 'bar',
+    data: {
+        labels: ["Osprey Atmos 65 Pack", "Osprey Aether 50 Pack"],
+        datasets: [
+            {
+                label: 'SM',
+                data: [55, 60],
+                backgroundColor: 'lightblue',
+                datalabels: {
+                    align: 'end',
+                    anchor: 'end',
+                },
+            },
+            {
+                label: 'MD',
+                data: [60, 65],
+                backgroundColor: 'blue',
+                datalabels: {
+                    align: 'end',
+                    anchor: 'end',
+                },
+            },
+            {
+                label: 'LG',
+                data: [65, 70],
+                backgroundColor: 'green',
+                datalabels: {
+                    align: 'end',
+                    anchor: 'end',
+                },
+            },
+        ]
+    },
+    options: {
+        title: {
+            display: true,
+            text: 'Weight Comparison'
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+            display: false
+        },
+        layout: {
+            padding: {
+                top: 20
+            }
+        },
+        scales: {
+            xAxes: [{
+                ticks: {
+                    suggestedMin: 50,
+                    suggestedMax: 75,
+                },
+            }],
+            yAxes: [{
+                ticks: {
+                    display: false
+                },
+                gridLines: {
+                    display: false
+                },
+            }],
+        },
+    }
+});
+</script>
+</body>
+</html>

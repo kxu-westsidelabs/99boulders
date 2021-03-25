@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0/dist/chartjs-plugin-datalabels.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" type="text/javascript"></script>
+
+<title>Osprey Men's Talon 22 Pack vs. Osprey Men's Stratos 24 Pack</title>
+
+<style>
+    /* Specs table for gear picker tool */
+    .specs-table-wrapper {
+        width: 100%;
+        margin: 0;
+        padding: 0 0 4em 0;
+        box-sizing: border-box;
+        min-width: 0px;
+        left: auto;
+        position: relative;
+    }
+    .specs-table {
+        table-layout: fixed;
+        width: 100%;
+        border: none;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    .specs-table col:first-child {
+        width: 8em;
+    }
+    .specs-table tbody {
+        font-size: 14px;
+    }
+    .specs-table th, .specs-table td {
+        padding: 12px 14px;
+        vertical-align: top;
+        text-align: left;
+        color: rgba(12,11,8,.75);
+    }
+
+    /* Product Name */
+    .specs-table thead th {
+        background: white;
+    }
+    .specs-table thead th a {
+        color: rgba(12,11,8,.75);
+        font-weight: 600;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    .specs-table thead th a:hover {
+        text-decoration: underline;
+    }
+
+    .specs-table thead tr:first-child th {
+        text-align: center;
+    }
+
+    /* sticky header only on Desktop */
+    .specs-table thead tr:last-child th {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        padding-bottom: 1rem;
+        z-index: 1;
+    }
+    .specs-table thead tr th:nth-child(1) {
+        background: transparent;
+        padding: 0;
+    }
+    .specs-table thead tr:nth-child(2) th:nth-child(2)::after, .specs-table thead tr:nth-child(2) th:nth-child(3)::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 8px;
+    }
+
+    /* header accent bars */
+    .specs-table thead tr:nth-child(2) th:nth-child(2)::after {
+        background-color: #7AADE1;
+    }
+    .specs-table thead tr:nth-child(2) th:nth-child(3)::after {
+        background-color: #2A70B7;
+    }
+    .specs-table thead td, .specs-table thead th {
+        border: none;
+    }
+    .specs-table tbody tr {
+        border-bottom: 1px solid #dcd6cb;
+    }
+    .specs-table tbody tr:first-child {
+        border-top: 1px solid #dcd6cb;
+    }
+
+    .specs-table tbody td:first-child {
+        background-color: #F2F2F2;
+        width: 20%;
+        font-weight: 700;
+    }
+
+    /*.specs-table tbody tr td:last-child {
+      border-left: 1px solid #dcd6cb;
+    }*/
+    .specs-table-link {
+        font-weight: bold;
+        font-size: 12px;
+        border-radius: 3px;
+        padding: 6px 16px;
+        width: auto;
+        text-transform: uppercase;
+        background-color: rgb(45, 190, 96);
+        color: rgb(255, 255, 255);
+        border: 1px solid rgb(45, 190, 96);
+        line-height: 20px;
+        max-width: 100%;
+        text-decoration: none;
+    }
+    .specs-table-link:hover {
+        background-color: #27A553;
+        border-color: #27A553;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+
+    @media (max-width: 900px) {
+        .specs-table-wrapper {
+            width: 100vw;
+            margin-left: -30px;
+        }
+        .specs-table table, .specs-table thead, .specs-table tbody {
+            display: block;
+        }
+        .specs-table col:first-child {
+            width: 100%;
+        }
+        .specs-table tr, .specs-table th {
+            display: flex;
+            min-height: 0px;
+            flex-flow: row wrap;
+        }
+        .specs-table tbody td:first-child, .specs-table thead tr th:nth-child(1) {
+            display: block;
+            width: 100%;
+            flex: none;
+        }
+        .specs-table tbody td:first-child {
+            border-bottom: 1px solid #dcd6cb;
+            text-transform: uppercase;
+        }
+        .specs-table thead tr:last-child th {
+            align-self: flex-start;
+        }
+        .specs-table tbody td, .specs-table thead th {
+            display: inline-block;
+            flex: 1 1 0%;
+            min-width: 0px;
+        }
+    }
+
+    /* Charts - Container*/
+    .chart-container {
+        padding: 0 0 4em 0;
+        width: 100%;
+        height: 200px;
+    }
+
+    /* Price History Chart - Container*/
+    .price-chart-container {
+        padding: 0 0 4em 0;
+        height: 400px;
+        width: 100%;
+    }
+    @media (max-width: 1000px) {
+        .price-chart-container {
+            width: 100%
+        }
+    }
+
+</style>
+</head>
+<body>
+<div class="specs-table-wrapper">
+        <table class="specs-table">
+            <colgroup>
+                <col>
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>
+                        <a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=828547">
+                            <img src="https://www.rei.com/media/12a7ed07-f628-49d0-b078-2db3e788ec57?size=1000" style="height: 300px">
+                        </a>
+                    </th>
+                    <th>
+                        <a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=614778">
+                            <img src="https://www.rei.com/media/5501a458-5c11-4f3d-8409-cbdee80afc4a?size=1000" style="height: 300px">
+                        </a>
+                    </th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th><a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=828547">Osprey Men's Talon 22 Pack</a></th>
+                    <th><a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=614778">Osprey Men's Stratos 24 Pack</a></th>
+                </tr>
+            </thead>
+            <tbody><tr>
+                <td>MSRP</td>
+                <td>$130.00</td>
+                <td>$140.00</td>
+            </tr><tr>
+                <td>Shop Online</td>
+                <td><a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=828547">$130.00 at REI</a></td>
+                <td><a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=614778">$140.00 at REI</a></td>
+            </tr><tr>
+                <td>Best Used For</td>
+                <td>Hiking</td>
+                <td>Hiking</td>
+            </tr><tr>
+                <td>Weight</td>
+                <td><b>S/M</b>: 1 lb. 14.6 oz.<br><b>L/XL</b>: 2 lbs. 0.64 oz</td>
+                <td>2 lbs. 12 oz.</td>
+            </tr><tr>
+                <td>Volume</td>
+                <td><b>S/M</b>: 20 liters<br><b>L/XL</b>: 22 liters</td>
+                <td>24 liters</td>
+            </tr><tr>
+                <td>Fit - Torso</td>
+                <td>L/XL: 19-22 inches, S/M: 17-20 inches</td>
+                <td>18 - 22 inches</td>
+            </tr><tr>
+                <td>Fit - Waist</td>
+                <td>L/XL: 30-46 inches, S/M: 28-42 inches</td>
+                <td>25 - 50 inches</td>
+            </tr><tr>
+                <td>Dimensions</td>
+                <td>L/XL: 21 x 11 x 9 inches, S/M: 19 x 10.5 x 9 inches</td>
+                <td>22 x 12 x 12 inches</td>
+            </tr><tr>
+                <td>Sizes</td>
+                <td>S/M, L/XL</td>
+                <td>One Size</td>
+            </tr><tr>
+                <td>Colors</td>
+                <td>Stealth Black, Cosmic Red, Eclipse Grey, Limon Green</td>
+                <td>Black, Eclipse Blue, Gator Green</td>
+            </tr><tr>
+                <td>Materials</td>
+                <td>Recycled nylon</td>
+                <td>Nylon</td>
+            </tr><tr>
+                <td>Key Features</td>
+                <td>
+                    <b>AIRSCAPE SUSPENSION</b>:
+                        An injection-molded, die-cut foam AirScapeTM backpanel creates a breathable, close-to-body fit.
+                    <br><br>
+                    <b>MULTI-SPORT</b>:
+                        From top-loaders to lumbar packs and everything in between, the Talon/Tempest Series accommodates the needs of hikers, bikers and more
+                </td>
+                <td>
+                    <b>AIRSCAPE SUSPENSION</b>:
+                        An injection-molded, die-cut foam AirScapeTM backpanel creates a breathable, close-to-body fit.
+                    <br><br>
+                    <b>SEAMLESS HIPBELT INTERFACE</b>:
+                        Users can't feel seams that don't exist, and because there aren't any on the Stratos/Sirrus updated hipbelt, hikers can focus on the journey instead of the pack on your back.
+                </td>
+            </tr></tbody>
+        </table>
+    </div>
+    <h2>Weight</h2>
+    <div class="chart-container">
+        <canvas id="weight-bar-chart"></canvas>
+    </div>
+
+    <h2>Volume</h2>
+    <div class="chart-container">
+        <canvas id="volume-bar-chart"></canvas>
+    </div>
+
+    <h2>Load Range</h2>
+    <div class="chart-container">
+        <canvas id="loadRange"></canvas>
+    </div>
+    
+    <h2>Where to Buy</h2>
+    <div class="specs-table-wrapper">
+        <table class="specs-table">
+            <colgroup>
+                <col>
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th><a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=828547">Osprey Men's Talon 22 Pack</a></th>
+                    <th><a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=614778">Osprey Men's Stratos 24 Pack</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>REI</td>
+                    <td><a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=828547">$130.00 at REI</a></td>
+                    <td><a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=614778">$140.00 at REI</a></td>
+                </tr>
+                <tr>
+                    <td>Backcountry</td>
+                    <td>
+                        <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1187856">$120.00 at Backcountry
+                        </a>
+                    </td>
+                    <td>
+                        <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1185742">$139.95 at Backcountry
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Osprey</td>
+                    <td>
+                        <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=6969&pw=179682&mi=16517&pt=3&pri=1438">$130.00 at Osprey
+                        </a>
+                    </td>
+                    <td>
+                        <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=6969&pw=179682&mi=16517&pt=3&pri=491">$140.00 at Osprey
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h2>Price History</h2>
+    <div class="price-chart-selector">
+        <label class="radio-inline">
+            <input type="radio" name="myRadios" value="price1" onclick="handleClick(this);" checked/>Osprey Men's Talon 22 Pack
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="myRadios" value="price2" onclick="handleClick(this);"/>Osprey Men's Stratos 24 Pack
+        </label>
+    </div>
+
+    <div id="price1" class="price-chart-container">
+        <canvas id="priceHistory1"></canvas>
+    </div>
+    <div id="price2" class="price-chart-container" style="display: none">
+        <canvas id="priceHistory2"></canvas>
+    </div><script>
+    const weightCtx = document.getElementById('weight-bar-chart').getContext("2d");
+    new Chart(weightCtx, {
+        type: 'bar',
+        data: {
+            labels: ["Osprey Men's Talon 22 Pack", "Osprey Men's Stratos 24 Pack"],
+            datasets: [
+                {
+                    data: [30.6, 44],
+                    backgroundColor: 'lightblue',
+                    datalabels: {
+                        align: 'end',
+                        anchor: 'end',
+                    },
+                },
+                {
+                    data: [32.6, null],
+                    backgroundColor: '#6ba292',
+                    datalabels: {
+                        align: 'end',
+                        anchor: 'end',
+                    },
+                },
+            ]
+        },
+        options: {
+            title: false,
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: false,
+            layout: {
+                padding: {
+                    top: 20
+                }
+            },
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        fontSize: 16,
+                    },
+                }],
+                yAxes: [{
+                    gridLines: {
+                        display: false,
+                    },
+                    ticks: {
+                        beginAtZero: true,
+                        stepSize: 10,
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: "Weight (oz)",
+                        fontSize: 16,
+                    }
+                }],
+            },
+            plugins: {
+                datalabels: {
+                    formatter: function(value, context) {
+                        var i = context.dataIndex;
+                        var j = context.datasetIndex;
+                        if (i == 0 && j == 0) return "S/M";
+                        if (i == 0 && j == 1) return "L/XL";
+                        if (i == 1 && j == 0) return "One Size";
+                    },
+                }
+            }
+        }
+    });
+    const volumeCtx = document.getElementById('volume-bar-chart').getContext("2d");
+    new Chart(volumeCtx, {
+        type: 'bar',
+        data: {
+            labels: ["Osprey Men's Talon 22 Pack", "Osprey Men's Stratos 24 Pack"],
+            datasets: [
+                {
+                    data: [20, 24],
+                    backgroundColor: '#6ba292',
+                    datalabels: {
+                        align: 'end',
+                        anchor: 'end',
+                    },
+                },
+                {
+                    data: [22, null],
+                    backgroundColor: '#bcd8b7',
+                    datalabels: {
+                        align: 'end',
+                        anchor: 'end',
+                    },
+                },
+            ]
+        },
+        options: {
+            title: {
+                display: false,
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+                display: false
+            },
+            layout: {
+                padding: {
+                    top: 20
+                }
+            },
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        fontSize: 16,
+                    },
+                }],
+                yAxes: [{
+                    gridLines: {
+                        display: false
+                    },
+                    ticks: {
+                        beginAtZero: true,
+                        stepSize: 10,
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: "Volume (L)",
+                        fontSize: 16,
+                    }
+                }],
+            },
+            plugins: {
+                datalabels: {
+                    formatter: function(value, context) {
+                        var i = context.dataIndex;
+                        var j = context.datasetIndex;
+                        if (i == 0 && j == 0) return "S/M";
+                        if (i == 0 && j == 1) return "L/XL";
+                        if (i == 1 && j == 0) return "One Size";
+                    },
+                }
+            },
+        },
+    });
+    const loadCtx = document.getElementById('loadRange').getContext("2d");
+    new Chart(loadCtx, {
+        type: 'horizontalBar',
+        data: {
+            labels: ["Osprey Men's Talon 22 Pack", "Osprey Men's Stratos 24 Pack"],
+            datalabels: ["10 - 20 lbs.", "10 - 25 lbs."],
+            datasets: [
+                {
+                    data: [[ 10, 20 ], [ 10, 25 ]],
+                    backgroundColor: 'lightblue',
+                    barPercentage: 1.0,
+                }
+            ]
+        },
+        options: {
+            title: false,
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: false,
+            tooltips: false,
+            layout: {
+                padding: {
+                    top: 20,
+                    bottom: 20
+                }
+            },
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        suggestedMin: 5,
+                        suggestedMax: 25,
+                    },
+                }],
+                yAxes: [{
+                    ticks: {
+                        fontSize: 16,
+                    }
+                }],
+            },
+            plugins: {
+                datalabels: {
+                    formatter: function(value, context) {
+                        return context.chart.data.datalabels[context.dataIndex];
+                    },
+                    font: {
+                        size: 16,
+                    }
+                }
+            }
+        },
+    });
+    var currentValue = 'price1';
+    function handleClick(myRadio) {
+        var hide = document.getElementById(currentValue);
+        hide.style.display = 'none';
+
+        var show = document.getElementById(myRadio.value);
+        show.style.display = 'block';
+
+        currentValue = myRadio.value;
+    }
+
+    const p1 = JSON.parse('{"rei":{"data":[{"t":"2020-10-11","y":"130.00"}],"labels":["2020-10-11"]},"backcountry":{"data":[{"t":"2017-01-26","y":"110.00"},{"t":"2017-05-19","y":"82.50"},{"t":"2017-05-30","y":"110.00"},{"t":"2017-08-25","y":"82.50"},{"t":"2017-09-05","y":"110.00"},{"t":"2017-11-10","y":"82.50"},{"t":"2017-11-30","y":"110.00"},{"t":"2017-12-05","y":"82.50"},{"t":"2017-12-07","y":"110.00"},{"t":"2018-05-18","y":"82.50"},{"t":"2018-05-29","y":"110.00"},{"t":"2018-08-24","y":"82.50"},{"t":"2018-09-04","y":"110.00"},{"t":"2018-11-15","y":"82.50"},{"t":"2018-11-17","y":"81.95"},{"t":"2018-11-19","y":"77.00"},{"t":"2018-11-23","y":"71.50"},{"t":"2018-12-10","y":"110.00"},{"t":"2018-12-13","y":"71.50"},{"t":"2018-12-14","y":"110.00"},{"t":"2018-12-18","y":"71.50"},{"t":"2018-12-19","y":"110.00"},{"t":"2018-12-20","y":"71.50"},{"t":"2018-12-24","y":"110.00"},{"t":"2019-01-26","y":"71.50"},{"t":"2019-01-27","y":"110.00"},{"t":"2019-02-08","y":"71.50"},{"t":"2019-02-09","y":"110.00"},{"t":"2019-06-21","y":"81.95"},{"t":"2019-07-05","y":"110.00"},{"t":"2019-08-21","y":"109.95"},{"t":"2019-08-23","y":"81.95"},{"t":"2019-09-04","y":"109.95"},{"t":"2020-01-01","y":"120.00"},{"t":"2020-01-14","y":"109.95"},{"t":"2020-03-20","y":"82.46"},{"t":"2020-03-21","y":"109.95"},{"t":"2020-05-02","y":"89.95"},{"t":"2020-05-15","y":"89.95"},{"t":"2020-05-26","y":"119.95"},{"t":"2020-07-01","y":"120.00"},{"t":"2020-08-28","y":"89.95"},{"t":"2020-09-08","y":"120.00"},{"t":"2020-11-13","y":"90.00"},{"t":"2020-12-01","y":"120.00"},{"t":"2021-03-10","y":"96.00"}],"labels":["2017-01-26","2017-05-19","2017-05-30","2017-08-25","2017-09-05","2017-11-10","2017-11-30","2017-12-05","2017-12-07","2018-05-18","2018-05-29","2018-08-24","2018-09-04","2018-11-15","2018-11-17","2018-11-19","2018-11-23","2018-12-10","2018-12-13","2018-12-14","2018-12-18","2018-12-19","2018-12-20","2018-12-24","2019-01-26","2019-01-27","2019-02-08","2019-02-09","2019-06-21","2019-07-05","2019-08-21","2019-08-23","2019-09-04","2020-01-01","2020-01-14","2020-03-20","2020-03-21","2020-05-02","2020-05-15","2020-05-26","2020-07-01","2020-08-28","2020-09-08","2020-11-13","2020-12-01","2021-03-10"]},"osprey":{"data":[{"t":"2020-10-02","y":"130.00"}],"labels":["2020-10-02"]}}');
+    const p2 = JSON.parse('{"rei":{"data":[{"t":"2016-12-20","y":"130.00"},{"t":"2017-08-26","y":"97.49"},{"t":"2017-09-05","y":"130.00"},{"t":"2018-11-18","y":"97.49"},{"t":"2018-11-29","y":"130.00"},{"t":"2019-08-24","y":"97.49"},{"t":"2019-09-04","y":"130.00"},{"t":"2020-01-09","y":"140.00"},{"t":"2020-08-28","y":"104.99"},{"t":"2020-09-09","y":"140.00"}],"labels":["2016-12-20","2017-08-26","2017-09-05","2018-11-18","2018-11-29","2019-08-24","2019-09-04","2020-01-09","2020-08-28","2020-09-09"]},"backcountry":{"data":[{"t":"2017-02-02","y":"130.00"},{"t":"2017-05-19","y":"97.50"},{"t":"2017-05-30","y":"130.00"},{"t":"2017-06-23","y":"97.50"},{"t":"2017-07-07","y":"130.00"},{"t":"2017-08-25","y":"97.50"},{"t":"2017-09-05","y":"130.00"},{"t":"2017-11-10","y":"97.50"},{"t":"2017-11-30","y":"130.00"},{"t":"2017-12-16","y":"129.36"},{"t":"2017-12-19","y":"129.22"},{"t":"2017-12-21","y":"130.00"},{"t":"2018-01-03","y":"129.90"},{"t":"2018-01-04","y":"130.00"},{"t":"2018-05-18","y":"97.50"},{"t":"2018-06-07","y":"130.00"},{"t":"2018-08-24","y":"97.50"},{"t":"2018-09-04","y":"130.00"},{"t":"2018-11-15","y":"97.50"},{"t":"2018-11-17","y":"96.95"},{"t":"2018-11-19","y":"91.00"},{"t":"2018-11-23","y":"84.50"},{"t":"2018-11-28","y":"130.00"},{"t":"2018-12-06","y":"84.50"},{"t":"2018-12-08","y":"130.00"},{"t":"2018-12-19","y":"104.00"},{"t":"2018-12-20","y":"130.00"},{"t":"2018-12-21","y":"84.50"},{"t":"2018-12-23","y":"130.00"},{"t":"2019-08-21","y":"129.95"},{"t":"2019-08-23","y":"96.95"},{"t":"2019-09-04","y":"129.95"},{"t":"2020-01-01","y":"140.00"},{"t":"2020-01-14","y":"129.95"},{"t":"2020-03-20","y":"97.46"},{"t":"2020-03-21","y":"129.95"},{"t":"2020-07-01","y":"140.00"},{"t":"2020-08-28","y":"104.95"},{"t":"2020-09-08","y":"140.00"},{"t":"2020-12-25","y":"84.50"},{"t":"2021-01-14","y":"139.95"}],"labels":["2017-02-02","2017-05-19","2017-05-30","2017-06-23","2017-07-07","2017-08-25","2017-09-05","2017-11-10","2017-11-30","2017-12-16","2017-12-19","2017-12-21","2018-01-03","2018-01-04","2018-05-18","2018-06-07","2018-08-24","2018-09-04","2018-11-15","2018-11-17","2018-11-19","2018-11-23","2018-11-28","2018-12-06","2018-12-08","2018-12-19","2018-12-20","2018-12-21","2018-12-23","2019-08-21","2019-08-23","2019-09-04","2020-01-01","2020-01-14","2020-03-20","2020-03-21","2020-07-01","2020-08-28","2020-09-08","2020-12-25","2021-01-14"]},"osprey":{"data":[{"t":"2020-01-14","y":"140.00"},{"t":"2020-08-28","y":"104.95"},{"t":"2020-09-09","y":"140.00"}],"labels":["2020-01-14","2020-08-28","2020-09-09"]}}');
+
+    const ctx1 = document.getElementById('priceHistory1').getContext("2d");
+    new Chart(ctx1, {
+        type: 'line',
+        label: "Osprey Men's Talon 22 Pack",
+        data: {
+            datasets: [
+                {
+                    label: 'REI',
+                    data: p1.rei.data,
+                    borderColor: 'green',
+                    borderWidth: 2,
+                    fill: false,
+                    steppedLine: true,
+                    datalabels: {
+                        display: false
+                    },
+                },
+                {
+                    label: 'Backcountry',
+                    data: p1.backcountry.data,
+                    borderColor: 'blue',
+                    borderWidth: 2,
+                    fill: false,
+                    steppedLine: true,
+                    datalabels: {
+                        display: false
+                    },
+                },
+                {
+                    label: 'Osprey',
+                    data: p1.osprey.data,
+                    borderColor: 'red',
+                    borderWidth: 2,
+                    fill: false,
+                    steppedLine: true,
+                    datalabels: {
+                        display: false
+                    },
+                },
+            ]
+        },
+        options: {
+            title: {
+                display: true,
+                text: "Osprey Men's Talon 22 Pack",
+                position: 'bottom',
+                fontSize: 20,
+                fontStyle: 'bold',
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+                position: 'top'
+            },
+            scales: {
+                xAxes: [{
+                    type: 'time',
+                    time: {
+                        unit: 'month',
+                        unitStepSize: 3,
+                        displayFormats: {
+                            'month': 'MMM YY'
+                        }
+                    }
+                }]
+            }
+        }
+    });
+
+    const ctx2 = document.getElementById('priceHistory2').getContext("2d");
+    new Chart(ctx2, {
+        type: 'line',
+        label: "Osprey Men's Stratos 24 Pack",
+        data: {
+            datasets: [
+                {
+                    label: 'REI',
+                    data: p2.rei.data,
+                    borderColor: 'green',
+                    borderWidth: 2,
+                    fill: false,
+                    steppedLine: true,
+                    datalabels: {
+                        display: false
+                    },
+                },
+                {
+                    label: 'Backcountry',
+                    data: p2.backcountry.data,
+                    borderColor: 'blue',
+                    borderWidth: 2,
+                    fill: false,
+                    steppedLine: true,
+                    datalabels: {
+                        display: false
+                    },
+                },
+                {
+                    label: 'Osprey',
+                    data: p2.osprey.data,
+                    borderColor: 'red',
+                    borderWidth: 2,
+                    fill: false,
+                    steppedLine: true,
+                    datalabels: {
+                        display: false
+                    },
+                },
+            ]
+        },
+        options: {
+            title: {
+                display: true,
+                text: "Osprey Men's Stratos 24 Pack",
+                position: 'bottom',
+                fontSize: 20,
+                fontStyle: 'bold',
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+                position: 'top'
+            },
+            scales: {
+                xAxes: [{
+                    type: 'time',
+                    time: {
+                        unit: 'month',
+                        unitStepSize: 3,
+                        displayFormats: {
+                            'month': 'MMM YY'
+                        }
+                    }
+                }]
+            }
+        }
+    });</script>
+
+    
+</body>
+</html>

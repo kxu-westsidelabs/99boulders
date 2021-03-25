@@ -1,0 +1,118 @@
+{
+  "sku": "177492",
+  "name": "Osprey Men's Aether 55 Pack",
+  "image": "https://www.rei.com/media/72a04939-e68d-45ce-8c2d-e81ea21a2699?size=1000",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=823794",
+  "price": "260.00",
+  "product_specs": [
+    {
+      "field": "MSRP",
+      "value": "$260.00"
+    },
+    {
+      "field": "Shop Online",
+      "value": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=823794"
+    },
+    {
+      "field": "Best Used For",
+      "value": "Backpacking"
+    },
+    {
+      "field": "Weight",
+      "value": "4 lbs. 13.3 oz."
+    },
+    {
+      "field": "Volume",
+      "value": "55 liters"
+    },
+    {
+      "field": "Fit - Torso",
+      "value": "L/XL: 19-23 inches, S/M: 17-20 inches"
+    },
+    {
+      "field": "Fit - Waist",
+      "value": "28-55 inches"
+    },
+    {
+      "field": "Dimensions",
+      "value": "31 x 15 x 10 inches"
+    },
+    {
+      "field": "Sizes",
+      "value": "S/M, L/XL"
+    },
+    {
+      "field": "Colors",
+      "value": "Black, Deep Water Blue, Garlic Mustard Green"
+    },
+    {
+      "field": "Materials",
+      "value": "210-denier nylon"
+    },
+    {
+      "field": "Key Features",
+      "value": ""
+    }
+  ],
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2020-08-27",
+          "y": "260.00"
+        }
+      ],
+      "labels": [
+        "2020-08-27"
+      ]
+    },
+    "backcountry": {
+      "data": [
+        {
+          "t": "2020-09-17",
+          "y": "260.00"
+        },
+        {
+          "t": "2020-10-01",
+          "y": "259.95"
+        }
+      ],
+      "labels": [
+        "2020-09-17",
+        "2020-10-01"
+      ]
+    },
+    "osprey": {
+      "data": [
+        {
+          "t": "2020-09-16",
+          "y": "260.00"
+        }
+      ],
+      "labels": [
+        "2020-09-16"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "260.00",
+      "sale_price": "260.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=823794",
+      "dividend": "$26.00"
+    },
+    "backcountry": {
+      "retail_price": "259.95",
+      "sale_price": "259.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1292261",
+      "availability": true
+    },
+    "osprey": {
+      "retail_price": "260.00",
+      "sale_price": "260.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=6969&pw=179682&mi=16517&pt=3&pri=1411",
+      "availability": true,
+      "stock": "58"
+    }
+  }
+}
