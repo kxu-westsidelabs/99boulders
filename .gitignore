@@ -1,5 +1,8 @@
 .DS_Store
 *.swp
 node_modules/
-1_api/
-2_web/
+etl/0_html
+etl/1_api
+etl/2_web
+etl/3_data
+
