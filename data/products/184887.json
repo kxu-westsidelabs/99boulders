@@ -1,0 +1,123 @@
+{
+  "sku": "184887",
+  "name": "Osprey Men's Talon 44 Pack",
+  "image": "https://www.rei.com/media/315ba6b5-803c-4713-b26e-c14ba71e779f",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=837231",
+  "price": "180.00",
+  "long_description": "Designed for light multiday adventures and travels, the men's Osprey Talon 44 pack streamlines fit and feel for going the distance with a continuous-wrap harness and hipbelt that moves with you.",
+  "gender": "male",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 13,
+    "high": 30
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "L/XL: 19-23 inches, S/M: 16-20 inches",
+  "materials": "Recycled 100-denier x 210-denier nylon",
+  "dimensions": "L/XL: 30 x 13 x 11 inches, S/M: 27 x 12 x 11 inches",
+  "colors": {
+    "data": [
+      "Ceramic Blue",
+      "Stealth Black"
+    ],
+    "raw": "Ceramic Blue, Stealth Black"
+  },
+  "sizes": {
+    "data": [
+      "S/M",
+      "L/XL"
+    ],
+    "raw": "S/M, L/XL"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "S/M",
+        "val": 42,
+        "raw": "42 liters"
+      },
+      {
+        "key": "L/XL",
+        "val": 44,
+        "raw": "44 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "L/XL: 44 liters, S/M: 42 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "S/M",
+        "val": 47,
+        "raw": "2 lbs. 15 oz."
+      },
+      {
+        "key": "L/XL",
+        "val": 53,
+        "raw": "3 lbs. 5 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "L/XL: 3 lbs. 5 oz., S/M: 2 lbs. 15 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2021-03-21",
+          "y": "180.00"
+        }
+      ],
+      "labels": [
+        "2021-03-21"
+      ]
+    },
+    "backcountry": {
+      "data": [
+        {
+          "t": "2021-03-16",
+          "y": "179.95"
+        }
+      ],
+      "labels": [
+        "2021-03-16"
+      ]
+    },
+    "osprey": {
+      "data": [
+        {
+          "t": "2021-03-12",
+          "y": "180.00"
+        }
+      ],
+      "labels": [
+        "2021-03-12"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "180.00",
+      "sale_price": "180.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=837231",
+      "dividend": "$18.00"
+    },
+    "backcountry": {
+      "retail_price": "179.95",
+      "sale_price": "179.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1306728",
+      "availability": true
+    },
+    "osprey": {
+      "retail_price": "180.00",
+      "sale_price": "180.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=6969&pw=179682&mi=16517&pt=3&pri=1666",
+      "availability": true,
+      "stock": "58"
+    }
+  }
+}

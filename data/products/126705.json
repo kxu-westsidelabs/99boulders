@@ -1,59 +1,81 @@
 {
   "sku": "126705",
   "name": "Osprey Men's Exos 48 Pack",
-  "image": "https://www.rei.com/media/da213261-bb67-46e4-a61c-aca7519a1108?size=1000",
+  "image": "https://www.rei.com/media/da213261-bb67-46e4-a61c-aca7519a1108",
   "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=633271",
   "price": "200.00",
-  "product_specs": [
-    {
-      "field": "MSRP",
-      "value": "$200.00"
-    },
-    {
-      "field": "Shop Online",
-      "value": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=633271"
-    },
-    {
-      "field": "Best Used For",
-      "value": "Backpacking"
-    },
-    {
-      "field": "Weight",
-      "value": "S: 2 lbs. 8.8 oz., M: 2 lbs. 9.1 oz., L: 2 lbs. 9.6 oz."
-    },
-    {
-      "field": "Volume",
-      "value": "S: 45 liters, M: 48 liters, L: 51 liters"
-    },
-    {
-      "field": "Fit - Torso",
-      "value": "S: 16 - 19 inches, M: 18 - 21 inches, L: 20 - 23 inches"
-    },
-    {
-      "field": "Fit - Waist",
-      "value": "S: 24 - 45 inches, M: 27 - 48 inches, L: 29 - 55 inches"
-    },
-    {
-      "field": "Dimensions",
-      "value": "31 x 16 x 13 inches"
-    },
-    {
-      "field": "Sizes",
-      "value": "S, M, L"
-    },
-    {
-      "field": "Colors",
-      "value": "Blaze Black, Tunnel Green"
-    },
-    {
-      "field": "Materials",
-      "value": "100-denier high-tenacity nylon/210-denier high-tenacity nylon"
-    },
-    {
-      "field": "Key Features",
-      "value": ""
-    }
-  ],
+  "long_description": "Do you daydream about hiking through meadows dotted with wildflowers? Made for quick overnights and long thru-hikes alike, the Osprey Exos 48 pack is your ultralight ticket to the great outdoors.",
+  "gender": "male",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 20,
+    "high": 40
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "S: 16 - 19 inches, M: 18 - 21 inches, L: 20 - 23 inches",
+  "fit_waist_in": "S: 24 - 45 inches, M: 27 - 48 inches, L: 29 - 55 inches",
+  "materials": "100-denier high-tenacity nylon/210-denier high-tenacity nylon",
+  "dimensions": "31 x 16 x 13 inches",
+  "colors": {
+    "data": [
+      "Blaze Black",
+      "Tunnel Green"
+    ],
+    "raw": "Blaze Black, Tunnel Green"
+  },
+  "sizes": {
+    "data": [
+      "S",
+      "M",
+      "L"
+    ],
+    "raw": "S, M, L"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "S",
+        "val": 45,
+        "raw": "45 liters"
+      },
+      {
+        "key": "M",
+        "val": 48,
+        "raw": "48 liters"
+      },
+      {
+        "key": "L",
+        "val": 51,
+        "raw": "51 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "S: 45 liters, M: 48 liters, L: 51 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "S",
+        "val": 40.8,
+        "raw": "2 lbs. 8.8 oz."
+      },
+      {
+        "key": "M",
+        "val": 41.1,
+        "raw": "2 lbs. 9.1 oz."
+      },
+      {
+        "key": "L",
+        "val": 41.6,
+        "raw": "2 lbs. 9.6 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "S: 2 lbs. 8.8 oz., M: 2 lbs. 9.1 oz., L: 2 lbs. 9.6 oz."
+  },
   "price_history": {
     "rei": {
       "data": [

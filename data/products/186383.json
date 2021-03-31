@@ -1,0 +1,114 @@
+{
+  "sku": "186383",
+  "name": "Osprey Daylite Plus Pack",
+  "image": "https://www.rei.com/media/6a5e47e8-2309-4e9c-9fe2-420846d2f589",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=834597",
+  "price": "70.00",
+  "long_description": "Everything you love about the Daylite, with more storage space and organization options-the Osprey Daylite Plus pack shines on its own for daily adventures, while also meeting the needs of travelers.",
+  "gender": "unisex",
+  "age_group": "adult",
+  "category": "Travel And Luggage",
+  "sub_category": "Day Bags And Packs",
+  "product_group": "Travel Daypacks",
+  "load": {
+    "low": 0,
+    "high": 0
+  },
+  "best_used_for": "Travel, Multisport",
+  "materials": "Recycled PET packcloth",
+  "dimensions": "19 x 11 x 9.5 inches",
+  "colors": {
+    "data": [
+      "Aluminum Grey",
+      "Black",
+      "Cosmic Red",
+      "Dream Purple",
+      "Wave Blue"
+    ],
+    "raw": "Aluminum Grey, Black, Cosmic Red, Dream Purple, Wave Blue"
+  },
+  "sizes": {
+    "data": [
+      "One Size"
+    ],
+    "raw": "One Size"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 20,
+        "raw": "20 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "20 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 21,
+        "raw": "1 lb. 5 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "1 lb. 5 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2021-02-11",
+          "y": "70.00"
+        }
+      ],
+      "labels": [
+        "2021-02-11"
+      ]
+    },
+    "backcountry": {
+      "data": [
+        {
+          "t": "2021-01-24",
+          "y": "69.95"
+        }
+      ],
+      "labels": [
+        "2021-01-24"
+      ]
+    },
+    "osprey": {
+      "data": [
+        {
+          "t": "2021-02-05",
+          "y": "70.00"
+        }
+      ],
+      "labels": [
+        "2021-02-05"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "70.00",
+      "sale_price": "70.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=834597",
+      "dividend": "$7.00"
+    },
+    "backcountry": {
+      "retail_price": "69.95",
+      "sale_price": "69.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1303128",
+      "availability": true
+    },
+    "osprey": {
+      "retail_price": "70.00",
+      "sale_price": "70.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=6969&pw=179682&mi=16517&pt=3&pri=1568",
+      "availability": true,
+      "stock": "123"
+    }
+  }
+}

@@ -1,59 +1,59 @@
 {
   "sku": "177493",
   "name": "Osprey Men's Aether 65 Pack",
-  "image": "https://www.rei.com/media/1d624628-43e7-4472-b0b0-a3f88b324e65?size=1000",
+  "image": "https://www.rei.com/media/241f983f-40ed-438d-a15c-0fe4eb675eac",
   "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=823792",
   "price": "280.00",
-  "product_specs": [
-    {
-      "field": "MSRP",
-      "value": "$280.00"
-    },
-    {
-      "field": "Shop Online",
-      "value": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=823792"
-    },
-    {
-      "field": "Best Used For",
-      "value": "Backpacking"
-    },
-    {
-      "field": "Weight",
-      "value": "4 lbs. 14.7 oz."
-    },
-    {
-      "field": "Volume",
-      "value": "65 liters"
-    },
-    {
-      "field": "Fit - Torso",
-      "value": "L/XL: 19-23 inches, S/M: 17-20 inches"
-    },
-    {
-      "field": "Fit - Waist",
-      "value": "28-55 inches"
-    },
-    {
-      "field": "Dimensions",
-      "value": "32 x 15 x 11 inches"
-    },
-    {
-      "field": "Sizes",
-      "value": "S/M, L/XL"
-    },
-    {
-      "field": "Colors",
-      "value": "Black, Deep Water Blue, Garlic Mustard Green"
-    },
-    {
-      "field": "Materials",
-      "value": "210-denier nylon"
-    },
-    {
-      "field": "Key Features",
-      "value": ""
-    }
-  ],
+  "long_description": "Built to comfortably haul heavy loads for the weekend or for a week, the men's Osprey Aether 65 pack features a highly customizable fit for a variety of body shapes and sizes.",
+  "gender": "male",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 30,
+    "high": 60
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "L/XL: 19-23 inches, S/M: 17-20 inches",
+  "fit_waist_in": "28-55 inches",
+  "materials": "210-denier nylon",
+  "dimensions": "32 x 15 x 11 inches",
+  "colors": {
+    "data": [
+      "Black"
+    ],
+    "raw": "Black"
+  },
+  "sizes": {
+    "data": [
+      "S/M",
+      "L/XL"
+    ],
+    "raw": "S/M, L/XL"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 65,
+        "raw": "65 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "65 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 78.7,
+        "raw": "4 lbs. 14.7 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "4 lbs. 14.7 oz."
+  },
   "price_history": {
     "rei": {
       "data": [
@@ -112,7 +112,7 @@
       "sale_price": "280.00",
       "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=6969&pw=179682&mi=16517&pt=3&pri=1399",
       "availability": true,
-      "stock": "13"
+      "stock": "29"
     }
   }
 }

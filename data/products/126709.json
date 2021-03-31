@@ -1,59 +1,81 @@
 {
   "sku": "126709",
   "name": "Osprey Men's Exos 58 Pack",
-  "image": "https://www.rei.com/media/ef83af8b-e49a-494e-b748-253f862df550?size=1000",
+  "image": "https://www.rei.com/media/ef83af8b-e49a-494e-b748-253f862df550",
   "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=632208",
   "price": "220.00",
-  "product_specs": [
-    {
-      "field": "MSRP",
-      "value": "$220.00"
-    },
-    {
-      "field": "Shop Online",
-      "value": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=632208"
-    },
-    {
-      "field": "Best Used For",
-      "value": "Backpacking"
-    },
-    {
-      "field": "Weight",
-      "value": "S: 2 lbs. 10 oz., M: 2 lbs. 11 oz., L: 2 lbs. 12 oz."
-    },
-    {
-      "field": "Volume",
-      "value": "S: 55 liters, M: 58 liters, L: 61 liters"
-    },
-    {
-      "field": "Fit - Torso",
-      "value": "S: 16 - 18 inches, M: 18 - 21 inches, L: 20 - 23 inches"
-    },
-    {
-      "field": "Fit - Waist",
-      "value": "S: 24 - 45 inches, M: 27 - 48 inches, L: 29 - 55 inches"
-    },
-    {
-      "field": "Dimensions",
-      "value": "S: 29.5 x 16.1 x 14.6 inches, M: 31.5 x 16.1 x 14.6 inches, L: 33.5 x 16.1 x 14.6 inches"
-    },
-    {
-      "field": "Sizes",
-      "value": "S, M, L"
-    },
-    {
-      "field": "Colors",
-      "value": "Blaze Black, Tunnel Green"
-    },
-    {
-      "field": "Materials",
-      "value": "Nylon"
-    },
-    {
-      "field": "Key Features",
-      "value": ""
-    }
-  ],
+  "long_description": "Light on the scale but not on comfort, the ultralight Osprey Exos 58 pack offers a ventilated suspension system that evenly distributes weight and offers a supportive fit for logging big miles.",
+  "gender": "male",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 20,
+    "high": 40
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "S: 16 - 18 inches, M: 18 - 21 inches, L: 20 - 23 inches",
+  "fit_waist_in": "S: 24 - 45 inches, M: 27 - 48 inches, L: 29 - 55 inches",
+  "materials": "Nylon",
+  "dimensions": "S: 29.5 x 16.1 x 14.6 inches, M: 31.5 x 16.1 x 14.6 inches, L: 33.5 x 16.1 x 14.6 inches",
+  "colors": {
+    "data": [
+      "Blaze Black",
+      "Tunnel Green"
+    ],
+    "raw": "Blaze Black, Tunnel Green"
+  },
+  "sizes": {
+    "data": [
+      "S",
+      "M",
+      "L"
+    ],
+    "raw": "S, M, L"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "S",
+        "val": 55,
+        "raw": "55 liters"
+      },
+      {
+        "key": "M",
+        "val": 58,
+        "raw": "58 liters"
+      },
+      {
+        "key": "L",
+        "val": 61,
+        "raw": "61 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "S: 55 liters, M: 58 liters, L: 61 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "S",
+        "val": 42,
+        "raw": "2 lbs. 10 oz."
+      },
+      {
+        "key": "M",
+        "val": 43,
+        "raw": "2 lbs. 11 oz."
+      },
+      {
+        "key": "L",
+        "val": 44,
+        "raw": "2 lbs. 12 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "S: 2 lbs. 10 oz., M: 2 lbs. 11 oz., L: 2 lbs. 12 oz."
+  },
   "price_history": {
     "rei": {
       "data": [
@@ -272,7 +294,7 @@
       "sale_price": "220.00",
       "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=6969&pw=179682&mi=16517&pt=3&pri=206",
       "availability": true,
-      "stock": "16"
+      "stock": "15"
     }
   }
 }

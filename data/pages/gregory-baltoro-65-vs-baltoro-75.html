@@ -1,0 +1,838 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0/dist/chartjs-plugin-datalabels.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" type="text/javascript"></script>
+
+<title>Gregory Men's Baltoro 65 Pack vs Baltoro 75 Pack</title>
+
+<style>
+/* Replicate 99Boulders */
+body {
+    padding: 35px 30px;
+}
+
+
+/* Specs table for gear picker tool */
+.specs-table-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0 0 4em 0;
+    box-sizing: border-box;
+    min-width: 0px;
+    left: auto;
+    position: relative;
+}
+.specs-table {
+    table-layout: fixed;
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.specs-table col:first-child {
+    width: 8em;
+}
+.specs-table tbody {
+    font-size: 14px;
+}
+.specs-table th, .specs-table td {
+    padding: 12px 14px;
+    vertical-align: top;
+    text-align: left;
+    color: rgba(12,11,8,.75);
+}
+
+.specs-table thead th img {
+    max-width: 250px;
+    width: 80%;
+    height: auto;
+}
+
+/* Product Name */
+.specs-table thead th {
+    background: white;
+}
+.specs-table thead th a {
+    color: rgba(12,11,8,.75);
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+}
+.specs-table thead th a:hover {
+    text-decoration: underline;
+}
+
+.specs-table thead tr:first-child th {
+    text-align: center;
+}
+
+/* sticky header only on Desktop */
+.specs-table thead tr:last-child th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding-bottom: 1rem;
+    z-index: 1;
+}
+.specs-table thead tr th:nth-child(1) {
+    background: transparent;
+    padding: 0;
+}
+.specs-table thead tr:nth-child(2) th:nth-child(2)::after, .specs-table thead tr:nth-child(2) th:nth-child(3)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 8px;
+}
+
+/* header accent bars */
+.specs-table thead tr:nth-child(2) th:nth-child(2)::after {
+    background-color: #7AADE1;
+}
+.specs-table thead tr:nth-child(2) th:nth-child(3)::after {
+    background-color: #2A70B7;
+}
+.specs-table thead td, .specs-table thead th {
+    border: none;
+}
+.specs-table tbody tr {
+    border-bottom: 1px solid #dcd6cb;
+}
+.specs-table tbody tr:first-child {
+    border-top: 1px solid #dcd6cb;
+}
+
+.specs-table tbody td:first-child {
+    background-color: #F2F2F2;
+    width: 20%;
+    font-weight: 700;
+}
+
+/*.specs-table tbody tr td:last-child {
+  border-left: 1px solid #dcd6cb;
+}*/
+.specs-table-link {
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 3px;
+    padding: 6px 16px;
+    width: auto;
+    text-transform: uppercase;
+    background-color: rgb(45, 190, 96);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(45, 190, 96);
+    line-height: 20px;
+    max-width: 100%;
+    text-decoration: none;
+}
+.specs-table-link:hover {
+    background-color: #27A553;
+    border-color: #27A553;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .specs-table-wrapper {
+        width: 100vw;
+        margin-left: -30px;
+    }
+    .specs-table table, .specs-table thead, .specs-table tbody {
+        display: block;
+    }
+    .specs-table thead th img {
+        width: 100%;
+        height: auto;
+    }
+    .specs-table thead th a {
+        font-size: 18px;
+    }
+    .specs-table col:first-child {
+        width: 100%;
+    }
+    .specs-table tr, .specs-table th {
+        display: flex;
+        min-height: 0px;
+        flex-flow: row wrap;
+    }
+    .specs-table tbody td:first-child, .specs-table thead tr th:nth-child(1) {
+        display: block;
+        width: 100%;
+        flex: none;
+    }
+    .specs-table tbody td:first-child {
+        border-bottom: 1px solid #dcd6cb;
+        text-transform: uppercase;
+    }
+    .specs-table thead tr:last-child th {
+        align-self: flex-start;
+    }
+    .specs-table tbody td, .specs-table thead th {
+        display: inline-block;
+        flex: 1 1 0%;
+        min-width: 0px;
+    }
+}
+
+
+/* Charts - Container*/
+.chart-container {
+    padding: 0 0 4em 0;
+    width: 100%;
+    height: 200px;
+}
+
+/* Price History Chart - Container*/
+.price-chart-container {
+    padding: 0 0 4em 0;
+    height: 400px;
+    width: 100%;
+}
+@media (max-width: 900px) {
+    .price-chart-container {
+        height: 250px;
+        width: 100%
+    }
+}
+
+/* Scatter Plot (weight) - Container*/
+.scatter-weight-container {
+    padding: 0 0 4em 0;
+    height: 400px;
+    width: 100%;
+}
+@media (max-width: 900px) {
+    .scatter-weight-container {
+        height: 250px;
+        width: 100%
+    }
+}
+
+</style>
+</head>
+<body>
+
+    <div class="affiliate-link-disclosure">
+        Just so you know, this page contains affiliate links. This means if you make a purchase after clicking through one, at no extra cost to you we may earn a commission.
+    </div>
+
+    <!-- Specs Table -->
+    <div class="specs-table-wrapper">
+        <table class="specs-table">
+            <colgroup>
+                <col>
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th><a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631946"><img src="https://www.rei.com/media/7ce73075-1843-4258-ad0b-df2a0045fc2a?size=1000"</a></th>
+                    <th><a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=629813"><img src="https://www.rei.com/media/0b630820-073e-4710-bcdd-5fe0b81a8a51?size=1000"</a></th>
+                </tr>
+
+                <tr>
+                    <th></th>
+                    <th><a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631946">Gregory Men's Baltoro 65 Pack</a></th>
+                    <th><a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=629813">Gregory Men's Baltoro 75 Pack</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>MSRP</td>
+                    <td>$299.95</td>
+                    <td>$329.95</td>
+                </tr>
+                <tr>
+                    <td>Shop Online</td>
+                    <td>
+                        <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631946">$299.95 at REI</a>
+                    </td>
+                    <td>
+                        <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=629813">$329.95 at REI</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Category</td>
+                    <td>Camping And Hiking > Hiking Backpacks</td>
+                    <td>Camping And Hiking > Hiking Backpacks</td>
+                </tr>
+                <tr>
+                    <td>Best Used For</td>
+                    <td>Backpacking</td>
+                    <td>Backpacking</td>
+                </tr>
+
+                <!-- Variant Specs -->
+                <tr>
+                    <td>Weight</td>
+                    <td>
+                        <b>S</b>: 4 lbs. 10.4 oz.<br><b>M</b>: 4 lbs. 13.4 oz.<br><b>L</b>: 5 lbs. 2.25 oz.
+                    </td>
+                    <td>
+                        <b>S</b>: 4 lbs. 13.2 oz<br><b>M</b>: 4 lbs. 15.3 oz.<br><b>L</b>: 5 lbs. 3.5 oz.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Volume</td>
+                    <td>
+                        <b>S</b>: 63 liters<br><b>M</b>: 65 liters<br><b>L</b>: 68 liters
+                    </td>
+                    <td>
+                        <b>S</b>: 72 liters<br><b>M</b>: 75 liters<br><b>L</b>: 78 liters
+                    </td>
+                </tr>
+
+                <!-- Full-Text -->
+                <tr>
+                    <td>Gender</td>
+                    <td>male</td>
+                    <td>male</td>
+                </tr>
+                <tr>
+                    <td>Age Group</td>
+                    <td>adult</td>
+                    <td>adult</td>
+                </tr>
+                <tr>
+                    <td>Fit - Waist</td>
+                    <td>S: 27 - 47 inches, M: 28 - 48 inches, L: 30 - 50 inches</td>
+                    <td>S: 27 - 47 inches, M: 28 - 48 inches, L: 30 - 50 inches</td>
+                </tr>
+                <tr>
+                    <td>Dimensions</td>
+                    <td>30 x 13 x 13 inches</td>
+                    <td>S: 28 x 14 x 13.5 inches, M: 30 x 14 x 13.5 inches, L: 32 x 14 x 13.5 inches</td>
+                </tr>
+                <tr>
+                    <td>Sizes</td>
+                    <td>S, M, L</td>
+                    <td>S, M, L</td>
+                </tr>
+                <tr>
+                    <td>Colors</td>
+                    <td>Ferrous Orange, Onyx Black, Dusk Blue</td>
+                    <td>Dusk Blue, Ferrous Orange</td>
+                </tr>
+                <tr>
+                    <td>Materials</td>
+                    <td>210-denier Honeycomb CryptoRip HD/210-denier high-tenacity nylon</td>
+                    <td>Nylon</td>
+                </tr>
+                <tr>
+                    <td>Long Description</td>
+                    <td>Spend the whole weekend in nature with everything you need right there. The Gregory Baltoro 65 pack offers plenty of space in a feature-rich silhouette that's optimized for comfortable carrying.</td>
+                    <td>Winter weekends and extended trail trips are all on the table with the Gregory Baltoro 75 pack. Its customizable suspension system  delivers dynamic support, making easy work out of long miles.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    [toc]
+
+    <!-- Charts -->
+    <h2>Weight</h2>
+    <div class="chart-container">
+        <canvas id="weight-bar-chart"></canvas>
+    </div>
+
+    <h2>Volume</h2>
+    <div class="chart-container">
+        <canvas id="volume-bar-chart"></canvas>
+    </div>
+
+    <h2>Load Range</h2>
+    <div class="chart-container">
+        <canvas id="load-range-chart"></canvas>
+    </div>
+
+    <!-- Purchase Table -->
+    <h2>Where to Buy</h2>
+    <div class="specs-table-wrapper">
+        <table class="specs-table">
+            <colgroup>
+                <col>
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th><a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631946">Gregory Men's Baltoro 65 Pack</a></th>
+                    <th><a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=629813">Gregory Men's Baltoro 75 Pack</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>REI</td>
+                    <td>
+                        <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631946">$299.95</a>
+                    </td>
+                    <td>
+                        <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=629813">$329.95</a>
+                    </td>
+                </tr>
+                
+    <tr>
+        <td>Backcountry</td>
+        <td>
+            <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1215982">$299.95</a>
+        </td>
+        <td>
+            <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1215980">$329.95</a>
+        </td>
+    </tr>
+                
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Price Charts -->
+    <h2>Price History</h2>
+    <div class="price-chart-selector">
+        <label class="radio-inline">
+            <input type="radio" name="myRadios" value="price1" onclick="handleClick(this);" checked/>Gregory Men's Baltoro 65 Pack
+        </label><br>
+        <label class="radio-inline">
+            <input type="radio" name="myRadios" value="price2" onclick="handleClick(this);"/>Gregory Men's Baltoro 75 Pack
+        </label>
+    </div>
+
+    <div id="price1" class="price-chart-container">
+        <canvas id="price-history-chart-p1"></canvas>
+    </div>
+    <div id="price2" class="price-chart-container" style="display: none">
+        <canvas id="price-history-chart-p2"></canvas>
+    </div>
+
+    <!-- Scatter Plot -->
+    <h2>Packs: Weight vs. Price</h2>
+    <div class="scatter-weight-container">
+        <canvas id="scatter-chart"></canvas>
+    </div>
+<script>
+new Chart(
+    document.getElementById('volume-bar-chart').getContext("2d"), {
+    type: 'bar',
+    data: {
+        labels: [ "Gregory Men's Baltoro 65 Pack", "Gregory Men's Baltoro 75 Pack" ],
+        datasets: [
+            {
+            data: [ 63, 72 ],
+            backgroundColor: 'lightblue',
+            datalabels: { align: 'end', anchor: 'end' },
+        },{
+            data: [ 65, 75 ],
+            backgroundColor: '#6ba292',
+            datalabels: { align: 'end', anchor: 'end' },
+        },{
+            data: [ 68, 78 ],
+            backgroundColor: '#bcd8b7',
+            datalabels: { align: 'end', anchor: 'end' },
+        },
+        ],
+    },
+    plugins: [{
+        beforeLayout: function(context) {
+            var fontSize = (context.chart.width < 900)
+                ? 10 : 16;
+            context.chart.options.scales.xAxes[0].ticks.fontSize = fontSize;
+        }
+    }],
+    options: {
+        title: false,
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: false,
+        layout: {
+            padding: {
+                top: 20
+            }
+        },
+        scales: {
+            yAxes: [{
+                gridLines: {
+                    display: false,
+                },
+                ticks: {
+                    beginAtZero: true,
+                    stepSize: 10,
+                },
+                scaleLabel: {
+                    display: true,
+                    labelString: "Volume (liters)",
+                    fontSize: 16,
+                }
+            }],
+        },
+        plugins: {
+            datalabels: {
+                formatter: function(value, context) {
+                    var i = context.datasetIndex;
+                    var j = context.dataIndex;
+                    
+                if (i == 0 && j == 0) return "S";
+                if (i == 0 && j == 1) return "S";
+                if (i == 1 && j == 0) return "M";
+                if (i == 1 && j == 1) return "M";
+                if (i == 2 && j == 0) return "L";
+                if (i == 2 && j == 1) return "L";
+                },
+            }
+        }
+    }
+});
+new Chart(
+    document.getElementById('weight-bar-chart').getContext("2d"), {
+    type: 'bar',
+    data: {
+        labels: [ "Gregory Men's Baltoro 65 Pack", "Gregory Men's Baltoro 75 Pack" ],
+        datasets: [
+            {
+            data: [ 74.4, 77.2 ],
+            backgroundColor: 'lightblue',
+            datalabels: { align: 'end', anchor: 'end' },
+        },{
+            data: [ 77.4, 79.3 ],
+            backgroundColor: '#6ba292',
+            datalabels: { align: 'end', anchor: 'end' },
+        },{
+            data: [ 82.25, 83.5 ],
+            backgroundColor: '#bcd8b7',
+            datalabels: { align: 'end', anchor: 'end' },
+        },
+        ],
+    },
+    plugins: [{
+        beforeLayout: function(context) {
+            var fontSize = (context.chart.width < 900)
+                ? 10 : 16;
+            context.chart.options.scales.xAxes[0].ticks.fontSize = fontSize;
+        }
+    }],
+    options: {
+        title: false,
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: false,
+        layout: {
+            padding: {
+                top: 20
+            }
+        },
+        scales: {
+            yAxes: [{
+                gridLines: {
+                    display: false,
+                },
+                ticks: {
+                    beginAtZero: true,
+                    stepSize: 10,
+                },
+                scaleLabel: {
+                    display: true,
+                    labelString: "Weight (oz)",
+                    fontSize: 16,
+                }
+            }],
+        },
+        plugins: {
+            datalabels: {
+                formatter: function(value, context) {
+                    var i = context.datasetIndex;
+                    var j = context.dataIndex;
+                    
+                if (i == 0 && j == 0) return "S";
+                if (i == 0 && j == 1) return "S";
+                if (i == 1 && j == 0) return "M";
+                if (i == 1 && j == 1) return "M";
+                if (i == 2 && j == 0) return "L";
+                if (i == 2 && j == 1) return "L";
+                },
+            }
+        }
+    }
+});
+new Chart(
+    document.getElementById('load-range-chart').getContext("2d"),
+    {
+        type: 'horizontalBar',
+        data: {
+            datasets: [
+                {
+                    label: "Gregory Men's Baltoro 65 Pack",
+                    data: [[ 30, 50]],
+                    backgroundColor: 'lightblue',
+                    barPercentage: 0.9,
+                },
+                {
+                    label: "Gregory Men's Baltoro 75 Pack",
+                    data: [[ 35, 55]],
+                    backgroundColor: '#6ba292',
+                    barPercentage: 0.9,
+                }
+            ],
+        },
+        plugins: [{
+            beforeLayout: function(context) {
+                var fontSize = (context.chart.width < 900) ? 10 : 16;
+                context.chart.options.plugins.datalabels.font.size = fontSize;
+                context.chart.options.legend.labels.fontSize = fontSize;
+            }
+        }],
+        options: {
+            title: false,
+            responsive: true,
+            maintainAspectRatio: false,
+            tooltips: false,
+            plugins: {
+                datalabels: {
+                    formatter: function(value, context) {
+                        var i = context.dataIndex;
+                        var j = context.datasetIndex;
+                        if (i == 0 && j == 0) return "30-50 lbs.";
+                        if (i == 0 && j == 1) return "35-55 lbs.";
+                    }
+                }
+            }
+        },
+    }
+);
+var currentValue = 'price1';
+function handleClick(myRadio) {
+    var hide = document.getElementById(currentValue);
+    hide.style.display = 'none';
+
+    var show = document.getElementById(myRadio.value);
+    show.style.display = 'block';
+
+    currentValue = myRadio.value;
+}
+
+const p1 = JSON.parse('{"rei":{"data":[{"t":"2017-12-12","y":"299.95"},{"t":"2018-11-10","y":"224.89"},{"t":"2018-11-22","y":"299.95"},{"t":"2019-11-16","y":"224.89"},{"t":"2019-11-27","y":"299.95"},{"t":"2020-06-27","y":"224.89"},{"t":"2020-07-08","y":"299.95"},{"t":"2020-08-28","y":"224.89"},{"t":"2020-09-09","y":"299.95"}],"labels":["2017-12-12","2018-11-10","2018-11-22","2019-11-16","2019-11-27","2020-06-27","2020-07-08","2020-08-28","2020-09-09"]},"backcountry":{"data":[{"t":"2018-01-31","y":"299.95"},{"t":"2018-05-15","y":"224.96"},{"t":"2018-05-24","y":"299.95"},{"t":"2018-06-28","y":"239.96"},{"t":"2018-08-24","y":"224.96"},{"t":"2018-09-04","y":"239.96"},{"t":"2018-10-03","y":"299.95"},{"t":"2018-11-19","y":"224.96"},{"t":"2018-11-28","y":"299.95"},{"t":"2019-02-12","y":"224.96"},{"t":"2019-04-06","y":"299.95"},{"t":"2019-05-18","y":"224.96"},{"t":"2019-05-29","y":"299.95"},{"t":"2019-08-27","y":"224.96"},{"t":"2019-09-12","y":"299.95"},{"t":"2019-11-25","y":"224.96"},{"t":"2019-12-04","y":"299.95"},{"t":"2020-02-10","y":"224.96"},{"t":"2020-02-18","y":"299.95"},{"t":"2020-03-20","y":"224.96"},{"t":"2020-03-24","y":"299.95"},{"t":"2020-03-31","y":"224.96"},{"t":"2020-04-07","y":"299.95"},{"t":"2020-05-18","y":"224.96"},{"t":"2020-05-26","y":"299.95"},{"t":"2020-11-23","y":"224.96"},{"t":"2020-12-01","y":"299.95"},{"t":"2021-02-08","y":"224.96"},{"t":"2021-02-16","y":"299.95"}],"labels":["2018-01-31","2018-05-15","2018-05-24","2018-06-28","2018-08-24","2018-09-04","2018-10-03","2018-11-19","2018-11-28","2019-02-12","2019-04-06","2019-05-18","2019-05-29","2019-08-27","2019-09-12","2019-11-25","2019-12-04","2020-02-10","2020-02-18","2020-03-20","2020-03-24","2020-03-31","2020-04-07","2020-05-18","2020-05-26","2020-11-23","2020-12-01","2021-02-08","2021-02-16"]}}');
+const p2 = JSON.parse('{"rei":{"data":[{"t":"2017-10-17","y":"329.95"},{"t":"2018-11-10","y":"247.39"},{"t":"2018-11-22","y":"329.95"},{"t":"2019-11-16","y":"246.99"},{"t":"2019-11-27","y":"329.95"},{"t":"2020-06-27","y":"247.39"},{"t":"2020-07-08","y":"329.95"},{"t":"2020-08-28","y":"247.39"},{"t":"2020-09-09","y":"329.95"}],"labels":["2017-10-17","2018-11-10","2018-11-22","2019-11-16","2019-11-27","2020-06-27","2020-07-08","2020-08-28","2020-09-09"]},"backcountry":{"data":[{"t":"2018-01-31","y":"329.95"},{"t":"2018-05-10","y":"263.96"},{"t":"2018-05-13","y":"329.95"},{"t":"2018-05-15","y":"247.46"},{"t":"2018-05-24","y":"329.95"},{"t":"2018-06-28","y":"263.96"},{"t":"2018-07-05","y":"329.95"},{"t":"2018-07-06","y":"263.96"},{"t":"2018-07-11","y":"329.95"},{"t":"2018-07-14","y":"263.96"},{"t":"2018-07-18","y":"329.95"},{"t":"2018-07-28","y":"263.96"},{"t":"2018-08-01","y":"329.95"},{"t":"2018-08-24","y":"247.46"},{"t":"2018-09-04","y":"329.95"},{"t":"2018-11-19","y":"247.46"},{"t":"2018-11-28","y":"329.95"},{"t":"2019-02-12","y":"247.46"},{"t":"2019-04-06","y":"329.95"},{"t":"2019-05-18","y":"247.46"},{"t":"2019-05-29","y":"329.95"},{"t":"2019-08-27","y":"247.46"},{"t":"2019-09-06","y":"329.95"},{"t":"2019-11-25","y":"247.46"},{"t":"2019-12-04","y":"329.95"},{"t":"2020-03-20","y":"247.46"},{"t":"2020-03-24","y":"329.95"},{"t":"2020-03-31","y":"247.46"},{"t":"2020-04-07","y":"329.95"},{"t":"2020-05-18","y":"247.46"},{"t":"2020-05-26","y":"329.95"},{"t":"2020-11-23","y":"247.46"},{"t":"2020-12-01","y":"329.95"},{"t":"2021-02-08","y":"247.46"},{"t":"2021-02-16","y":"329.95"}],"labels":["2018-01-31","2018-05-10","2018-05-13","2018-05-15","2018-05-24","2018-06-28","2018-07-05","2018-07-06","2018-07-11","2018-07-14","2018-07-18","2018-07-28","2018-08-01","2018-08-24","2018-09-04","2018-11-19","2018-11-28","2019-02-12","2019-04-06","2019-05-18","2019-05-29","2019-08-27","2019-09-06","2019-11-25","2019-12-04","2020-03-20","2020-03-24","2020-03-31","2020-04-07","2020-05-18","2020-05-26","2020-11-23","2020-12-01","2021-02-08","2021-02-16"]}}');
+
+
+new Chart(
+    document.getElementById('price-history-chart-p1').getContext("2d"),
+    {
+        type: 'line',
+        label: "Gregory Men's Baltoro 65 Pack",
+        data: {
+            datasets: [{
+            label: 'REI',
+            data: p1.rei.data,
+            borderColor: 'green',
+            borderWidth: 2,
+            fill: false,
+            steppedLine: true,
+            datalabels: {
+                display: false
+            },
+        },{
+            label: 'Backcountry',
+            data: p1.backcountry.data,
+            borderColor: 'blue',
+            borderWidth: 2,
+            fill: false,
+            steppedLine: true,
+            datalabels: {
+                display: false
+            },
+        },]
+        },
+        options: {
+            title: {
+                display: true,
+                text: "Gregory Men's Baltoro 65 Pack",
+                position: 'bottom',
+                fontSize: 16,
+                fontStyle: 'bold',
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+                position: 'top'
+            },
+            scales: {
+                xAxes: [{
+                    type: 'time',
+                    time: {
+                        unit: 'month',
+                        unitStepSize: 3,
+                        displayFormats: {
+                            'month': 'MMM YY'
+                        }
+                    }
+                }]
+            }
+        }
+    }
+);
+
+new Chart(
+    document.getElementById('price-history-chart-p2').getContext("2d"),
+    {
+        type: 'line',
+        label: "Gregory Men's Baltoro 75 Pack",
+        data: {
+            datasets: [{
+            label: 'REI',
+            data: p2.rei.data,
+            borderColor: 'green',
+            borderWidth: 2,
+            fill: false,
+            steppedLine: true,
+            datalabels: {
+                display: false
+            },
+        },{
+            label: 'Backcountry',
+            data: p2.backcountry.data,
+            borderColor: 'blue',
+            borderWidth: 2,
+            fill: false,
+            steppedLine: true,
+            datalabels: {
+                display: false
+            },
+        },]
+        },
+        options: {
+            title: {
+                display: true,
+                text: "Gregory Men's Baltoro 75 Pack",
+                position: 'bottom',
+                fontSize: 16,
+                fontStyle: 'bold',
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+                position: 'top'
+            },
+            scales: {
+                xAxes: [{
+                    type: 'time',
+                    time: {
+                        unit: 'month',
+                        unitStepSize: 3,
+                        displayFormats: {
+                            'month': 'MMM YY'
+                        }
+                    }
+                }]
+            }
+        }
+    }
+);
+
+new Chart(
+    document.getElementById('scatter-chart').getContext("2d"),
+    {
+        type: 'scatter',
+        data: {
+            datasets: [{
+                label: 'Pack Weight vs. Price',
+                data: [{"x":"329.95","y":4.83,"name":"Gregory Men's Baltoro 75 Pack - S"},{"x":"329.95","y":4.96,"name":"Gregory Men's Baltoro 75 Pack - M"},{"x":"329.95","y":5.22,"name":"Gregory Men's Baltoro 75 Pack - L"},{"x":"299.95","y":4.65,"name":"Gregory Men's Baltoro 65 Pack - S"},{"x":"299.95","y":4.84,"name":"Gregory Men's Baltoro 65 Pack - M"},{"x":"299.95","y":5.14,"name":"Gregory Men's Baltoro 65 Pack - L"},{"x":"200.00","y":2.55,"name":"Osprey Men's Exos 48 Pack - S"},{"x":"200.00","y":2.57,"name":"Osprey Men's Exos 48 Pack - M"},{"x":"200.00","y":2.6,"name":"Osprey Men's Exos 48 Pack - L"},{"x":"240.00","y":4.13,"name":"Osprey Men's Atmos AG 50 Pack - S"},{"x":"240.00","y":4.19,"name":"Osprey Men's Atmos AG 50 Pack - M"},{"x":"240.00","y":4.25,"name":"Osprey Men's Atmos AG 50 Pack - L"},{"x":"220.00","y":2.63,"name":"Osprey Men's Exos 58 Pack - S"},{"x":"220.00","y":2.69,"name":"Osprey Men's Exos 58 Pack - M"},{"x":"220.00","y":2.75,"name":"Osprey Men's Exos 58 Pack - L"},{"x":"240.00","y":0.25,"name":"Osprey Women's Aura AG 50 Pack - XS"},{"x":"240.00","y":4.13,"name":"Osprey Women's Aura AG 50 Pack - S"},{"x":"240.00","y":4.19,"name":"Osprey Women's Aura AG 50 Pack - M"},{"x":"270.00","y":4.25,"name":"Osprey Women's Aura AG 65 Pack - XS"},{"x":"270.00","y":4.31,"name":"Osprey Women's Aura AG 65 Pack - S"},{"x":"270.00","y":4.44,"name":"Osprey Women's Aura AG 65 Pack - M"},{"x":"270.00","y":4.5,"name":"Osprey Men's Atmos AG 65 Pack - S"},{"x":"270.00","y":4.63,"name":"Osprey Men's Atmos AG 65 Pack - L"},{"x":"250.00","y":5.88,"name":"Deuter Kid Comfort Active Child Carrier"},{"x":"290.00","y":7.7,"name":"Osprey Poco Child Carrier"},{"x":"330.00","y":7.9,"name":"Osprey Poco Plus Child Carrier"},{"x":"260.00","y":4.83,"name":"Osprey Men's Aether 55 Pack"},{"x":"280.00","y":4.92,"name":"Osprey Men's Aether 65 Pack"},{"x":"260.00","y":4.82,"name":"Osprey Women's Ariel 55 Pack"},{"x":"280.00","y":4.89,"name":"Osprey Women's Ariel 65 Pack"},{"x":"180.00","y":2.94,"name":"Osprey Men's Talon 44 Pack - S/M"},{"x":"180.00","y":3.31,"name":"Osprey Men's Talon 44 Pack - L/XL"},{"x":"70.00","y":1.31,"name":"Osprey Daylite Plus Pack"}],
+                backgroundColor: function(context) {
+                    var index = context.dataIndex;
+                    var value = context.dataset.data[index];
+                    if (value && value.name) {
+                        if (value.name.includes("Gregory Men's Baltoro 65 Pack")) {
+                            return 'red';
+                        }
+                        if (value.name.includes("Gregory Men's Baltoro 75 Pack")) {
+                            return 'blue';
+                        }
+                    }
+                    return '#A9A9A9';
+                },
+                pointRadius: 3,
+                pointHoverRadius: 4,
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            title: {
+                display: false,
+            },
+            legend: {
+                display: false,
+            },
+            scales: {
+                xAxes: [{
+                    scaleLabel: {
+                        display: false,
+                    },
+                    gridLines: {
+                        display: true,
+                    },
+                    ticks: {
+                        callback: function(value, index, values) {
+                            return '$' + value.toLocaleString();
+                        }
+                    },
+                }],
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Weight (lbs)',
+                        fontSize: 16,
+                    },
+                    gridLines: {
+                        display: true,
+                    },
+                    ticks: {
+                        stepSize: 2,
+                        callback: function(value, index, values) {
+                            return value.toLocaleString();
+                        }
+                    }
+                }],
+            },
+            tooltips: {
+                displayColors: false,
+                callbacks: {
+                    title: function(tooltipItem, all) {
+                        return [
+                            all.datasets[tooltipItem[0].datasetIndex].data[tooltipItem[0].index].name,
+                        ]
+                    },
+                    label: function(tooltipItem, all) {
+                        return [
+                            'Price: $' + tooltipItem.xLabel.toLocaleString(),
+                            'Weight: ' + tooltipItem.yLabel.toLocaleString() + ' lbs',
+                        ]
+                    }
+                }
+            },
+            plugins: {
+                datalabels: {
+                    display: false
+                },
+            },
+        }
+    }
+);</script>
+
+
+
+</body>
+</html>

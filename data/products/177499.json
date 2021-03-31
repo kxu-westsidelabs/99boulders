@@ -1,0 +1,120 @@
+{
+  "sku": "177499",
+  "name": "Osprey Women's Ariel 65 Pack",
+  "image": "https://www.rei.com/media/446d952b-49a9-496b-9cfa-1497504afab0",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=823791",
+  "price": "280.00",
+  "long_description": "Built to comfortably haul heavy loads for the week or a weekend, the women's Osprey Ariel 65 pack features a highly customizable fit for a variety of body shapes and sizes.",
+  "gender": "female",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 30,
+    "high": 60
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "M/L: 16-19 inches, XS/S: 13-17 inches",
+  "fit_waist_in": "26-50 inches",
+  "materials": "210-denier nylon",
+  "dimensions": "31.5 x 16 x 11 inches",
+  "colors": {
+    "data": [
+      "Black",
+      "Ceramic Blue",
+      "Claret Red"
+    ],
+    "raw": "Black, Ceramic Blue, Claret Red"
+  },
+  "sizes": {
+    "data": [
+      "XS/S",
+      "M/L"
+    ],
+    "raw": "XS/S, M/L"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 65,
+        "raw": "65 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "65 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 78.2,
+        "raw": "4 lbs. 14.2 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "4 lbs. 14.2 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2020-08-27",
+          "y": "280.00"
+        }
+      ],
+      "labels": [
+        "2020-08-27"
+      ]
+    },
+    "backcountry": {
+      "data": [
+        {
+          "t": "2020-09-17",
+          "y": "280.00"
+        },
+        {
+          "t": "2020-10-01",
+          "y": "279.95"
+        }
+      ],
+      "labels": [
+        "2020-09-17",
+        "2020-10-01"
+      ]
+    },
+    "osprey": {
+      "data": [
+        {
+          "t": "2020-09-16",
+          "y": "280.00"
+        }
+      ],
+      "labels": [
+        "2020-09-16"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "280.00",
+      "sale_price": "280.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=823791",
+      "dividend": "$28.00"
+    },
+    "backcountry": {
+      "retail_price": "279.95",
+      "sale_price": "279.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1292252",
+      "availability": true
+    },
+    "osprey": {
+      "retail_price": "280.00",
+      "sale_price": "280.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=6969&pw=179682&mi=16517&pt=3&pri=1405",
+      "availability": true,
+      "stock": "24"
+    }
+  }
+}

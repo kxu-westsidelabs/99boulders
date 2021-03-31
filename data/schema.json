@@ -1,0 +1,54 @@
+{
+  "sku": "111298",
+  "name": "Osprey Men's Stratos 24 Pack",
+
+  "image": "https://www.rei.com/media/5501a458-5c11-4f3d-8409-cbdee80afc4a?size=1000",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=614778",
+  "price": "140.00",
+
+  // stats
+  "volume": [
+    { "key": "S", "val": 58 },
+    { "key": "M", "val": 65 },
+    { "key": "L", "val": 75 },
+  ],
+  "weight": [
+      { "key": "S/M", "val": 20 },
+      { "key": "L/XL", "val": 22 },
+  ],
+
+  // variants
+  "colors": [ "Black", "Eclipse Blue", "Gator Green" ],
+  "sizes": [ "One Size" ],
+
+  // text
+  "best_used_for": "hiking",
+  "fit_torso": "18 - 22 inches",
+  "fit_waist": "25 - 50 inches",
+  "dimensions": "22 x 12 x 12 inches",
+  "materials": "nylon",
+  "long_description": "osprey atmos...",
+
+
+  "purchase_info": {
+    "rei": {
+      "retail_price": "140.00",
+      "sale_price": "140.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=614778",
+      "dividend": "$14.00"
+    },
+    "backcountry": {
+      "retail_price": "139.95",
+      "sale_price": "139.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1185742",
+      "availability": true
+    },
+    "osprey": {
+      "retail_price": "140.00",
+      "sale_price": "140.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=6969&pw=179682&mi=16517&pt=3&pri=491",
+      "availability": true,
+      "stock": "16"
+    }
+  }
+}

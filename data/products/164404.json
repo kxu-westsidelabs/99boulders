@@ -1,0 +1,100 @@
+{
+  "sku": "164404",
+  "name": "Osprey Poco Child Carrier",
+  "image": "https://www.rei.com/media/0071049e-709d-44f1-8d3e-bae01e4a83d6",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=797785",
+  "price": "290.00",
+  "long_description": "Whether you're headed to a festival, farmers market or a few miles into the woods, make it a family affair with the Osprey Poco child carrier.",
+  "gender": "unisex",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Baby Carrier Packs",
+  "load": {
+    "low": 23.7,
+    "high": 48.5
+  },
+  "best_used_for": "Hiking",
+  "fit_torso_in": "15-21 inches",
+  "fit_waist_in": "26-48 inches",
+  "materials": "210-denier nylon diamond",
+  "dimensions": "28 x 17.75 x 15.75 inches",
+  "colors": {
+    "data": [
+      "Blue Sky",
+      "Starry Black"
+    ],
+    "raw": "Blue Sky, Starry Black"
+  },
+  "sizes": {
+    "data": [
+      "One Size"
+    ],
+    "raw": "One Size"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 20,
+        "raw": "20 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "20 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 123.2,
+        "raw": "7 lbs. 11.2 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "7 lbs. 11.2 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2020-02-16",
+          "y": "290.00"
+        }
+      ],
+      "labels": [
+        "2020-02-16"
+      ]
+    },
+    "backcountry": {
+      "data": [],
+      "labels": []
+    },
+    "osprey": {
+      "data": [
+        {
+          "t": "2020-01-14",
+          "y": "290.00"
+        }
+      ],
+      "labels": [
+        "2020-01-14"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "290.00",
+      "sale_price": "290.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=797785",
+      "dividend": "$29.00"
+    },
+    "osprey": {
+      "retail_price": "290.00",
+      "sale_price": "290.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=6969&pw=179682&mi=16517&pt=3&pri=108",
+      "availability": true,
+      "stock": "81"
+    }
+  }
+}

@@ -1,0 +1,326 @@
+{
+  "sku": "126717",
+  "name": "Osprey Women's Aura AG 65 Pack",
+  "image": "https://www.rei.com/media/824d588e-780e-46cd-bc73-5fd0d301c089",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631406",
+  "price": "270.00",
+  "long_description": "With an Anti-Gravity(TM) suspension system and a women-specific fit, the Osprey Aura AG 65 pack lets you maintain comfort when you're trading your creature comforts for adventures on the trail.",
+  "gender": "female",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 30,
+    "high": 50
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "XS: 14-17 inches, S: 16-19 inches, M: 18-21 inches",
+  "fit_waist_in": "XS: 24-45 inches, S: 24-45 inches, M: 27-48 inches",
+  "materials": "100-denier x 630-denier nylon dobby/210-denier high-tenacity nylon/420HD nylon",
+  "dimensions": "33 x 16 x 15 inches",
+  "colors": {
+    "data": [
+      "Challenger Blue",
+      "Gamma Red",
+      "Vestal Grey"
+    ],
+    "raw": "Challenger Blue, Gamma Red, Vestal Grey"
+  },
+  "sizes": {
+    "data": [
+      "XS",
+      "S",
+      "M"
+    ],
+    "raw": "XS, S, M"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "XS",
+        "val": 60,
+        "raw": "60 liters"
+      },
+      {
+        "key": "S",
+        "val": 62,
+        "raw": "62 liters"
+      },
+      {
+        "key": "M",
+        "val": 65,
+        "raw": "65 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "XS: 60 liters, S: 62 liters, M: 65 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "XS",
+        "val": 68,
+        "raw": "4 lbs. 4 oz."
+      },
+      {
+        "key": "S",
+        "val": 69,
+        "raw": "4 lbs. 5 oz."
+      },
+      {
+        "key": "M",
+        "val": 71,
+        "raw": "4 lbs. 7 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "XS: 4 lbs. 4 oz., S: 4 lbs. 5 oz., M: 4 lbs. 7 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2017-11-30",
+          "y": "270.00"
+        },
+        {
+          "t": "2018-11-18",
+          "y": "202.49"
+        },
+        {
+          "t": "2018-11-29",
+          "y": "270.00"
+        },
+        {
+          "t": "2019-05-18",
+          "y": "199.99"
+        },
+        {
+          "t": "2019-05-29",
+          "y": "270.00"
+        },
+        {
+          "t": "2019-06-22",
+          "y": "199.99"
+        },
+        {
+          "t": "2019-06-26",
+          "y": "201.99"
+        },
+        {
+          "t": "2019-07-06",
+          "y": "270.00"
+        },
+        {
+          "t": "2020-05-02",
+          "y": "202.49"
+        },
+        {
+          "t": "2020-05-27",
+          "y": "270.00"
+        },
+        {
+          "t": "2020-08-28",
+          "y": "202.49"
+        },
+        {
+          "t": "2020-09-09",
+          "y": "270.00"
+        }
+      ],
+      "labels": [
+        "2017-11-30",
+        "2018-11-18",
+        "2018-11-29",
+        "2019-05-18",
+        "2019-05-29",
+        "2019-06-22",
+        "2019-06-26",
+        "2019-07-06",
+        "2020-05-02",
+        "2020-05-27",
+        "2020-08-28",
+        "2020-09-09"
+      ]
+    },
+    "backcountry": {
+      "data": [
+        {
+          "t": "2018-01-05",
+          "y": "270.00"
+        },
+        {
+          "t": "2018-05-18",
+          "y": "202.50"
+        },
+        {
+          "t": "2018-05-29",
+          "y": "270.00"
+        },
+        {
+          "t": "2018-08-24",
+          "y": "202.50"
+        },
+        {
+          "t": "2018-09-04",
+          "y": "270.00"
+        },
+        {
+          "t": "2018-11-17",
+          "y": "201.95"
+        },
+        {
+          "t": "2018-11-28",
+          "y": "270.00"
+        },
+        {
+          "t": "2018-12-19",
+          "y": "216.00"
+        },
+        {
+          "t": "2018-12-20",
+          "y": "270.00"
+        },
+        {
+          "t": "2019-05-17",
+          "y": "201.95"
+        },
+        {
+          "t": "2019-05-29",
+          "y": "270.00"
+        },
+        {
+          "t": "2019-06-21",
+          "y": "201.95"
+        },
+        {
+          "t": "2019-07-05",
+          "y": "270.00"
+        },
+        {
+          "t": "2019-08-21",
+          "y": "269.95"
+        },
+        {
+          "t": "2020-01-01",
+          "y": "270.00"
+        },
+        {
+          "t": "2020-01-14",
+          "y": "269.95"
+        },
+        {
+          "t": "2020-03-20",
+          "y": "202.46"
+        },
+        {
+          "t": "2020-03-21",
+          "y": "269.95"
+        },
+        {
+          "t": "2020-05-02",
+          "y": "201.95"
+        },
+        {
+          "t": "2020-05-26",
+          "y": "269.95"
+        },
+        {
+          "t": "2020-07-01",
+          "y": "270.00"
+        },
+        {
+          "t": "2020-08-28",
+          "y": "201.95"
+        },
+        {
+          "t": "2020-09-08",
+          "y": "270.00"
+        },
+        {
+          "t": "2021-01-01",
+          "y": "269.95"
+        }
+      ],
+      "labels": [
+        "2018-01-05",
+        "2018-05-18",
+        "2018-05-29",
+        "2018-08-24",
+        "2018-09-04",
+        "2018-11-17",
+        "2018-11-28",
+        "2018-12-19",
+        "2018-12-20",
+        "2019-05-17",
+        "2019-05-29",
+        "2019-06-21",
+        "2019-07-05",
+        "2019-08-21",
+        "2020-01-01",
+        "2020-01-14",
+        "2020-03-20",
+        "2020-03-21",
+        "2020-05-02",
+        "2020-05-26",
+        "2020-07-01",
+        "2020-08-28",
+        "2020-09-08",
+        "2021-01-01"
+      ]
+    },
+    "osprey": {
+      "data": [
+        {
+          "t": "2020-01-14",
+          "y": "270.00"
+        },
+        {
+          "t": "2020-05-08",
+          "y": "201.95"
+        },
+        {
+          "t": "2020-05-26",
+          "y": "270.00"
+        },
+        {
+          "t": "2020-08-28",
+          "y": "201.95"
+        },
+        {
+          "t": "2020-09-09",
+          "y": "270.00"
+        }
+      ],
+      "labels": [
+        "2020-01-14",
+        "2020-05-08",
+        "2020-05-26",
+        "2020-08-28",
+        "2020-09-09"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "270.00",
+      "sale_price": "270.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631406",
+      "dividend": "$27.00"
+    },
+    "backcountry": {
+      "retail_price": "269.95",
+      "sale_price": "269.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1213831",
+      "availability": true
+    },
+    "osprey": {
+      "retail_price": "270.00",
+      "sale_price": "270.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=6969&pw=179682&mi=16517&pt=3&pri=127",
+      "availability": true,
+      "stock": "23"
+    }
+  }
+}

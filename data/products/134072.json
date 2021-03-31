@@ -1,59 +1,69 @@
 {
   "sku": "134072",
   "name": "Osprey Men's Atmos AG 65 Pack",
-  "image": "https://www.rei.com/media/3e2cbb6c-95b6-4b99-b95b-2dce34ebbfc5?size=1000",
+  "image": "https://www.rei.com/media/07325538-a1f2-4d5b-8949-ac3082c62f59",
   "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631830",
   "price": "270.00",
-  "product_specs": [
-    {
-      "field": "MSRP",
-      "value": "$270.00"
-    },
-    {
-      "field": "Shop Online",
-      "value": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631830"
-    },
-    {
-      "field": "Best Used For",
-      "value": "Backpacking"
-    },
-    {
-      "field": "Weight",
-      "value": "S: 4 lbs. 8 oz., M: 4 lbs. 9 oz., L: 4 lbs. 10 oz"
-    },
-    {
-      "field": "Volume",
-      "value": "S: 62 liters, M: 65 liters, L: 68 liters"
-    },
-    {
-      "field": "Fit - Torso",
-      "value": "S: 16-19 inches, M: 18-21 inches, L: 20-23 inches"
-    },
-    {
-      "field": "Fit - Waist",
-      "value": "S: 24-45 inches, M: 27-48 inches, L: 29-55 inches"
-    },
-    {
-      "field": "Dimensions",
-      "value": "34 x 15 x 16 inches"
-    },
-    {
-      "field": "Sizes",
-      "value": "S, M, L"
-    },
-    {
-      "field": "Colors",
-      "value": "Abyss Grey, Rigby Red, Unity Blue"
-    },
-    {
-      "field": "Materials",
-      "value": "100-denier x 630-denier nylon dobby/210-denier high-tenacity nylon/420HD nylon"
-    },
-    {
-      "field": "Key Features",
-      "value": ""
-    }
-  ],
+  "long_description": "Don't abandon comfort just because you're leaving your creature comforts at home. The Osprey Atmos AG 65 pack uses Anti-Gravity(TM) technology to distribute the load and provide a dreamlike fit.",
+  "gender": "male",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 30,
+    "high": 50
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "S: 16-19 inches, L: 20-23 inches",
+  "fit_waist_in": "S: 24-45 inches, L: 29-55 inches",
+  "materials": "100-denier x 630-denier nylon dobby/210-denier high-tenacity nylon/420HD nylon",
+  "dimensions": "34 x 15 x 16 inches",
+  "colors": {
+    "data": [
+      "Abyss Grey"
+    ],
+    "raw": "Abyss Grey"
+  },
+  "sizes": {
+    "data": [
+      "S",
+      "L"
+    ],
+    "raw": "S, L"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "S",
+        "val": 62,
+        "raw": "62 liters"
+      },
+      {
+        "key": "L",
+        "val": 68,
+        "raw": "68 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "S: 62 liters, L: 68 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "S",
+        "val": 72,
+        "raw": "4 lbs. 8 oz."
+      },
+      {
+        "key": "L",
+        "val": 74,
+        "raw": "4 lbs. 10 oz"
+      }
+    ],
+    "unit": "oz",
+    "raw": "S: 4 lbs. 8 oz., L: 4 lbs. 10 oz"
+  },
   "price_history": {
     "rei": {
       "data": [
@@ -307,7 +317,7 @@
       "sale_price": "270.00",
       "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=6969&pw=179682&mi=16517&pt=3&pri=117",
       "availability": true,
-      "stock": "12"
+      "stock": "21"
     }
   }
 }

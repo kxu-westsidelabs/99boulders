@@ -1,59 +1,82 @@
 {
   "sku": "126707",
   "name": "Osprey Men's Atmos AG 50 Pack",
-  "image": "https://www.rei.com/media/d67d0533-b44e-45ff-a095-b3378c5240cd?size=1000",
+  "image": "https://www.rei.com/media/d67d0533-b44e-45ff-a095-b3378c5240cd",
   "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631407",
   "price": "240.00",
-  "product_specs": [
-    {
-      "field": "MSRP",
-      "value": "$240.00"
-    },
-    {
-      "field": "Shop Online",
-      "value": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631407"
-    },
-    {
-      "field": "Best Used For",
-      "value": "Backpacking"
-    },
-    {
-      "field": "Weight",
-      "value": "S: 4 lbs. 2 oz., M: 4 lbs. 3 oz., L: 4 lbs. 4 oz."
-    },
-    {
-      "field": "Volume",
-      "value": "S: 47 liters, M: 50 liters, L: 53 liters"
-    },
-    {
-      "field": "Fit - Torso",
-      "value": "S: 16-19 inches, M: 18-21 inches, L: 20-23 inches"
-    },
-    {
-      "field": "Fit - Waist",
-      "value": "S: 24-45 inches, M: 27-48 inches, L: 29-55 inches"
-    },
-    {
-      "field": "Dimensions",
-      "value": "33 x 15 x 15 inches"
-    },
-    {
-      "field": "Sizes",
-      "value": "S, M, L"
-    },
-    {
-      "field": "Colors",
-      "value": "Abyss Grey, Rigby Red, Unity Blue"
-    },
-    {
-      "field": "Materials",
-      "value": "100-denier x 630-denier nylon dobby/210-denier high-tenacity nylon/420HD nylon"
-    },
-    {
-      "field": "Key Features",
-      "value": ""
-    }
-  ],
+  "long_description": "Linger on the trail a little longer with the Osprey Atmos AG 50 pack. Its ventilated Anti-Gravity(TM) suspension system and 9 pockets make it a pleasure to shoulder your backcountry essentials.",
+  "gender": "male",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 25,
+    "high": 40
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "S: 16-19 inches, M: 18-21 inches, L: 20-23 inches",
+  "fit_waist_in": "S: 24-45 inches, M: 27-48 inches, L: 29-55 inches",
+  "materials": "100-denier x 630-denier nylon dobby/210-denier high-tenacity nylon/420HD nylon",
+  "dimensions": "33 x 15 x 15 inches",
+  "colors": {
+    "data": [
+      "Abyss Grey",
+      "Rigby Red",
+      "Unity Blue"
+    ],
+    "raw": "Abyss Grey, Rigby Red, Unity Blue"
+  },
+  "sizes": {
+    "data": [
+      "S",
+      "M",
+      "L"
+    ],
+    "raw": "S, M, L"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "S",
+        "val": 47,
+        "raw": "47 liters"
+      },
+      {
+        "key": "M",
+        "val": 50,
+        "raw": "50 liters"
+      },
+      {
+        "key": "L",
+        "val": 53,
+        "raw": "53 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "S: 47 liters, M: 50 liters, L: 53 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "S",
+        "val": 66,
+        "raw": "4 lbs. 2 oz."
+      },
+      {
+        "key": "M",
+        "val": 67,
+        "raw": "4 lbs. 3 oz."
+      },
+      {
+        "key": "L",
+        "val": 68,
+        "raw": "4 lbs. 4 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "S: 4 lbs. 2 oz., M: 4 lbs. 3 oz., L: 4 lbs. 4 oz."
+  },
   "price_history": {
     "rei": {
       "data": [

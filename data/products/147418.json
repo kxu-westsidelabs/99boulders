@@ -1,0 +1,121 @@
+{
+  "sku": "147418",
+  "name": "Deuter Kid Comfort Active Child Carrier",
+  "image": "https://www.rei.com/media/efbeb86e-f6ee-40a0-ad7a-48a3d3a862f1",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=657239",
+  "price": "250.00",
+  "long_description": "Despite its minimalist, athletic build, the Deuter Kid Comfort Active child carrier's seating area is comfortable and stable. It also features a simple to use, easily accessible safety harness.",
+  "gender": "unisex",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Baby Carrier Packs",
+  "load": {
+    "low": 25,
+    "high": 48.5
+  },
+  "best_used_for": "Hiking",
+  "fit_torso_in": "15-20 inches",
+  "materials": "210-denier polyamide polyester",
+  "dimensions": "28 x 17 x 13 inches",
+  "colors": {
+    "data": [
+      "Midnight"
+    ],
+    "raw": "Midnight"
+  },
+  "sizes": {
+    "data": [
+      "One Size"
+    ],
+    "raw": "One Size"
+  },
+  "volume": {
+    "data": [],
+    "unit": "liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 94,
+        "raw": "5 lbs. 14 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "5 lbs. 14 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2019-03-12",
+          "y": "240.00"
+        },
+        {
+          "t": "2019-08-24",
+          "y": "179.99"
+        },
+        {
+          "t": "2019-09-04",
+          "y": "240.00"
+        },
+        {
+          "t": "2020-05-16",
+          "y": "179.99"
+        },
+        {
+          "t": "2020-05-27",
+          "y": "240.00"
+        },
+        {
+          "t": "2020-06-27",
+          "y": "179.99"
+        },
+        {
+          "t": "2020-07-08",
+          "y": "240.00"
+        },
+        {
+          "t": "2021-01-16",
+          "y": "250.00"
+        }
+      ],
+      "labels": [
+        "2019-03-12",
+        "2019-08-24",
+        "2019-09-04",
+        "2020-05-16",
+        "2020-05-27",
+        "2020-06-27",
+        "2020-07-08",
+        "2021-01-16"
+      ]
+    },
+    "backcountry": {
+      "data": [
+        {
+          "t": "2021-01-06",
+          "y": "250.00"
+        }
+      ],
+      "labels": [
+        "2021-01-06"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "250.00",
+      "sale_price": "250.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=657239",
+      "dividend": "$25.00"
+    },
+    "backcountry": {
+      "retail_price": "250.00",
+      "sale_price": "250.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1302386",
+      "availability": true
+    }
+  }
+}
