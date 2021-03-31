@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- 
+    https://handsondataviz.github.io/chartjs-scatter/
+-->
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0/dist/chartjs-plugin-datalabels.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" type="text/javascript"></script>
+
+<title>Scatter Plot</title>
+
+<style>
+    .main-container {
+        padding: 35px 30px;
+    }
+    .chart-container {
+        padding: 0 0 4em 0;
+        width: 100%;
+        height: 200px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="main-container">
+    <h2>Scatter Plot</h2>
+    <div class="chart-container">
+        <canvas id="scatter-chart"></canvas>
+    </div>
+</div>
+
+<script>
+
+var TITLE = 'Distribution of Weight vs. Price for Osprey Packs';
+
+var POINT_X = 'price';      // column name for x values in data.csv
+var POINT_X_PREFIX = '$';   // prefix for x values, eg '$'
+var POINT_X_POSTFIX = '';   // postfix for x values, eg '%'
+
+var POINT_Y = 'grades';     // column name for y values in data.csv
+var POINT_Y_PREFIX = '';    // prefix for x values, eg 'USD '
+var POINT_Y_POSTFIX = 'oz';   // postfix for x values, eg ' kg'
+
+var POINT_NAME = 'district';    // point names that appear in tooltip
+var POINT_COLOR = '#A9A9A9';    // eg `black` or `rgba(10,100,44,0.8)`
+var POINT_RADIUS = 2;           // radius of each data point
+
+var X_AXIS = 'Price';       // x-axis label, label in tooltip
+var Y_AXIS = 'Weight (oz)';      // y-axis label, label in tooltip
+
+
+var MOBILE_POINT_RADIUS = 3;    // radius of each data point
+
+var SHOW_GRID = 'true';
+
+const context = document.getElementById('scatter-chart').getContext("2d");
+
+const chart = new Chart(context, {
+    type: 'scatter',
+    data: {
+        datasets: [{
+            label: 'Pack Weight vs. Price',
+            data: [
+                // TODO: add in ALL variant weights
+                // x: price, y: weight (oz)
+                { x: 140, y: 44, name: "Osprey Men's Stratos 24 Pack" },
+                { x: 170, y: 50.7, name: "Osprey Men's Stratos 36 Pack (S/M)" },
+                { x: 170, y: 52.8, name: "Osprey Men's Stratos 36 Pack (M/L)" },
+                { x: 160, y: 49.3, name: "Osprey Men's Stratos 34 Pack (M/L)" },
+                { x: 200, y: 40.8, name: "Osprey Men's Exos 48 Pack (S)" },
+                { x: 240, y: 66, name: "Osprey Men's Atmos AG 50 Pack (S)" },
+                { x: 220, y: 42, name: "Osprey Men's Exos 58 Pack (S)" },
+                { x: 270, y: 72, name: "Osprey Men's Atmos AG 65 Pack (S)" },
+                { x: 260, y: 77.3, name: "Osprey Men's Aether 55 Pack" },
+                { x: 280, y: 78.7, name: "Osprey Men's Aether 65 Pack" },
+                { x: 130, y: 32.64, name: "Osprey Men's Talon 22 Pack (L/XL)" },
+            ],
+            backgroundColor: function(context) {
+                var index = context.dataIndex;
+                var value = context.dataset.data[index];
+                if (value && value.name) {
+                    if (value.name.includes("Talon 22")) {
+                        return 'red';
+                    }
+                    if (value.name.includes("Stratos 24")) {
+                        return 'blue';
+                    }
+                }
+                return POINT_COLOR;
+            },
+            pointRadius: POINT_RADIUS,
+            // pointHoverRadius:  POINT_RADIUS + 1,
+            pointHoverRadius:  POINT_RADIUS + 1,
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        title: {
+            display: true,
+            text: TITLE,
+            fontSize: 14,
+        },
+        legend: {
+            display: false,
+        },
+        scales: {
+            xAxes: [{
+                scaleLabel: {
+                    display: false,
+                },
+                gridLines: {
+                    display: SHOW_GRID,
+                },
+                ticks: {
+                    callback: function(value, index, values) {
+                        return POINT_X_PREFIX + value.toLocaleString() + POINT_X_POSTFIX;
+                    }
+                },
+            }],
+            yAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: Y_AXIS,
+                    fontSize: 16,
+                },
+                gridLines: {
+                    display: SHOW_GRID,
+                },
+                ticks: {
+                    stepSize: 10,
+                    callback: function(value, index, values) {
+                        return POINT_Y_PREFIX + value.toLocaleString();
+                    }
+                }
+            }],
+        },
+        tooltips: {
+            displayColors: false,
+            callbacks: {
+                title: function(tooltipItem, all) {
+                    return [
+                        all.datasets[tooltipItem[0].datasetIndex].data[tooltipItem[0].index].name,
+                    ]
+                },
+                label: function(tooltipItem, all) {
+                    return [
+                        X_AXIS + ': ' + POINT_X_PREFIX + tooltipItem.xLabel.toLocaleString() + POINT_X_POSTFIX,
+                        Y_AXIS + ': ' + POINT_Y_PREFIX + tooltipItem.yLabel.toLocaleString() + ' ' + POINT_Y_POSTFIX
+                    ]
+                }
+            }
+        },
+        plugins: {
+            datalabels: {
+                display: false
+            },
+        },
+    },
+});
+
+</script>
+</body>
+

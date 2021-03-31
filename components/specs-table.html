@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Specs Table</title>
+
+<style>
+
+/* Specs table for gear picker tool */
+.specs-table-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0 0 4em 0;
+    box-sizing: border-box;
+    min-width: 0px;
+    left: auto;
+    position: relative;
+}
+.specs-table {
+    table-layout: fixed;
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.specs-table col:first-child {
+    width: 8em;
+}
+.specs-table tbody {
+    font-size: 14px;
+}
+.specs-table th, .specs-table td {
+    padding: 12px 14px;
+    vertical-align: top;
+    text-align: left;
+    color: rgba(12,11,8,.75);
+}
+
+.specs-table thead th img {
+    max-width: 250px;
+    width: 80%;
+    height: auto;
+}
+
+/* Product Name */
+.specs-table thead th {
+    background: white;
+}
+.specs-table thead th a {
+    color: rgba(12,11,8,.75);
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+}
+.specs-table thead th a:hover {
+    text-decoration: underline;
+}
+
+.specs-table thead tr:first-child th {
+    text-align: center;
+}
+
+/* sticky header only on Desktop */
+.specs-table thead tr:last-child th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding-bottom: 1rem;
+    z-index: 1;
+}
+.specs-table thead tr th:nth-child(1) {
+    background: transparent;
+    padding: 0;
+}
+.specs-table thead tr:nth-child(2) th:nth-child(2)::after, .specs-table thead tr:nth-child(2) th:nth-child(3)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 8px;
+}
+
+/* header accent bars */
+.specs-table thead tr:nth-child(2) th:nth-child(2)::after {
+    background-color: #7AADE1;
+}
+.specs-table thead tr:nth-child(2) th:nth-child(3)::after {
+    background-color: #2A70B7;
+}
+.specs-table thead td, .specs-table thead th {
+    border: none;
+}
+.specs-table tbody tr {
+    border-bottom: 1px solid #dcd6cb;
+}
+.specs-table tbody tr:first-child {
+    border-top: 1px solid #dcd6cb;
+}
+
+.specs-table tbody td:first-child {
+    background-color: #F2F2F2;
+    width: 20%;
+    font-weight: 700;
+}
+
+/*.specs-table tbody tr td:last-child {
+  border-left: 1px solid #dcd6cb;
+}*/
+.specs-table-link {
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 3px;
+    padding: 6px 16px;
+    width: auto;
+    text-transform: uppercase;
+    background-color: rgb(45, 190, 96);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(45, 190, 96);
+    line-height: 20px;
+    max-width: 100%;
+    text-decoration: none;
+}
+.specs-table-link:hover {
+    background-color: #27A553;
+    border-color: #27A553;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .specs-table-wrapper {
+        width: 100vw;
+        margin-left: -30px;
+    }
+    .specs-table table, .specs-table thead, .specs-table tbody {
+        display: block;
+    }
+    .specs-table thead th img {
+        width: 100%;
+        height: auto;
+    }
+    .specs-table thead th a {
+        font-size: 18px;
+    }
+    .specs-table col:first-child {
+        width: 100%;
+    }
+    .specs-table tr, .specs-table th {
+        display: flex;
+        min-height: 0px;
+        flex-flow: row wrap;
+    }
+    .specs-table tbody td:first-child, .specs-table thead tr th:nth-child(1) {
+        display: block;
+        width: 100%;
+        flex: none;
+    }
+    .specs-table tbody td:first-child {
+        border-bottom: 1px solid #dcd6cb;
+        text-transform: uppercase;
+    }
+    .specs-table thead tr:last-child th {
+        align-self: flex-start;
+    }
+    .specs-table tbody td, .specs-table thead th {
+        display: inline-block;
+        flex: 1 1 0%;
+        min-width: 0px;
+    }
+}
+
+.main-container {
+    padding: 35px 30px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="main-container">
+
+<div class="specs-table-wrapper">
+    <table class="specs-table">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+            <!-- Header Row: Image -->
+            <tr>
+                <th></th>
+                <th>
+                    <a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631407">
+                        <img src="https://www.rei.com/media/d67d0533-b44e-45ff-a095-b3378c5240cd?size=1000">
+                    </a>
+                </th>
+                <th>
+                    <a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631830">
+                        <img src="https://www.rei.com/media/3e2cbb6c-95b6-4b99-b95b-2dce34ebbfc5?size=1000">
+                    </a>
+                </th>
+            </tr>
+
+            <!-- Header Row: Title -->
+            <tr>
+                <th></th>
+                <th><a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631407">Osprey Men's Atmos AG 50&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </a></th>
+                <th><a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631830">Osprey Men's Atmos AG 65 Pack</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>MSRP</td>
+                <td>$240.00</td>
+                <td>$270.00</td>
+            </tr>
+            <!-- Button -->
+            <tr>
+                <td>Shop Online</td>
+                <td>
+                    <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631407">$240.00 at REI</a>
+                </td>
+                <td>
+                    <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631830">$270.00 at REI</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Best Used For</td>
+                <td>Backpacking</td>
+                <td>Backpacking</td>
+            </tr>
+            <tr>
+                <td>Weight</td>
+                <td>
+                    <b>S</b>: 4 lbs. 2 oz.<br>
+                    <b>M</b>: 4 lbs. 3 oz.<br>
+                    <b>L</b>: 4 lbs. 4 oz.
+                </td>
+                <td>
+                    <b>S</b>: 4 lbs. 8 oz.<br>
+                    <b>M</b>: 4 lbs. 9 oz.<br>
+                    <b>L</b>: 4 lbs. 10 oz
+                </td>
+            </tr>
+            <!-- Multi-entity
+                Manual breaks - fence post problem
+                Bold and non-bolded sections
+            -->
+            <tr>
+                <td>Volume</td>
+                <td>
+                    <b>S</b>: 47 liters<br>
+                    <b>M</b>: 50 liters<br>
+                    <b>L</b>: 53 liters
+                </td>
+                <td>
+                    <b>S</b>: 62 liters<br>
+                    <b>M</b>: 65 liters<br>
+                    <b>L</b>: 68 liters
+                </td>
+            </tr>
+            <tr>
+                <td>Fit - Torso</td>
+                <td>S: 16-19 inches, M: 18-21 inches, L: 20-23 inches</td>
+                <td>S: 16-19 inches, M: 18-21 inches, L: 20-23 inches</td>
+            </tr>
+            <tr>
+                <td>Fit - Waist</td>
+                <td>S: 24-45 inches, M: 27-48 inches, L: 29-55 inches</td>
+                <td>S: 24-45 inches, M: 27-48 inches, L: 29-55 inches</td>
+            </tr>
+            <tr>
+                <td>Dimensions</td>
+                <td>33 x 15 x 15 inches</td>
+                <td>34 x 15 x 16 inches</td>
+            </tr>
+            <tr>
+                <td>Sizes</td>
+                <td>S, M, L</td>
+                <td>S, M, L</td>
+            </tr>
+            <tr>
+                <td>Colors</td>
+                <td>Abyss Grey, Rigby Red, Unity Blue</td>
+                <td>Abyss Grey, Rigby Red, Unity Blue</td>
+            </tr>
+            <tr>
+                <td>Materials</td>
+                <td>100-denier x 630-denier nylon dobby/210-denier high-tenacity nylon/420HD nylon</td>
+                <td>100-denier x 630-denier nylon dobby/210-denier high-tenacity nylon/420HD nylon</td>
+            </tr>
+            <tr>
+                <td>Long Description</td>
+                <td>The Atmos™ AG 65 is the best-fitting, most ventilated and comfortable pack ever made for traditional backpacking trips up to a week or more in duration. The innovative AntiGravity suspension makes it feel like you're carrying less weight and seamlessly wraps around your body, which means you'll enjoy every mile more than ever. From easy to use stretch mesh side pockets, Stow-on-the-Go trekking pole attachment, and FlapJacket for lidless use, the Atmos™ AG 65 is still the top contender. Backed by our All Mighty Guarantee, forever.</td>
+                <td>The Atmos™ AG 65 is the best-fitting, most ventilated and comfortable pack ever made for traditional backpacking trips up to a week or more in duration. The innovative AntiGravity suspension makes it feel like you're carrying less weight and seamlessly wraps around your body, which means you'll enjoy every mile more than ever. From easy to use stretch mesh side pockets, Stow-on-the-Go trekking pole attachment, and FlapJacket for lidless use, the Atmos™ AG 65 is still the top contender. Backed by our All Mighty Guarantee, forever.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+</div>
+
+</body>
+</html>

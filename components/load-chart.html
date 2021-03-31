@@ -29,94 +29,51 @@
 </div>
 
 <script>
-/*
-const loadCtx = document.getElementById('loadRange').getContext("2d");
-new Chart(loadCtx, {
-    type: 'horizontalBar',
-    data: {
-        labels: ["Osprey Men's Atmos AG 50 Pack", "Osprey Men's Atmos AG 65 Pack"],
-        datasets: [
-            {
-                data: [[ 25, 40 ], [ 30, 50 ]],
-                backgroundColor: 'lightblue',
-                barPercentage: 1.0,
-                fontSize: 16,
-            }
-        ]
-    },
-    options: {
-        title: false,
-        responsive: true,
-        maintainAspectRatio: false,
-        tooltips: false,
-        legend: false,
-        scales: {
-            yAxes: [{
-                ticks: {
-                    display: false,
+new Chart(
+    document.getElementById('loadRange').getContext("2d"),
+    {
+        type: 'horizontalBar',
+        data: {
+            datasets: [
+                {
+                    label: "Osprey Men's Atmos AG 50 Pack",
+                    data: [[25, 40]],
+                    backgroundColor: 'lightblue',
+                    barPercentage: 1.0,
                 },
-            }],
+                {
+                    label: "Osprey Men's Aether AG 50 Pack",
+                    data: [[30, 50]],
+                    backgroundColor: '#6ba292',
+                    barPercentage: 1.0,
+                }
+            ],
         },
-        plugins: {
-            datalabels: {
-                font: {
-                    weight: 'bold',
-                    size: 12,
-                },
-                formatter: function(value, context) {
-                    var i = context.dataIndex;
-                    var j = context.datasetIndex;
-                    if (i == 0 && j == 0) return "Osprey Atmos: 25-40 lbs";
-                    if (i == 1 && j == 0) return "Osprey Aether: 30-50 lbs";
-                },
+        plugins: [{
+            beforeLayout: function(context) {
+                var fontSize = (context.chart.width < 900) ? 10 : 16;
+                context.chart.options.plugins.datalabels.font.size = fontSize;
+                context.chart.options.legend.labels.fontSize = fontSize;
             }
-        }
-    },
-});
-*/
-const loadCtx = document.getElementById('loadRange').getContext("2d");
-new Chart(loadCtx, {
-    type: 'horizontalBar',
-    data: {
-        datasets: [
-            {
-                label: "Osprey Men's Atmos AG 50 Pack",
-                data: [[25, 40]],
-                backgroundColor: 'lightblue',
-                barPercentage: 1.0,
-            },
-            {
-                label: "Osprey Men's Aether AG 50 Pack",
-                data: [[30, 50]],
-                backgroundColor: '#6ba292',
-                barPercentage: 1.0,
-            }
-        ],
-    },
-    plugins: [{
-        beforeLayout: function(context) {
-            var fontSize = (context.chart.width < 900) ? 10 : 16;
-            context.chart.options.plugins.datalabels.font.size = fontSize;
-            context.chart.options.legend.labels.fontSize = fontSize;
-        }
-    }],
-    options: {
-        title: false,
-        responsive: true,
-        maintainAspectRatio: false,
-        tooltips: false,
-        plugins: {
-            datalabels: {
-                formatter: function(value, context) {
-                    var i = context.dataIndex;
-                    var j = context.datasetIndex;
-                    if (i == 0 && j == 0) return "25-40 lbs";
-                    if (i == 0 && j == 1) return "30-50 lbs";
+        }],
+        options: {
+            title: false,
+            responsive: true,
+            maintainAspectRatio: false,
+            tooltips: false,
+            plugins: {
+                datalabels: {
+                    formatter: function(value, context) {
+                        var i = context.dataIndex;
+                        var j = context.datasetIndex;
+                        if (i == 0 && j == 0) return "25-40 lbs";
+                        if (i == 0 && j == 1) return "30-50 lbs";
+                    }
                 }
             }
-        }
-    },
-});
+        },
+    }
+);
 
 </script>
 </body>
