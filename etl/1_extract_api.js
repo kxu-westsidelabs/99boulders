@@ -2,48 +2,66 @@ const fetch = require("node-fetch");
 const xml = require("xml-js");
 const util = require('util')
 
+const RETAILERS = {
+    rei: {
+        name: 'rei',
+        datafeed_id: 115,
+    },
+    backcountry: {
+        name: 'backcountry',
+        datafeed_id: 52,
+    },
+    osprey: {
+        name: 'osprey',
+        datafeed_id: 6969,
+    },
+};
+
+
 main();
 
 async function main() {
     const rei = process.argv[2];
     const bc = process.argv[3];
     const osprey = process.argv[4];
-    const stringify = process.argv[5];
 
-    if (!rei || !bc || !osprey) {
-        console.log("Error: missing arguments");
-        return;
+    var affiliates = [];
+    if (rei !== "-") {
+        affiliates.push({
+            ...RETAILERS.rei,
+            sku: rei,
+        });
     }
-
-    const affiliates = [{
-        name: 'rei',
-        datafeed_id:115,
-        sku: rei,
-    }, {
-        name: 'backcountry',
-        datafeed_id: 52,
-        sku: bc,
-    }, {
-        name: 'osprey',
-        datafeed_id: 6969,
-        sku: osprey,
-    }];
+    if (bc !== "-") {
+        affiliates.push({
+            ...RETAILERS.backcountry,
+            sku: bc,
+        });
+    }
+    if (osprey !== "-") {
+        affiliates.push({
+            ...RETAILERS.osprey,
+            sku: osprey,
+        });
+    }
 
     const productContent = await extractProductContent(affiliates);
     const priceHistory = await extractProductPriceHistory(affiliates);
 
+    var name = "";
+    if (Object.keys(productContent.rei).length > 0) {
+        name = productContent.rei.Product.Product_Name._text;
+    } else if (Object.keys(productContent.backcountry).length > 0) {
+        name = productContent.backcountry.Product.Product_Name._text;
+    }
+
     const data = {
         uid: rei,
-        name: productContent.rei.Product.Product_Name._text,
+        name: name,
         product_content: productContent,
         price_history: priceHistory,
     };
-
-    if (stringify) {
-        console.log(JSON.stringify(data));
-    } else {
-        console.log(util.inspect(data, false, null, true));
-    }
+    console.log(JSON.stringify(data, null, 2));
 }
 
 async function fetchAvantlink(endpoint) {
@@ -80,10 +98,17 @@ async function extractProductContent(affiliates) {
 }
 
 async function fetchAndParseAffiliateProductContent(datafeed_id, sku) {
+    if (sku === "null") {
+        return {};
+    }
     const productContentEndpoint = `http://classic.avantlink.com/api.php?affiliate_id=144850&module=ProductContent&output=xml&website_id=179682&merchant_id=16517&datafeed_id=${datafeed_id}&sku=${sku}`;
 
     const response = await fetchAvantlink(productContentEndpoint);
     const data = await response.text();
+
+    if (data.includes("error")) {
+        return {};
+    }
 
     const obj = xml.xml2js(data, {compact: true, spaces: 4});
     return obj.Root;
@@ -107,6 +132,10 @@ async function extractProductPriceHistory(affiliates) {
 }
 
 async function fetchAndParseAffiliatePriceHistory(datafeed_id, sku) {
+    if (sku === "null") {
+        return { data: [], labels: [] };
+    }
+
     const priceCheckEndpoint = `http://classic.avantlink.com/api.php?affiliate_id=144850&module=ProductPriceCheck&output=csv&merchant_id=16517&datafeed_id=${datafeed_id}&sku=${sku}&show_retail_price=1&show_pricing_history=1`;
 
     const response = await fetchAvantlink(priceCheckEndpoint);
