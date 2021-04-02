@@ -46,10 +46,9 @@ function generateHTML(p1, p2) {
             <thead>
                 <tr>
                     <th></th>
-                    <th><a href="${p1.buy_link}"><img src="${p1.image}?size=1000"</a></th>
-                    <th><a href="${p2.buy_link}"><img src="${p2.image}?size=1000"</a></th>
+                    <th><a href="${p1.buy_link}"><img src="${p1.image}?size=1000"></a></th>
+                    <th><a href="${p2.buy_link}"><img src="${p2.image}?size=1000"></a></th>
                 </tr>
-
                 <tr>
                     <th></th>
                     <th><a href="${p1.buy_link}">${getTitle(p1.name, p2.name)}</a></th>
@@ -70,12 +69,6 @@ function generateHTML(p1, p2) {
                     <td>
                         <a class="specs-table-link" href="${p2.buy_link}">$${p2.price} at REI</a>
                     </td>
-                </tr>
-
-                <tr>
-                    <td>Category</td>
-                    <td>${p1.category} > ${p1.sub_category}</td>
-                    <td>${p2.category} > ${p1.sub_category}</td>
                 </tr>
                 <tr>
                     <td>Best Used For</td>
@@ -106,13 +99,8 @@ function generateHTML(p1, p2) {
                 <!-- Full-Text -->
                 <tr>
                     <td>Gender</td>
-                    <td>${p1.gender}</td>
-                    <td>${p2.gender}</td>
-                </tr>
-                <tr>
-                    <td>Age Group</td>
-                    <td>${p1.age_group}</td>
-                    <td>${p2.age_group}</td>
+                    <td>${p1.gender.charAt(0).toUpperCase() + p1.gender.slice(1)}</td>
+                    <td>${p2.gender.charAt(0).toUpperCase() + p2.gender.slice(1)}</td>
                 </tr>
                 <tr>
                     <td>Fit - Waist</td>
@@ -140,7 +128,7 @@ function generateHTML(p1, p2) {
                     <td>${p2.materials}</td>
                 </tr>
                 <tr>
-                    <td>Long Description</td>
+                    <td>Description</td>
                     <td>${p1.long_description}</td>
                     <td>${p2.long_description}</td>
                 </tr>
@@ -206,26 +194,33 @@ function generateHTML(p1, p2) {
 
     <!-- Price Charts -->
     <h2>Price History</h2>
-    <div class="price-chart-selector">
-        <label class="radio-inline">
-            <input type="radio" name="myRadios" value="price1" onclick="handleClick(this);" checked/>${p1.name}
-        </label><br>
-        <label class="radio-inline">
-            <input type="radio" name="myRadios" value="price2" onclick="handleClick(this);"/>${p2.name}
-        </label>
-    </div>
+    <div>
+        <div class="price-chart-selector">
+            <label class="radio-inline">
+                <input type="radio" name="myRadios" value="price1" onclick="handleClick(this);" checked/>${p1.name}
+            </label><br>
+            <label class="radio-inline">
+                <input type="radio" name="myRadios" value="price2" onclick="handleClick(this);"/>${p2.name}
+            </label>
+        </div>
 
-    <div id="price1" class="price-chart-container">
-        <canvas id="price-history-chart-p1"></canvas>
-    </div>
-    <div id="price2" class="price-chart-container" style="display: none">
-        <canvas id="price-history-chart-p2"></canvas>
+        <div id="price1" class="price-chart-container">
+            <canvas id="price-history-chart-p1"></canvas>
+        </div>
+        <div id="price2" class="price-chart-container" style="display: none">
+            <canvas id="price-history-chart-p2"></canvas>
+        </div>
     </div>
 
     <!-- Scatter Plot -->
     <h2>Packs: Weight vs. Price</h2>
     <div class="scatter-weight-container">
         <canvas id="scatter-chart"></canvas>
+    </div>
+
+    <h2>Packs: Weight vs. Volume</h2>
+    <div class="scatter-weight-container">
+        <canvas id="scatter-weight-volume-chart"></canvas>
     </div>
 `;
 }
@@ -297,7 +292,9 @@ function formatVariantFields(val) {
  ***********************************************/
 
 function generateJS(p1, p2) {
-    return '<script>' +
+    return `
+    <script type="text/javascript">
+    <!--` +
         BarChart.generateChart(
             "volume-bar-chart", "Volume (liters)",
             p1.name, p1.volume.data,
@@ -310,7 +307,9 @@ function generateJS(p1, p2) {
         ) +
         generateLoadChartJS(p1, p2) +
         PriceChart.generateChart(p1, p2) +
-        ScatterPlot.generateChart(p1, p2) + '</script>';
+        ScatterPlot.generateChart(p1, p2) +
+        ScatterPlot.generateWeightVsVolumeChart(p1, p2) + `
+    //--></script>`;
 }
 
 function generateLoadChartJS(p1, p2) {
