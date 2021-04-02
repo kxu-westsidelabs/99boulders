@@ -5,5 +5,4 @@ etl/0_html
 etl/1_api
 etl/2_web
 etl/3_data
-generator/scratch.html
 
