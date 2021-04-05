@@ -33,13 +33,20 @@ function convertVolumeToL(str) {
 // Weight
 // 	- "2.5 ounces"
 // 	- "4 lbs. 10 oz"
+// 	- "2 lbs. 10  oz"
+// 	- "4 lbs."
 function convertWeightToOz(str) {
 	var arr = str.split(" ");
+    arr = arr.filter(n => n);
 	if (arr.length === 4) {
 		var lbs = arr[0] * 1;
 		var oz = arr[2] * 1;
 		return convert(lbs).from('lb').to('oz') + oz;
 	} else if (arr.length === 2) {
+        if (arr[1].includes('lb')) {
+            var lbs = arr[0] * 1;
+		    return convert(lbs).from('lb').to('oz');
+        }
 		return arr[0] * 1;
 	} else {
 		 throw new Error("Unable to parse weight str", str);

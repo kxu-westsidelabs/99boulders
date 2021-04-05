@@ -71,7 +71,7 @@ async function parseProductTable(dom) {
 async function parseVariants(dom) {
     var variants = {
         colors: [],
-        sizes: []
+        sizes: [],
     };
     try {
 
@@ -99,7 +99,11 @@ async function parseVariants(dom) {
             sizes: variants.sizes.join(", "),
         };
     } catch (err) {
-        return variants;
+        console.error("Error", err);
+        return {
+            colors: '',
+            sizes: '',
+        };
     }
 }
 

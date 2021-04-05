@@ -176,7 +176,7 @@ function parseMultiVariants(str, convertFn) {
         return arr;
     }
 
-    if (!str.includes(",")) {   // no variants
+    if (!str.includes(",") && !str.includes(":")) {   // no variants
         return [{
             key: 'One Size',
             val: convertFn(str),

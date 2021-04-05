@@ -1,5 +1,4 @@
 const puppeteer = require("puppeteer");
-const { parse } = require("node-html-parser");
 
 (async () => {
     const browser = await puppeteer.launch({
@@ -16,7 +15,6 @@ const { parse } = require("node-html-parser");
             timeout: 0,
         });
 
-        // parse and get html
         const html = await page.content();
         console.log(html);
 
