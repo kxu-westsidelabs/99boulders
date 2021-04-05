@@ -1,0 +1,278 @@
+{
+  "sku": "125757",
+  "name": "Gregory Women's Deva 60 Pack",
+  "image": "https://www.rei.com/media/f8f36668-48b0-4720-8b19-b27c357d7329",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631950",
+  "price": "299.95",
+  "long_description": "On short or long weekend getaways to the wilderness, forget about what you're carrying and escape into the journey with the superior comfort and generous capacity of the Gregory Deva 60 pack.",
+  "gender": "female",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 30,
+    "high": 50
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "XS: 14 - 16 inches, S: 16 - 18 inches, M: 18 - 20 inches",
+  "fit_waist_in": "XS: 26 - 46 inches, S: 27 - 47 inches, M: 28 - 48 inches",
+  "materials": "210-denier Honeycomb CryptoRip nylon/high-tenacity nylon",
+  "dimensions": "XS: 26 x 12 x 12.5 inches, S: 28 x 12.5 x 12 inches, M: 30 x 12 x 12.5 inches",
+  "colors": {
+    "data": [
+      "Antigua Green",
+      "Nocturne Blue",
+      "Plum Red"
+    ],
+    "raw": "Antigua Green, Nocturne Blue, Plum Red"
+  },
+  "sizes": {
+    "data": [
+      "XS",
+      "S",
+      "M"
+    ],
+    "raw": "XS, S, M"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "XS",
+        "val": 56,
+        "raw": "56 liters"
+      },
+      {
+        "key": "S",
+        "val": 60,
+        "raw": "60 liters"
+      },
+      {
+        "key": "M",
+        "val": 64,
+        "raw": "64 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "XS: 56 liters, S: 60 liters, M: 64 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "XS",
+        "val": 71.7,
+        "raw": "4 lbs. 7.7 oz."
+      },
+      {
+        "key": "S",
+        "val": 73.8,
+        "raw": "4 lbs. 9.8 oz."
+      },
+      {
+        "key": "M",
+        "val": 77.3,
+        "raw": "4 lbs. 13.3 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "XS: 4 lbs. 7.7 oz., S: 4 lbs. 9.8 oz., M: 4 lbs. 13.3 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2017-12-12",
+          "y": "299.95"
+        },
+        {
+          "t": "2018-11-10",
+          "y": "224.89"
+        },
+        {
+          "t": "2018-11-22",
+          "y": "299.95"
+        },
+        {
+          "t": "2019-11-16",
+          "y": "224.89"
+        },
+        {
+          "t": "2019-11-27",
+          "y": "299.95"
+        },
+        {
+          "t": "2020-06-27",
+          "y": "224.89"
+        },
+        {
+          "t": "2020-07-08",
+          "y": "299.95"
+        },
+        {
+          "t": "2020-08-28",
+          "y": "224.89"
+        },
+        {
+          "t": "2020-09-09",
+          "y": "299.95"
+        }
+      ],
+      "labels": [
+        "2017-12-12",
+        "2018-11-10",
+        "2018-11-22",
+        "2019-11-16",
+        "2019-11-27",
+        "2020-06-27",
+        "2020-07-08",
+        "2020-08-28",
+        "2020-09-09"
+      ]
+    },
+    "backcountry": {
+      "data": [
+        {
+          "t": "2018-04-20",
+          "y": "299.95"
+        },
+        {
+          "t": "2018-05-15",
+          "y": "224.96"
+        },
+        {
+          "t": "2018-05-24",
+          "y": "299.95"
+        },
+        {
+          "t": "2018-08-24",
+          "y": "224.96"
+        },
+        {
+          "t": "2018-09-04",
+          "y": "299.95"
+        },
+        {
+          "t": "2018-11-19",
+          "y": "224.96"
+        },
+        {
+          "t": "2018-11-28",
+          "y": "299.95"
+        },
+        {
+          "t": "2019-02-12",
+          "y": "224.96"
+        },
+        {
+          "t": "2019-04-06",
+          "y": "299.95"
+        },
+        {
+          "t": "2019-05-18",
+          "y": "224.96"
+        },
+        {
+          "t": "2019-05-29",
+          "y": "299.95"
+        },
+        {
+          "t": "2019-08-27",
+          "y": "224.96"
+        },
+        {
+          "t": "2019-09-12",
+          "y": "299.95"
+        },
+        {
+          "t": "2019-11-25",
+          "y": "224.96"
+        },
+        {
+          "t": "2019-12-04",
+          "y": "299.95"
+        },
+        {
+          "t": "2020-02-10",
+          "y": "224.96"
+        },
+        {
+          "t": "2020-02-18",
+          "y": "299.95"
+        },
+        {
+          "t": "2020-03-20",
+          "y": "224.96"
+        },
+        {
+          "t": "2020-03-24",
+          "y": "299.95"
+        },
+        {
+          "t": "2020-03-31",
+          "y": "224.96"
+        },
+        {
+          "t": "2020-04-07",
+          "y": "299.95"
+        },
+        {
+          "t": "2020-05-18",
+          "y": "224.96"
+        },
+        {
+          "t": "2020-05-26",
+          "y": "299.95"
+        },
+        {
+          "t": "2020-11-23",
+          "y": "224.96"
+        },
+        {
+          "t": "2020-12-01",
+          "y": "299.95"
+        }
+      ],
+      "labels": [
+        "2018-04-20",
+        "2018-05-15",
+        "2018-05-24",
+        "2018-08-24",
+        "2018-09-04",
+        "2018-11-19",
+        "2018-11-28",
+        "2019-02-12",
+        "2019-04-06",
+        "2019-05-18",
+        "2019-05-29",
+        "2019-08-27",
+        "2019-09-12",
+        "2019-11-25",
+        "2019-12-04",
+        "2020-02-10",
+        "2020-02-18",
+        "2020-03-20",
+        "2020-03-24",
+        "2020-03-31",
+        "2020-04-07",
+        "2020-05-18",
+        "2020-05-26",
+        "2020-11-23",
+        "2020-12-01"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "299.95",
+      "sale_price": "299.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631950",
+      "dividend": "$30.00"
+    },
+    "backcountry": {
+      "retail_price": "299.95",
+      "sale_price": "299.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1225512",
+      "availability": true
+    }
+  }
+}

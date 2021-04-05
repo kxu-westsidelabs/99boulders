@@ -1,0 +1,111 @@
+{
+  "sku": "185550",
+  "name": "REI Co-op Men's Traverse 60 Pack",
+  "image": "https://www.rei.com/media/827114bc-bb9a-4b66-983d-76ed74e3fa40",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=834750",
+  "price": "229.00",
+  "long_description": "Born from our extensive field research, the men's Traverse 60 pack is dialed in with fit and features. The result: burly durability, easy adjustability, improved comfort and just-in-case versatility.",
+  "gender": "male",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 20,
+    "high": 40
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "S: 17-19 inches, M: 18-20 inches, L: 19-21 inches, L Torso x S Hipbelt: 19-21 inches",
+  "fit_waist_in": "S: 32-40 inches, M: 34-42 inches, L: 36-46 inches, L Torso x S Hipbelt: 32-40 inches",
+  "materials": "300-denier recycled ripstop nylon (bluesign® approved)",
+  "dimensions": "S: 32 x 16 x 14 inches, M: 33 x 16 x 14 inches, L: 34 x 16 x 14 inches, L Torso x S Hipbelt: 34 x 16 x 14 inches",
+  "colors": {
+    "data": [
+      "Sea Olive",
+      "Blue Nights"
+    ],
+    "raw": "Sea Olive, Blue Nights"
+  },
+  "sizes": {
+    "data": [
+      "S",
+      "M",
+      "L",
+      "L Torso x S Hipbelt"
+    ],
+    "raw": "S, M, L, L Torso x S Hipbelt"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "S",
+        "val": 58,
+        "raw": "58 liters"
+      },
+      {
+        "key": "M",
+        "val": 60,
+        "raw": "60 liters"
+      },
+      {
+        "key": "L",
+        "val": 62,
+        "raw": "62 liters"
+      },
+      {
+        "key": "L Torso x S Hipbelt",
+        "val": 62,
+        "raw": "62 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "S: 58 liters, M: 60 liters, L: 62 liters, L Torso x S Hipbelt: 62 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "S",
+        "val": 67,
+        "raw": "4 lbs. 3 oz."
+      },
+      {
+        "key": "M",
+        "val": 68,
+        "raw": "4 lbs. 4 oz."
+      },
+      {
+        "key": "L Torso x S Hipbelt",
+        "val": 68,
+        "raw": "4 lbs. 4 oz."
+      },
+      {
+        "key": "L",
+        "val": 69,
+        "raw": "4 lbs. 5 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "S: 4 lbs. 3 oz., M: 4 lbs. 4 oz., L: 4 lbs. 5 oz., L Torso x S Hipbelt: 4 lbs. 4 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2021-02-13",
+          "y": "229.00"
+        }
+      ],
+      "labels": [
+        "2021-02-13"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "229.00",
+      "sale_price": "229.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=834750",
+      "dividend": "$22.90"
+    }
+  }
+}

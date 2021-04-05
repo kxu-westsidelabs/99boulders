@@ -1,0 +1,97 @@
+{
+  "sku": "168252",
+  "name": "REI Co-op Women's Trailbreak 60 Pack",
+  "image": "https://www.rei.com/media/e2c11622-93aa-4a29-8b58-149f841d5df0",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=795756",
+  "price": "149.00",
+  "long_description": "You're set to tackle weekend trips and long hikes with the comfortable women's REI Co-op Trailbreak 60 pack. It's built to last for years, and then you can hand it down-it adjusts to fit most bodies.",
+  "gender": "female",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 15,
+    "high": 35
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "15-19 inches",
+  "fit_waist_in": "28-44 inches",
+  "materials": "Ripstop nylon (bluesign®-approved)",
+  "dimensions": "28 x 13 x 13 inches",
+  "colors": {
+    "data": [
+      "Tumbleweed"
+    ],
+    "raw": "Tumbleweed"
+  },
+  "sizes": {
+    "data": [
+      "One Size"
+    ],
+    "raw": "One Size"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 60,
+        "raw": "60 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "60 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 59,
+        "raw": "3 lbs. 11 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "3 lbs. 11 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2020-01-23",
+          "y": "149.00"
+        },
+        {
+          "t": "2020-03-21",
+          "y": "111.69"
+        },
+        {
+          "t": "2020-04-01",
+          "y": "149.00"
+        },
+        {
+          "t": "2020-04-18",
+          "y": "111.69"
+        },
+        {
+          "t": "2020-04-29",
+          "y": "149.00"
+        }
+      ],
+      "labels": [
+        "2020-01-23",
+        "2020-03-21",
+        "2020-04-01",
+        "2020-04-18",
+        "2020-04-29"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "149.00",
+      "sale_price": "149.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=795756",
+      "dividend": "$14.90"
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "sku": "125529",
+  "name": "Deuter Women's Aircontact Lite 45 + 10 SL Pack",
+  "image": "https://www.rei.com/media/6d5c1a15-3976-4cab-a3a6-6d4550f981bb",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=630073",
+  "price": "200.00",
+  "long_description": "Tackle the trail in total comfort with the lightweight and ventilated women's Deuter Aircontact Lite 45 + 10 SL pack. It's built tough to accompany you on a lifetime of adventures.",
+  "gender": "female",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 25,
+    "high": 45
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "14-19 inches",
+  "fit_waist_in": "27-52 inches",
+  "materials": "Nylon/polyester/closed-cell foam",
+  "dimensions": "29.1 x 11.8 x 9.4 inches",
+  "colors": {
+    "data": [
+      "Arctic/Navy",
+      "Graphite/Black",
+      "Maron/Graphite"
+    ],
+    "raw": "Arctic/Navy, Graphite/Black, Maron/Graphite"
+  },
+  "sizes": {
+    "data": [
+      "One Size"
+    ],
+    "raw": "One Size"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 55,
+        "raw": "55 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "55 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 60,
+        "raw": "3 lbs. 12 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "3 lbs. 12 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2017-10-21",
+          "y": "200.00"
+        },
+        {
+          "t": "2018-05-19",
+          "y": "149.99"
+        },
+        {
+          "t": "2018-05-29",
+          "y": "200.00"
+        },
+        {
+          "t": "2018-11-10",
+          "y": "149.99"
+        },
+        {
+          "t": "2018-11-22",
+          "y": "200.00"
+        },
+        {
+          "t": "2019-05-18",
+          "y": "149.99"
+        },
+        {
+          "t": "2019-05-29",
+          "y": "200.00"
+        },
+        {
+          "t": "2019-11-16",
+          "y": "149.99"
+        },
+        {
+          "t": "2019-11-27",
+          "y": "200.00"
+        },
+        {
+          "t": "2020-05-16",
+          "y": "149.99"
+        },
+        {
+          "t": "2020-05-27",
+          "y": "200.00"
+        },
+        {
+          "t": "2020-08-28",
+          "y": "149.99"
+        },
+        {
+          "t": "2020-09-09",
+          "y": "200.00"
+        },
+        {
+          "t": "2020-11-13",
+          "y": "149.99"
+        },
+        {
+          "t": "2020-11-25",
+          "y": "200.00"
+        }
+      ],
+      "labels": [
+        "2017-10-21",
+        "2018-05-19",
+        "2018-05-29",
+        "2018-11-10",
+        "2018-11-22",
+        "2019-05-18",
+        "2019-05-29",
+        "2019-11-16",
+        "2019-11-27",
+        "2020-05-16",
+        "2020-05-27",
+        "2020-08-28",
+        "2020-09-09",
+        "2020-11-13",
+        "2020-11-25"
+      ]
+    },
+    "backcountry": {
+      "data": [],
+      "labels": []
+    },
+    "osprey": {
+      "data": [],
+      "labels": []
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "200.00",
+      "sale_price": "200.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=630073",
+      "dividend": "$20.00"
+    }
+  }
+}

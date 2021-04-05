@@ -1,0 +1,116 @@
+{
+  "sku": "165334",
+  "name": "Gregory Men's Paragon 48 Pack",
+  "image": "https://www.rei.com/media/af699ba9-d2fb-48b2-a79c-46fe1c105ec0",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=793544",
+  "price": "199.95",
+  "long_description": "Designed for fast-paced adventures with a lightweight kit, the men's Gregory Paragon 48 pack offers an adjustable suspension and comfortable carry for pared-down thru-hikes or quick weekends away.",
+  "gender": "male",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 20,
+    "high": 40
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "M/L: 18-22 inches, S/M: 15-19 inches",
+  "fit_waist_in": "M/L: 27-53 inches, S/M: 25-48 inches",
+  "materials": "Nylon/polyester",
+  "dimensions": "30 x 14 x 10 inches",
+  "colors": {
+    "data": [
+      "Burnt Olive",
+      "Smoke Grey"
+    ],
+    "raw": "Burnt Olive, Smoke Grey"
+  },
+  "sizes": {
+    "data": [
+      "S/M",
+      "M/L"
+    ],
+    "raw": "S/M, M/L"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 48,
+        "raw": "48 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "48 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 56,
+        "raw": "3 lbs. 8 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "3 lbs. 8 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2019-12-16",
+          "y": "199.95"
+        },
+        {
+          "t": "2020-06-27",
+          "y": "149.89"
+        },
+        {
+          "t": "2020-07-08",
+          "y": "199.95"
+        },
+        {
+          "t": "2020-11-13",
+          "y": "149.89"
+        },
+        {
+          "t": "2020-11-25",
+          "y": "199.95"
+        }
+      ],
+      "labels": [
+        "2019-12-16",
+        "2020-06-27",
+        "2020-07-08",
+        "2020-11-13",
+        "2020-11-25"
+      ]
+    },
+    "backcountry": {
+      "data": [
+        {
+          "t": "2020-06-07",
+          "y": "199.95"
+        }
+      ],
+      "labels": [
+        "2020-06-07"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "199.95",
+      "sale_price": "199.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=793544",
+      "dividend": "$20.00"
+    },
+    "backcountry": {
+      "retail_price": "199.95",
+      "sale_price": "199.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1287934",
+      "availability": true
+    }
+  }
+}

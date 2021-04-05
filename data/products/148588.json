@@ -1,0 +1,128 @@
+{
+  "sku": "148588",
+  "name": "REI Co-op Men's Flash 45 Pack",
+  "image": "https://www.rei.com/media/27133100-a8e3-4ff2-b595-270b8d7b9cef",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=652492",
+  "price": "159.00",
+  "long_description": "Pack what you will for your weekend trip-the men's REI Co-op Flash 45 pack holds your load stable and steady. A contoured hipbelt and ventilated back panel let you hike cool and comfy.",
+  "gender": "male",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 15,
+    "high": 30
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "S: 18 inches, M: 19 inches",
+  "fit_waist_in": "S: 30-40 inches, M: 32-42 inches",
+  "materials": "Ripstop nylon; nylon Oxford (bluesign® approved)",
+  "dimensions": "S: 14 x 28 x 11 inches, M: 14 x 29 x 11 inches",
+  "colors": {
+    "data": [
+      "Pumpkin"
+    ],
+    "raw": "Pumpkin"
+  },
+  "sizes": {
+    "data": [
+      "S",
+      "M"
+    ],
+    "raw": "S, M"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "S",
+        "val": 43,
+        "raw": "43 liters"
+      },
+      {
+        "key": "M",
+        "val": 45,
+        "raw": "45 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "S: 43 liters, M: 45 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "S",
+        "val": 39.5,
+        "raw": "2 lbs. 7.5 oz."
+      },
+      {
+        "key": "M",
+        "val": 40.5,
+        "raw": "2 lbs. 8.5 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "S: 2 lbs. 7.5 oz., M: 2 lbs. 8.5 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2019-01-10",
+          "y": "159.00"
+        },
+        {
+          "t": "2019-11-16",
+          "y": "111.29"
+        },
+        {
+          "t": "2019-11-27",
+          "y": "159.00"
+        },
+        {
+          "t": "2020-03-21",
+          "y": "119.19"
+        },
+        {
+          "t": "2020-04-01",
+          "y": "159.00"
+        },
+        {
+          "t": "2020-04-18",
+          "y": "119.19"
+        },
+        {
+          "t": "2020-04-29",
+          "y": "159.00"
+        },
+        {
+          "t": "2020-05-16",
+          "y": "79.49"
+        },
+        {
+          "t": "2020-05-27",
+          "y": "159.00"
+        }
+      ],
+      "labels": [
+        "2019-01-10",
+        "2019-11-16",
+        "2019-11-27",
+        "2020-03-21",
+        "2020-04-01",
+        "2020-04-18",
+        "2020-04-29",
+        "2020-05-16",
+        "2020-05-27"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "159.00",
+      "sale_price": "159.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=652492",
+      "dividend": "$15.90"
+    }
+  }
+}

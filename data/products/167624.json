@@ -1,0 +1,112 @@
+{
+  "sku": "167624",
+  "name": "Deuter Men's Aircontact Lite 40 + 10 Pack",
+  "image": "https://www.rei.com/media/5bcb5a2e-8ca5-408d-8d27-126fbb7d7c5f",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=797636",
+  "price": "190.00",
+  "long_description": "Balancing comfort, weight and ventilation, the Deuter Aircontact Lite 40 + 10 pack will score big points on your back. Its effective moisture transfer is ideal for long treks and high-altitude tours.",
+  "gender": "male",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 15,
+    "high": 33
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "15-20 inches",
+  "fit_waist_in": "Unavailable",
+  "materials": "600-denier polyurethane-coated ripstop polyester/100-denier high-tenacity nylon",
+  "dimensions": "29.1 x 11.8 x 8.7 inches",
+  "colors": {
+    "data": [
+      "Black/Graphite",
+      "Denim/Arctic"
+    ],
+    "raw": "Black/Graphite, Denim/Arctic"
+  },
+  "sizes": {
+    "data": [
+      "One Size"
+    ],
+    "raw": "One Size"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 50,
+        "raw": "50 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "50 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 59.2,
+        "raw": "3 lbs. 11.2 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "3 lbs. 11.2 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2020-02-14",
+          "y": "190.00"
+        },
+        {
+          "t": "2020-05-16",
+          "y": "142.49"
+        },
+        {
+          "t": "2020-05-27",
+          "y": "190.00"
+        },
+        {
+          "t": "2020-08-28",
+          "y": "142.49"
+        },
+        {
+          "t": "2020-09-09",
+          "y": "190.00"
+        },
+        {
+          "t": "2020-11-13",
+          "y": "142.49"
+        },
+        {
+          "t": "2020-11-25",
+          "y": "190.00"
+        }
+      ],
+      "labels": [
+        "2020-02-14",
+        "2020-05-16",
+        "2020-05-27",
+        "2020-08-28",
+        "2020-09-09",
+        "2020-11-13",
+        "2020-11-25"
+      ]
+    },
+    "backcountry": {
+      "data": [],
+      "labels": []
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "190.00",
+      "sale_price": "190.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=797636",
+      "dividend": "$19.00"
+    }
+  }
+}

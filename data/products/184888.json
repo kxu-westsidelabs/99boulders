@@ -1,0 +1,124 @@
+{
+  "sku": "184888",
+  "name": "Osprey Men's Kestrel 58 Pack",
+  "image": "https://www.rei.com/media/62f43adb-1887-4e07-aab9-32ee796ddec2",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=834752",
+  "price": "195.00",
+  "long_description": "Equally suited for an extended weekend in the woods or your next big thru-hike, the men's Osprey Kestrel 58 pack is a durable hauler that's ready to scramble up peaks, explore dense brush and more.",
+  "gender": "male",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 30,
+    "high": 45
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "M/L: 19-23 inches, S/M: 16-20 inches",
+  "fit_waist_in": "M/L: 28-50 inches, S/M: 26-45 inches",
+  "materials": "Nylon",
+  "dimensions": "M/L: 30 x 14 x 13.5 inches, S/M: 28 x 14 x 13.5 inches",
+  "colors": {
+    "data": [
+      "Black",
+      "Picholine Green"
+    ],
+    "raw": "Black, Picholine Green"
+  },
+  "sizes": {
+    "data": [
+      "S/M",
+      "M/L"
+    ],
+    "raw": "S/M, M/L"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "S/M",
+        "val": 56,
+        "raw": "56 liters"
+      },
+      {
+        "key": "M/L",
+        "val": 58,
+        "raw": "58 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "M/L: 58 liters, S/M: 56 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "S/M",
+        "val": 60,
+        "raw": "3 lbs. 12 oz."
+      },
+      {
+        "key": "M/L",
+        "val": 62,
+        "raw": "3 lbs. 14 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "M/L: 3 lbs. 14 oz., S/M: 3 lbs. 12 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2021-02-13",
+          "y": "195.00"
+        }
+      ],
+      "labels": [
+        "2021-02-13"
+      ]
+    },
+    "backcountry": {
+      "data": [
+        {
+          "t": "2021-01-19",
+          "y": "194.95"
+        }
+      ],
+      "labels": [
+        "2021-01-19"
+      ]
+    },
+    "osprey": {
+      "data": [
+        {
+          "t": "2021-01-08",
+          "y": "195.00"
+        }
+      ],
+      "labels": [
+        "2021-01-08"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "195.00",
+      "sale_price": "195.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=834752",
+      "dividend": "$19.50"
+    },
+    "backcountry": {
+      "retail_price": "194.95",
+      "sale_price": "194.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1302771",
+      "availability": true
+    },
+    "osprey": {
+      "retail_price": "195.00",
+      "sale_price": "195.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=6969&pw=179682&mi=16517&pt=3&pri=1469",
+      "availability": true,
+      "stock": "31"
+    }
+  }
+}

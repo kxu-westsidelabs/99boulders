@@ -1,0 +1,246 @@
+{
+  "sku": "165338",
+  "name": "Gregory Women's Maven 45 Pack",
+  "image": "https://www.rei.com/media/990733f0-a89b-4a8e-98e0-a7ae80eaf556",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=793545",
+  "price": "199.95",
+  "long_description": "When it's time to escape, the women's Gregory Maven 45 pack makes short work of long treks to distant campsites. Ample pockets stash your gear while the breathable, adjustable suspension adds comfort.",
+  "gender": "female",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 20,
+    "high": 40
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "S/M: 15-19 inches, XS/S: 14-17 inches",
+  "fit_waist_in": "S/M: 25-48 inches, XS/S: 24-46 inches",
+  "materials": "Nylon/polyester",
+  "dimensions": "28.3 x 14.2 x 10 inches",
+  "colors": {
+    "data": [
+      "Helium Grey",
+      "Rosewood Red"
+    ],
+    "raw": "Helium Grey, Rosewood Red"
+  },
+  "sizes": {
+    "data": [
+      "XS/S",
+      "S/M"
+    ],
+    "raw": "XS/S, S/M"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 45,
+        "raw": "45 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "45 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 53,
+        "raw": "3 lbs. 5 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "3 lbs. 5 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2019-12-16",
+          "y": "199.95"
+        },
+        {
+          "t": "2020-06-27",
+          "y": "149.89"
+        },
+        {
+          "t": "2020-07-08",
+          "y": "199.95"
+        },
+        {
+          "t": "2020-11-13",
+          "y": "149.89"
+        },
+        {
+          "t": "2020-11-25",
+          "y": "199.95"
+        }
+      ],
+      "labels": [
+        "2019-12-16",
+        "2020-06-27",
+        "2020-07-08",
+        "2020-11-13",
+        "2020-11-25"
+      ]
+    },
+    "backcountry": {
+      "data": [
+        {
+          "t": "2017-02-23",
+          "y": "180.00"
+        },
+        {
+          "t": "2017-07-01",
+          "y": "179.95"
+        },
+        {
+          "t": "2018-03-09",
+          "y": "143.96"
+        },
+        {
+          "t": "2018-03-10",
+          "y": "179.95"
+        },
+        {
+          "t": "2018-05-10",
+          "y": "143.96"
+        },
+        {
+          "t": "2018-05-13",
+          "y": "179.95"
+        },
+        {
+          "t": "2018-05-24",
+          "y": "134.96"
+        },
+        {
+          "t": "2018-05-29",
+          "y": "179.95"
+        },
+        {
+          "t": "2018-09-01",
+          "y": "142.92"
+        },
+        {
+          "t": "2018-09-07",
+          "y": "179.95"
+        },
+        {
+          "t": "2018-10-24",
+          "y": "143.96"
+        },
+        {
+          "t": "2018-11-19",
+          "y": "134.96"
+        },
+        {
+          "t": "2018-11-28",
+          "y": "143.96"
+        },
+        {
+          "t": "2018-11-29",
+          "y": "179.95"
+        },
+        {
+          "t": "2020-01-24",
+          "y": "134.96"
+        },
+        {
+          "t": "2020-01-30",
+          "y": "124.95"
+        },
+        {
+          "t": "2020-02-08",
+          "y": "114.06"
+        },
+        {
+          "t": "2020-02-12",
+          "y": "109.96"
+        },
+        {
+          "t": "2020-02-18",
+          "y": "89.99"
+        },
+        {
+          "t": "2020-02-23",
+          "y": "99.99"
+        },
+        {
+          "t": "2020-02-26",
+          "y": "89.99"
+        },
+        {
+          "t": "2020-03-13",
+          "y": "109.99"
+        },
+        {
+          "t": "2020-03-15",
+          "y": "114.95"
+        },
+        {
+          "t": "2020-03-29",
+          "y": "89.95"
+        },
+        {
+          "t": "2020-05-21",
+          "y": "199.95"
+        },
+        {
+          "t": "2020-07-10",
+          "y": "143.96"
+        },
+        {
+          "t": "2020-07-22",
+          "y": "199.95"
+        }
+      ],
+      "labels": [
+        "2017-02-23",
+        "2017-07-01",
+        "2018-03-09",
+        "2018-03-10",
+        "2018-05-10",
+        "2018-05-13",
+        "2018-05-24",
+        "2018-05-29",
+        "2018-09-01",
+        "2018-09-07",
+        "2018-10-24",
+        "2018-11-19",
+        "2018-11-28",
+        "2018-11-29",
+        "2020-01-24",
+        "2020-01-30",
+        "2020-02-08",
+        "2020-02-12",
+        "2020-02-18",
+        "2020-02-23",
+        "2020-02-26",
+        "2020-03-13",
+        "2020-03-15",
+        "2020-03-29",
+        "2020-05-21",
+        "2020-07-10",
+        "2020-07-22"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "199.95",
+      "sale_price": "199.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=793545",
+      "dividend": "$20.00"
+    },
+    "backcountry": {
+      "retail_price": "199.95",
+      "sale_price": "199.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1182151",
+      "availability": true
+    }
+  }
+}

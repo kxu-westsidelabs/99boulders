@@ -1,0 +1,136 @@
+{
+  "sku": "159408",
+  "name": "Gregory Men's Paragon 58 Pack",
+  "image": "https://www.rei.com/media/5b9623d4-dbd0-4479-82f7-28aa83132774",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=792271",
+  "price": "229.95",
+  "long_description": "Stay light on your feet with the men's Gregory Paragon 58 pack. An adjustable FreeFloat dynamic suspension moves with your body  so you stay balanced across steep traverses and through slot canyons.",
+  "gender": "male",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 30,
+    "high": 50
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "M/L: 18-22 inches, S/M: 16-20 inches",
+  "fit_waist_in": "M/L: 29 - 51 inches, S/M: 27 - 46 inches",
+  "materials": "100-, 210-, and 420-denier high-density nylon/135-denier high-density 50% recycled polyester",
+  "dimensions": "M/L: 28 x 14 x 11.5 inches, S/M: 26 x 14 x 11.5 inches",
+  "colors": {
+    "data": [
+      "Burnt Olive",
+      "Graphite Blue"
+    ],
+    "raw": "Burnt Olive, Graphite Blue"
+  },
+  "sizes": {
+    "data": [
+      "S/M",
+      "M/L"
+    ],
+    "raw": "S/M, M/L"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "S/M",
+        "val": 55,
+        "raw": "55 liters"
+      },
+      {
+        "key": "M/L",
+        "val": 58,
+        "raw": "58 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "M/L: 58 liters, S/M: 55 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "S/M",
+        "val": 55,
+        "raw": "3 lbs. 7 oz."
+      },
+      {
+        "key": "M/L",
+        "val": 57,
+        "raw": "3 lbs. 9 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "M/L: 3 lbs. 9 oz., S/M: 3 lbs. 7 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2019-10-28",
+          "y": "229.95"
+        },
+        {
+          "t": "2020-06-27",
+          "y": "172.39"
+        },
+        {
+          "t": "2020-07-08",
+          "y": "229.95"
+        },
+        {
+          "t": "2020-11-13",
+          "y": "172.39"
+        },
+        {
+          "t": "2020-11-25",
+          "y": "229.95"
+        }
+      ],
+      "labels": [
+        "2019-10-28",
+        "2020-06-27",
+        "2020-07-08",
+        "2020-11-13",
+        "2020-11-25"
+      ]
+    },
+    "backcountry": {
+      "data": [
+        {
+          "t": "2020-01-16",
+          "y": "229.95"
+        },
+        {
+          "t": "2020-03-20",
+          "y": "172.46"
+        },
+        {
+          "t": "2020-03-24",
+          "y": "229.95"
+        }
+      ],
+      "labels": [
+        "2020-01-16",
+        "2020-03-20",
+        "2020-03-24"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "229.95",
+      "sale_price": "229.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=792271",
+      "dividend": "$23.00"
+    },
+    "backcountry": {
+      "retail_price": "229.95",
+      "sale_price": "229.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1280447",
+      "availability": true
+    }
+  }
+}

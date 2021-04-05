@@ -1,0 +1,166 @@
+{
+  "sku": "145640",
+  "name": "Gregory Men's Zulu 65 Pack",
+  "image": "https://www.rei.com/media/1dff3371-b592-47eb-8071-ffeb78baef7d",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=651065",
+  "price": "229.95",
+  "long_description": "Combining week-long volume with a streamlined profile and ventilated, adjustable FreeFloat suspension, the men's Gregory Zulu 65 pack offers year-round hauling for your backcountry adventures.",
+  "gender": "male",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 20,
+    "high": 40
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "M/L: 18-22 inches, S/M: 16-20 inches",
+  "fit_waist_in": "M/L: 29-51 inches, S/M: 27-46 inches",
+  "materials": "210-denier nylon/210-denier high-tenacity nylon",
+  "dimensions": "M/L: 30 x 13.25 x 13 inches, S/M: 28 x 13.25 x 13 inches",
+  "colors": {
+    "data": [
+      "Empire Blue",
+      "Mantis Green"
+    ],
+    "raw": "Empire Blue, Mantis Green"
+  },
+  "sizes": {
+    "data": [
+      "S/M",
+      "M/L"
+    ],
+    "raw": "S/M, M/L"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "S/M",
+        "val": 63,
+        "raw": "63 liters"
+      },
+      {
+        "key": "M/L",
+        "val": 65,
+        "raw": "65 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "M/L: 65 liters, S/M: 63 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "S/M",
+        "val": 58.9,
+        "raw": "3 lbs. 10.9 oz."
+      },
+      {
+        "key": "M/L",
+        "val": 59.4,
+        "raw": "3 lbs. 11.4 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "M/L: 3 lbs. 11.4 oz., S/M: 3 lbs. 10.9 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2018-12-18",
+          "y": "229.95"
+        },
+        {
+          "t": "2019-05-18",
+          "y": "172.39"
+        },
+        {
+          "t": "2019-05-29",
+          "y": "229.95"
+        },
+        {
+          "t": "2020-05-16",
+          "y": "172.39"
+        },
+        {
+          "t": "2020-05-27",
+          "y": "229.95"
+        },
+        {
+          "t": "2020-06-27",
+          "y": "172.39"
+        },
+        {
+          "t": "2020-07-08",
+          "y": "229.95"
+        }
+      ],
+      "labels": [
+        "2018-12-18",
+        "2019-05-18",
+        "2019-05-29",
+        "2020-05-16",
+        "2020-05-27",
+        "2020-06-27",
+        "2020-07-08"
+      ]
+    },
+    "backcountry": {
+      "data": [
+        {
+          "t": "2019-02-01",
+          "y": "229.95"
+        },
+        {
+          "t": "2019-05-18",
+          "y": "172.46"
+        },
+        {
+          "t": "2019-06-13",
+          "y": "229.95"
+        },
+        {
+          "t": "2020-03-20",
+          "y": "172.46"
+        },
+        {
+          "t": "2020-03-24",
+          "y": "229.95"
+        },
+        {
+          "t": "2020-05-18",
+          "y": "172.46"
+        },
+        {
+          "t": "2020-05-26",
+          "y": "229.95"
+        }
+      ],
+      "labels": [
+        "2019-02-01",
+        "2019-05-18",
+        "2019-06-13",
+        "2020-03-20",
+        "2020-03-24",
+        "2020-05-18",
+        "2020-05-26"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "229.95",
+      "sale_price": "229.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=651065",
+      "dividend": "$23.00"
+    },
+    "backcountry": {
+      "retail_price": "229.95",
+      "sale_price": "229.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1257805",
+      "availability": true
+    }
+  }
+}

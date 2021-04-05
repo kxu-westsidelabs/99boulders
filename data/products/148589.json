@@ -1,0 +1,140 @@
+{
+  "sku": "148589",
+  "name": "REI Co-op Men's Flash 55 Pack",
+  "image": "https://www.rei.com/media/ae61a09f-7802-49f7-822d-da051422911b",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=651176",
+  "price": "199.00",
+  "long_description": "Loaded for a week or stripped down for an overnighter, the men's REI Co-op Flash 55 pack keeps your load stable and steady. Seamlessly integrated suspension makes your hike cool and comfortable.",
+  "gender": "male",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 15,
+    "high": 30
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "S: 18 inches, M: 19 inches, L: 20 inches",
+  "fit_waist_in": "S: 30-40 inches, M: 32-42 inches, L: 34-46 inches",
+  "materials": "100-denier ripstop nylon main body; 420-denier nylon bottom",
+  "dimensions": "S: 14 x 29 x 12 inches, M: 14 x 30 x 12 inches, L: 14 x 31 x 12 inches",
+  "colors": {
+    "data": [
+      "Asphalt",
+      "Olive Oil"
+    ],
+    "raw": "Asphalt, Olive Oil"
+  },
+  "sizes": {
+    "data": [
+      "S",
+      "M",
+      "L"
+    ],
+    "raw": "S, M, L"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "S",
+        "val": 53,
+        "raw": "53 liters"
+      },
+      {
+        "key": "M",
+        "val": 55,
+        "raw": "55 liters"
+      },
+      {
+        "key": "L",
+        "val": 57,
+        "raw": "57 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "S: 53 liters, M: 55 liters, L: 57 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "S",
+        "val": 41,
+        "raw": "2 lbs. 9 oz."
+      },
+      {
+        "key": "M",
+        "val": 42,
+        "raw": "2 lbs. 10 oz."
+      },
+      {
+        "key": "L",
+        "val": 43,
+        "raw": "2 lbs. 11 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "S: 2 lbs. 9 oz., M: 2 lbs. 10 oz., L: 2 lbs. 11 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2018-12-20",
+          "y": "199.00"
+        },
+        {
+          "t": "2019-11-16",
+          "y": "139.29"
+        },
+        {
+          "t": "2019-11-27",
+          "y": "199.00"
+        },
+        {
+          "t": "2020-03-21",
+          "y": "149.19"
+        },
+        {
+          "t": "2020-04-01",
+          "y": "199.00"
+        },
+        {
+          "t": "2020-04-18",
+          "y": "149.19"
+        },
+        {
+          "t": "2020-04-29",
+          "y": "199.00"
+        },
+        {
+          "t": "2020-05-16",
+          "y": "139.29"
+        },
+        {
+          "t": "2020-05-27",
+          "y": "199.00"
+        }
+      ],
+      "labels": [
+        "2018-12-20",
+        "2019-11-16",
+        "2019-11-27",
+        "2020-03-21",
+        "2020-04-01",
+        "2020-04-18",
+        "2020-04-29",
+        "2020-05-16",
+        "2020-05-27"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "199.00",
+      "sale_price": "199.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=651176",
+      "dividend": "$19.90"
+    }
+  }
+}

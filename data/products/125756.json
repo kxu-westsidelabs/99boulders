@@ -1,0 +1,225 @@
+{
+  "sku": "125756",
+  "name": "Gregory Men's Baltoro 95 Pro Pack",
+  "image": "https://www.rei.com/media/101c35ba-1710-4968-a955-0b552cb4f8cc",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631940",
+  "price": "379.95",
+  "long_description": "Backpack with the best of 'em by carrying your gear in the feature-rich Gregory Baltoro 95 Pro pack. It's optimized for comfort and offers space for everything you need for a multiday excursion.",
+  "gender": "male",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 55,
+    "high": 75
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "S: 16 - 18 inches, M: 18 - 20 inches",
+  "fit_waist_in": "S: 27 - 47 inches, M: 28 - 48 inches",
+  "materials": "210-denier Honeycomb CryptoRip HD/210-denier high-tenacity nylon",
+  "dimensions": "S: 30 x 14 x 14 inches, M: 32 x 14 x 14 inches",
+  "colors": {
+    "data": [
+      "Volcanic Black"
+    ],
+    "raw": "Volcanic Black"
+  },
+  "sizes": {
+    "data": [
+      "S",
+      "M"
+    ],
+    "raw": "S, M"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "S",
+        "val": 92,
+        "raw": "92 liters"
+      },
+      {
+        "key": "M",
+        "val": 95,
+        "raw": "95 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "S: 92 liters, M: 95 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "S",
+        "val": 102,
+        "raw": "6 lbs. 6 oz."
+      },
+      {
+        "key": "M",
+        "val": 103.5,
+        "raw": "6 lbs. 7.5 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "S: 6 lbs. 6 oz., M: 6 lbs. 7.5 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2017-12-12",
+          "y": "379.95"
+        },
+        {
+          "t": "2018-11-10",
+          "y": "284.89"
+        },
+        {
+          "t": "2018-11-22",
+          "y": "379.95"
+        },
+        {
+          "t": "2019-11-16",
+          "y": "284.89"
+        },
+        {
+          "t": "2019-11-27",
+          "y": "379.95"
+        },
+        {
+          "t": "2020-06-27",
+          "y": "284.89"
+        },
+        {
+          "t": "2020-07-08",
+          "y": "379.95"
+        },
+        {
+          "t": "2020-08-28",
+          "y": "284.89"
+        },
+        {
+          "t": "2020-09-09",
+          "y": "379.95"
+        }
+      ],
+      "labels": [
+        "2017-12-12",
+        "2018-11-10",
+        "2018-11-22",
+        "2019-11-16",
+        "2019-11-27",
+        "2020-06-27",
+        "2020-07-08",
+        "2020-08-28",
+        "2020-09-09"
+      ]
+    },
+    "backcountry": {
+      "data": [
+        {
+          "t": "2019-01-24",
+          "y": "379.95"
+        },
+        {
+          "t": "2019-02-12",
+          "y": "284.96"
+        },
+        {
+          "t": "2019-03-03",
+          "y": "379.95"
+        },
+        {
+          "t": "2019-03-26",
+          "y": "284.96"
+        },
+        {
+          "t": "2019-03-27",
+          "y": "379.95"
+        },
+        {
+          "t": "2019-04-03",
+          "y": "284.96"
+        },
+        {
+          "t": "2019-04-22",
+          "y": "379.95"
+        },
+        {
+          "t": "2019-05-18",
+          "y": "284.96"
+        },
+        {
+          "t": "2019-05-29",
+          "y": "379.95"
+        },
+        {
+          "t": "2019-08-27",
+          "y": "284.96"
+        },
+        {
+          "t": "2019-09-12",
+          "y": "379.95"
+        },
+        {
+          "t": "2020-03-20",
+          "y": "284.96"
+        },
+        {
+          "t": "2020-03-24",
+          "y": "379.95"
+        },
+        {
+          "t": "2020-05-18",
+          "y": "284.96"
+        },
+        {
+          "t": "2020-05-26",
+          "y": "379.95"
+        },
+        {
+          "t": "2021-02-08",
+          "y": "284.96"
+        },
+        {
+          "t": "2021-03-12",
+          "y": "379.95"
+        }
+      ],
+      "labels": [
+        "2019-01-24",
+        "2019-02-12",
+        "2019-03-03",
+        "2019-03-26",
+        "2019-03-27",
+        "2019-04-03",
+        "2019-04-22",
+        "2019-05-18",
+        "2019-05-29",
+        "2019-08-27",
+        "2019-09-12",
+        "2020-03-20",
+        "2020-03-24",
+        "2020-05-18",
+        "2020-05-26",
+        "2021-02-08",
+        "2021-03-12"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "379.95",
+      "sale_price": "379.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631940",
+      "dividend": "$38.00"
+    },
+    "backcountry": {
+      "retail_price": "379.95",
+      "sale_price": "379.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1256837",
+      "availability": true
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "sku": "177497",
+  "name": "Osprey Men's Aether Plus 85 Pack",
+  "image": "https://www.rei.com/media/77634502-6497-4e7f-b03c-50f7096f450c",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=828516",
+  "price": "380.00",
+  "long_description": "In search of a customizable, perfect-fitting pack? Blaze new trails with the men's Osprey Aether Plus 85 pack. It's one of the brand's largest-volume packs-perfect for epic multiday adventures.",
+  "gender": "male",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 40,
+    "high": 70
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "S/M: 17-20 inches",
+  "fit_waist_in": "26-50 inches",
+  "materials": "210-denier nylon",
+  "dimensions": "34 x 16 x 16 inches",
+  "colors": {
+    "data": [
+      "Black",
+      "Axo Green"
+    ],
+    "raw": "Black, Axo Green"
+  },
+  "sizes": {
+    "data": [
+      "S/M"
+    ],
+    "raw": "S/M"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 85,
+        "raw": "85 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "85 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 99.7,
+        "raw": "6 lbs. 3.7 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "6 lbs. 3.7 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2020-10-11",
+          "y": "380.00"
+        }
+      ],
+      "labels": [
+        "2020-10-11"
+      ]
+    },
+    "backcountry": {
+      "data": [
+        {
+          "t": "2021-01-19",
+          "y": "379.95"
+        }
+      ],
+      "labels": [
+        "2021-01-19"
+      ]
+    },
+    "osprey": {
+      "data": [
+        {
+          "t": "2021-01-25",
+          "y": "380.00"
+        }
+      ],
+      "labels": [
+        "2021-01-25"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "380.00",
+      "sale_price": "380.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=828516",
+      "dividend": "$38.00"
+    },
+    "backcountry": {
+      "retail_price": "379.95",
+      "sale_price": "379.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1302765",
+      "availability": true
+    },
+    "osprey": {
+      "retail_price": "380.00",
+      "sale_price": "380.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=6969&pw=179682&mi=16517&pt=3&pri=1505",
+      "availability": true,
+      "stock": "62"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "sku": "184890",
+  "name": "Osprey Women's Kyte 56 Pack",
+  "image": "https://www.rei.com/media/974003a6-d146-4ee6-960e-603d310ba011",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=834753",
+  "price": "195.00",
+  "long_description": "Remote backcountry trips and thru-hikes call for gear you can count on-and the women's Osprey Kyte 56 pack delivers. Its durable design is ready for slot canyons, dense brush and more.",
+  "gender": "female",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 30,
+    "high": 40
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "S/M: 16-20 inches, XS/S: 13-17 inches",
+  "fit_waist_in": "S/M: 26-45 inches, XS/S: 24-45 inches",
+  "materials": "Nylon",
+  "dimensions": "S/M: 28 x 14 x 13.5 inches, XS/S: 26 x 14 x 13.5 inches",
+  "colors": {
+    "data": [
+      "Mulberry Purple",
+      "Siren Grey"
+    ],
+    "raw": "Mulberry Purple, Siren Grey"
+  },
+  "sizes": {
+    "data": [
+      "XS/S",
+      "S/M"
+    ],
+    "raw": "XS/S, S/M"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "XS/S",
+        "val": 54,
+        "raw": "54 liters"
+      },
+      {
+        "key": "S/M",
+        "val": 56,
+        "raw": "56 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "S/M: 56 liters, XS/S: 54 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "XS/S",
+        "val": 57,
+        "raw": "3 lbs. 9 oz."
+      },
+      {
+        "key": "S/M",
+        "val": 59,
+        "raw": "3 lbs. 11 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "S/M: 3 lbs. 11 oz., XS/S: 3 lbs. 9 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2021-02-13",
+          "y": "195.00"
+        }
+      ],
+      "labels": [
+        "2021-02-13"
+      ]
+    },
+    "backcountry": {
+      "data": [
+        {
+          "t": "2021-01-28",
+          "y": "194.95"
+        }
+      ],
+      "labels": [
+        "2021-01-28"
+      ]
+    },
+    "osprey": {
+      "data": [
+        {
+          "t": "2021-01-08",
+          "y": "195.00"
+        }
+      ],
+      "labels": [
+        "2021-01-08"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "195.00",
+      "sale_price": "195.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=834753",
+      "dividend": "$19.50"
+    },
+    "backcountry": {
+      "retail_price": "194.95",
+      "sale_price": "194.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1303242",
+      "availability": true
+    },
+    "osprey": {
+      "retail_price": "195.00",
+      "sale_price": "195.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=6969&pw=179682&mi=16517&pt=3&pri=1473",
+      "availability": true,
+      "stock": "25"
+    }
+  }
+}

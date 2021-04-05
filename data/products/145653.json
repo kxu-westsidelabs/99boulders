@@ -1,0 +1,119 @@
+{
+  "sku": "145653",
+  "name": "Gregory Women's Jade 63 Pack",
+  "image": "https://www.rei.com/media/9b0f6f34-68cc-430c-88fc-52d0ebe1a7de",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=651066",
+  "price": "229.95",
+  "long_description": "Make a week on the trail feel like an overnighter with the women's Gregory Jade 63 well-ventilated pack. This sleek, streamlined pack offers lightweight comfort for the long haul.",
+  "gender": "female",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 20,
+    "high": 40
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "S/M: 15-19 inches, XS/S: 14-17",
+  "fit_waist_in": "S/M: 27-46 inches, XS/S: 26-45",
+  "materials": "210-denier nylon/210-denier high-tenacity nylon",
+  "dimensions": "S/M: 28 x 13.25 x 13 inches, XS/S: 27 x 13.25 x 13",
+  "colors": {
+    "data": [
+      "Ethereal Grey",
+      "Mayan Teal"
+    ],
+    "raw": "Ethereal Grey, Mayan Teal"
+  },
+  "sizes": {
+    "data": [
+      "XS/S",
+      "S/M"
+    ],
+    "raw": "XS/S, S/M"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "XS/S",
+        "val": 60,
+        "raw": "60"
+      },
+      {
+        "key": "S/M",
+        "val": 63,
+        "raw": "63 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "S/M: 63 liters, XS/S: 60"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "XS/S",
+        "val": 54.6,
+        "raw": "3 lbs. 6.6 oz."
+      },
+      {
+        "key": "S/M",
+        "val": 55.7,
+        "raw": "3 lbs. 7.7 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "S/M: 3 lbs. 7.7 oz., XS/S: 3 lbs. 6.6 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2018-12-18",
+          "y": "229.95"
+        },
+        {
+          "t": "2019-05-18",
+          "y": "172.39"
+        },
+        {
+          "t": "2019-05-29",
+          "y": "229.95"
+        },
+        {
+          "t": "2020-05-16",
+          "y": "172.39"
+        },
+        {
+          "t": "2020-05-27",
+          "y": "229.95"
+        },
+        {
+          "t": "2020-06-27",
+          "y": "172.39"
+        },
+        {
+          "t": "2020-07-08",
+          "y": "229.95"
+        }
+      ],
+      "labels": [
+        "2018-12-18",
+        "2019-05-18",
+        "2019-05-29",
+        "2020-05-16",
+        "2020-05-27",
+        "2020-06-27",
+        "2020-07-08"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "229.95",
+      "sale_price": "229.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=651066",
+      "dividend": "$23.00"
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "sku": "148671",
+  "name": "REI Co-op Women's Flash 55 Pack",
+  "image": "https://www.rei.com/media/5c02bd53-2333-43dd-a261-dc7329056d4c",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=652676",
+  "price": "199.00",
+  "long_description": "The women's REI Co-op Flash 55 pack offers options to keep your load stable and steady no matter how you hike-fast and light or fully loaded. Well-integrated suspension adds carrying comfort.",
+  "gender": "female",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 15,
+    "high": 30
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "XS: 16 inches, S: 17 inches, M: 18 inches",
+  "fit_waist_in": "XS: 28-38 inches, S: 30-40 inches, M: 32-44 inches",
+  "materials": "Ripstop nylon; Oxford nylon (bluesign® approved)",
+  "dimensions": "XS: 14 x 27 x 12 inches, S: 14 x 28 x 12 inches, M: 14 x 29 x 12 inches",
+  "colors": {
+    "data": [
+      "Castlerock",
+      "Olive Oil"
+    ],
+    "raw": "Castlerock, Olive Oil"
+  },
+  "sizes": {
+    "data": [
+      "XS",
+      "S",
+      "M"
+    ],
+    "raw": "XS, S, M"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "XS",
+        "val": 53,
+        "raw": "53 liters"
+      },
+      {
+        "key": "S",
+        "val": 55,
+        "raw": "55 liters"
+      },
+      {
+        "key": "M",
+        "val": 57,
+        "raw": "57 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "XS: 53 liters, S: 55 liters, M: 57 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "XS",
+        "val": 41,
+        "raw": "2 lbs. 9 oz."
+      },
+      {
+        "key": "S",
+        "val": 42,
+        "raw": "2 lbs. 10 oz."
+      },
+      {
+        "key": "M",
+        "val": 43,
+        "raw": "2 lbs. 11 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "XS: 2 lbs. 9 oz., S: 2 lbs. 10 oz., M: 2 lbs. 11 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2019-01-12",
+          "y": "199.00"
+        },
+        {
+          "t": "2019-11-16",
+          "y": "139.29"
+        },
+        {
+          "t": "2019-11-27",
+          "y": "199.00"
+        },
+        {
+          "t": "2020-03-21",
+          "y": "149.19"
+        },
+        {
+          "t": "2020-04-01",
+          "y": "199.00"
+        },
+        {
+          "t": "2020-04-18",
+          "y": "149.19"
+        },
+        {
+          "t": "2020-04-29",
+          "y": "199.00"
+        },
+        {
+          "t": "2020-05-16",
+          "y": "139.29"
+        },
+        {
+          "t": "2020-05-27",
+          "y": "199.00"
+        }
+      ],
+      "labels": [
+        "2019-01-12",
+        "2019-11-16",
+        "2019-11-27",
+        "2020-03-21",
+        "2020-04-01",
+        "2020-04-18",
+        "2020-04-29",
+        "2020-05-16",
+        "2020-05-27"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "199.00",
+      "sale_price": "199.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=652676",
+      "dividend": "$19.90"
+    }
+  }
+}

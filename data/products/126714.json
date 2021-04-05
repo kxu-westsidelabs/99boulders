@@ -1,0 +1,279 @@
+{
+  "sku": "126714",
+  "name": "Osprey Women's Lumina 45 Pack",
+  "image": "https://www.rei.com/media/ce66993f-48eb-4c04-98c3-fdb363d0666b",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=635699",
+  "price": "250.00",
+  "long_description": "Do you love half-length toothbrushes and other ingenious ultralight backpacking hacks? You'll love the Osprey Lumina 45 women's pack. It's ventilated and strong for streamlined weekends or thru-hikes.",
+  "gender": "female",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 5,
+    "high": 20
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "XS: 14-17 inches, S: 16-19 inches, M: 18-21 inches",
+  "fit_waist_in": "XS: 24-45 inches, S: 24-45 inches, M: 27-48 inches",
+  "materials": "30D Cordura silnylon ripstop/NanoFly 210D nylon X 200D UHMWPE/ NanoFly 210D nylon X 200D UHMWPE",
+  "dimensions": "27 x 16 x 12 inches",
+  "colors": {
+    "data": [
+      "Cyan Silver"
+    ],
+    "raw": "Cyan Silver"
+  },
+  "sizes": {
+    "data": [
+      "XS",
+      "S",
+      "M"
+    ],
+    "raw": "XS, S, M"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "XS",
+        "val": 38,
+        "raw": "38 liters"
+      },
+      {
+        "key": "S",
+        "val": 41,
+        "raw": "41 liters"
+      },
+      {
+        "key": "M",
+        "val": 45,
+        "raw": "45 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "XS: 38 liters, S: 41 liters, M: 45 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "One Size",
+        "val": 28,
+        "raw": "1 lb. 12 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "1 lb. 12 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2018-02-14",
+          "y": "250.00"
+        },
+        {
+          "t": "2020-05-02",
+          "y": "187.49"
+        },
+        {
+          "t": "2020-05-27",
+          "y": "250.00"
+        },
+        {
+          "t": "2020-11-13",
+          "y": "187.49"
+        },
+        {
+          "t": "2020-12-02",
+          "y": "250.00"
+        }
+      ],
+      "labels": [
+        "2018-02-14",
+        "2020-05-02",
+        "2020-05-27",
+        "2020-11-13",
+        "2020-12-02"
+      ]
+    },
+    "backcountry": {
+      "data": [
+        {
+          "t": "2018-03-30",
+          "y": "250.00"
+        },
+        {
+          "t": "2018-05-10",
+          "y": "200.00"
+        },
+        {
+          "t": "2018-05-13",
+          "y": "250.00"
+        },
+        {
+          "t": "2018-06-28",
+          "y": "200.00"
+        },
+        {
+          "t": "2018-07-05",
+          "y": "250.00"
+        },
+        {
+          "t": "2018-07-06",
+          "y": "200.00"
+        },
+        {
+          "t": "2018-07-11",
+          "y": "250.00"
+        },
+        {
+          "t": "2018-08-24",
+          "y": "187.50"
+        },
+        {
+          "t": "2018-09-04",
+          "y": "250.00"
+        },
+        {
+          "t": "2018-11-17",
+          "y": "186.95"
+        },
+        {
+          "t": "2018-11-28",
+          "y": "250.00"
+        },
+        {
+          "t": "2018-12-19",
+          "y": "200.00"
+        },
+        {
+          "t": "2018-12-20",
+          "y": "250.00"
+        },
+        {
+          "t": "2019-08-21",
+          "y": "249.95"
+        },
+        {
+          "t": "2020-01-01",
+          "y": "250.00"
+        },
+        {
+          "t": "2020-01-14",
+          "y": "249.95"
+        },
+        {
+          "t": "2020-03-20",
+          "y": "187.46"
+        },
+        {
+          "t": "2020-03-21",
+          "y": "249.95"
+        },
+        {
+          "t": "2020-05-15",
+          "y": "187.95"
+        },
+        {
+          "t": "2020-05-26",
+          "y": "249.95"
+        },
+        {
+          "t": "2020-07-01",
+          "y": "250.00"
+        },
+        {
+          "t": "2020-11-13",
+          "y": "186.95"
+        },
+        {
+          "t": "2020-11-14",
+          "y": "250.00"
+        },
+        {
+          "t": "2021-01-01",
+          "y": "249.95"
+        }
+      ],
+      "labels": [
+        "2018-03-30",
+        "2018-05-10",
+        "2018-05-13",
+        "2018-06-28",
+        "2018-07-05",
+        "2018-07-06",
+        "2018-07-11",
+        "2018-08-24",
+        "2018-09-04",
+        "2018-11-17",
+        "2018-11-28",
+        "2018-12-19",
+        "2018-12-20",
+        "2019-08-21",
+        "2020-01-01",
+        "2020-01-14",
+        "2020-03-20",
+        "2020-03-21",
+        "2020-05-15",
+        "2020-05-26",
+        "2020-07-01",
+        "2020-11-13",
+        "2020-11-14",
+        "2021-01-01"
+      ]
+    },
+    "osprey": {
+      "data": [
+        {
+          "t": "2020-01-14",
+          "y": "250.00"
+        },
+        {
+          "t": "2020-05-09",
+          "y": "187.95"
+        },
+        {
+          "t": "2020-05-26",
+          "y": "250.00"
+        },
+        {
+          "t": "2020-11-13",
+          "y": "186.95"
+        },
+        {
+          "t": "2020-12-02",
+          "y": "250.00"
+        }
+      ],
+      "labels": [
+        "2020-01-14",
+        "2020-05-09",
+        "2020-05-26",
+        "2020-11-13",
+        "2020-12-02"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "250.00",
+      "sale_price": "250.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=635699",
+      "dividend": "$25.00"
+    },
+    "backcountry": {
+      "retail_price": "249.95",
+      "sale_price": "249.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1222260",
+      "availability": true
+    },
+    "osprey": {
+      "retail_price": "250.00",
+      "sale_price": "250.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=6969&pw=179682&mi=16517&pt=3&pri=153",
+      "availability": true,
+      "stock": "31"
+    }
+  }
+}

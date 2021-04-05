@@ -1,0 +1,156 @@
+{
+  "sku": "145651",
+  "name": "Gregory Women's Jade 38 Pack",
+  "image": "https://www.rei.com/media/dcf95859-70b5-40ee-8f88-8913410eecf8",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=651084",
+  "price": "179.95",
+  "long_description": "Ready for an overnighter or a warm-weather long weekend, the women's Gregory Jade 38 pack is designed for adventures with elevation changes and rough terrain, no matter the mileage.",
+  "gender": "female",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 15,
+    "high": 35
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "S/M: 16 - 20 inches, XS/S: 14 - 18 inches",
+  "fit_waist_in": "S/M: 27 - 46 inches, XS/S: 26 - 45 inches",
+  "materials": "210-denier nylon/210-denier high-tenacity nylon",
+  "dimensions": "S/M: 24 x 12.25 x 11 inches, XS/S: 23 x 12.25 x 11 inches",
+  "colors": {
+    "data": [
+      "Ethereal Grey",
+      "Poppy Red"
+    ],
+    "raw": "Ethereal Grey, Poppy Red"
+  },
+  "sizes": {
+    "data": [
+      "XS/S",
+      "S/M"
+    ],
+    "raw": "XS/S, S/M"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "XS/S",
+        "val": 35,
+        "raw": "35 liters"
+      },
+      {
+        "key": "S/M",
+        "val": 38,
+        "raw": "38 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "S/M: 38 liters, XS/S: 35 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "XS/S",
+        "val": 44,
+        "raw": "2 lbs. 12 oz."
+      },
+      {
+        "key": "S/M",
+        "val": 44.5,
+        "raw": "2 lbs. 12.5 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "S/M: 2 lbs. 12.5 oz., XS/S: 2 lbs. 12 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2018-12-18",
+          "y": "179.95"
+        },
+        {
+          "t": "2019-05-18",
+          "y": "134.89"
+        },
+        {
+          "t": "2019-05-29",
+          "y": "179.95"
+        },
+        {
+          "t": "2020-05-16",
+          "y": "134.89"
+        },
+        {
+          "t": "2020-05-27",
+          "y": "179.95"
+        },
+        {
+          "t": "2020-06-27",
+          "y": "134.89"
+        },
+        {
+          "t": "2020-07-08",
+          "y": "179.95"
+        }
+      ],
+      "labels": [
+        "2018-12-18",
+        "2019-05-18",
+        "2019-05-29",
+        "2020-05-16",
+        "2020-05-27",
+        "2020-06-27",
+        "2020-07-08"
+      ]
+    },
+    "backcountry": {
+      "data": [
+        {
+          "t": "2019-01-23",
+          "y": "179.95"
+        },
+        {
+          "t": "2019-05-18",
+          "y": "134.96"
+        },
+        {
+          "t": "2019-05-29",
+          "y": "179.95"
+        },
+        {
+          "t": "2020-03-20",
+          "y": "134.96"
+        },
+        {
+          "t": "2020-03-24",
+          "y": "179.95"
+        }
+      ],
+      "labels": [
+        "2019-01-23",
+        "2019-05-18",
+        "2019-05-29",
+        "2020-03-20",
+        "2020-03-24"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "179.95",
+      "sale_price": "179.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=651084",
+      "dividend": "$18.00"
+    },
+    "backcountry": {
+      "retail_price": "179.95",
+      "sale_price": "179.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1256729",
+      "availability": true
+    }
+  }
+}

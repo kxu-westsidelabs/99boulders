@@ -1,0 +1,210 @@
+{
+  "sku": "141492",
+  "name": "Osprey Women's Kyte 46 Pack",
+  "image": "https://www.rei.com/media/fd7f3d1f-91af-4f74-8947-ed624b63caed",
+  "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=649571",
+  "price": "180.00",
+  "long_description": "Rich with practical features, the women's Osprey Kyte 46 pack is a durable workhorse that's ready to carry your gear off the beaten path into rugged, unpredictable backcountry terrain.",
+  "gender": "female",
+  "age_group": "adult",
+  "category": "Camping And Hiking",
+  "sub_category": "Hiking Backpacks",
+  "product_group": "Backpacking Packs",
+  "load": {
+    "low": 20,
+    "high": 35
+  },
+  "best_used_for": "Backpacking",
+  "fit_torso_in": "S/M: 16-20 inches, XS/S: 13-17 inches",
+  "fit_waist_in": "S/M: 26-45 inches, XS/S: 24-45 inches",
+  "materials": "210-denier x 630-denier nylon dobby/500-denier nylon packcloth",
+  "dimensions": "S/M: 27.6 x 13.4 x 12.6 inches, XS/S: 25.6 x 13.4 x 12.6 inches",
+  "colors": {
+    "data": [
+      "Mulberry Purple",
+      "Icelake Green",
+      "Siren Grey"
+    ],
+    "raw": "Mulberry Purple, Icelake Green, Siren Grey"
+  },
+  "sizes": {
+    "data": [
+      "XS/S",
+      "S/M"
+    ],
+    "raw": "XS/S, S/M"
+  },
+  "volume": {
+    "data": [
+      {
+        "key": "XS/S",
+        "val": 44,
+        "raw": "44 liters"
+      },
+      {
+        "key": "S/M",
+        "val": 46,
+        "raw": "46 liters"
+      }
+    ],
+    "unit": "liters",
+    "raw": "S/M: 46 liters, XS/S: 44 liters"
+  },
+  "weight": {
+    "data": [
+      {
+        "key": "XS/S",
+        "val": 51.8,
+        "raw": "3 lbs. 3.8 oz."
+      },
+      {
+        "key": "S/M",
+        "val": 54.1,
+        "raw": "3 lbs. 6.1 oz."
+      }
+    ],
+    "unit": "oz",
+    "raw": "S/M: 3 lbs. 6.1 oz., XS/S: 3 lbs. 3.8 oz."
+  },
+  "price_history": {
+    "rei": {
+      "data": [
+        {
+          "t": "2018-11-03",
+          "y": "180.00"
+        },
+        {
+          "t": "2019-11-16",
+          "y": "134.99"
+        },
+        {
+          "t": "2019-11-27",
+          "y": "180.00"
+        },
+        {
+          "t": "2020-08-28",
+          "y": "134.99"
+        },
+        {
+          "t": "2020-09-09",
+          "y": "180.00"
+        }
+      ],
+      "labels": [
+        "2018-11-03",
+        "2019-11-16",
+        "2019-11-27",
+        "2020-08-28",
+        "2020-09-09"
+      ]
+    },
+    "backcountry": {
+      "data": [
+        {
+          "t": "2019-02-21",
+          "y": "180.00"
+        },
+        {
+          "t": "2019-08-21",
+          "y": "179.95"
+        },
+        {
+          "t": "2019-11-15",
+          "y": "134.95"
+        },
+        {
+          "t": "2019-11-27",
+          "y": "179.95"
+        },
+        {
+          "t": "2020-01-01",
+          "y": "180.00"
+        },
+        {
+          "t": "2020-01-14",
+          "y": "179.95"
+        },
+        {
+          "t": "2020-03-20",
+          "y": "134.96"
+        },
+        {
+          "t": "2020-03-21",
+          "y": "179.95"
+        },
+        {
+          "t": "2020-07-01",
+          "y": "180.00"
+        },
+        {
+          "t": "2020-08-28",
+          "y": "134.95"
+        },
+        {
+          "t": "2020-09-08",
+          "y": "180.00"
+        },
+        {
+          "t": "2021-01-01",
+          "y": "179.95"
+        }
+      ],
+      "labels": [
+        "2019-02-21",
+        "2019-08-21",
+        "2019-11-15",
+        "2019-11-27",
+        "2020-01-01",
+        "2020-01-14",
+        "2020-03-20",
+        "2020-03-21",
+        "2020-07-01",
+        "2020-08-28",
+        "2020-09-08",
+        "2021-01-01"
+      ]
+    },
+    "osprey": {
+      "data": [
+        {
+          "t": "2020-01-14",
+          "y": "180.00"
+        },
+        {
+          "t": "2020-08-28",
+          "y": "134.95"
+        },
+        {
+          "t": "2020-09-09",
+          "y": "180.00"
+        }
+      ],
+      "labels": [
+        "2020-01-14",
+        "2020-08-28",
+        "2020-09-09"
+      ]
+    }
+  },
+  "purchase_info": {
+    "rei": {
+      "retail_price": "180.00",
+      "sale_price": "180.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=649571",
+      "dividend": "$18.00"
+    },
+    "backcountry": {
+      "retail_price": "179.95",
+      "sale_price": "179.95",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1259591",
+      "availability": true
+    },
+    "osprey": {
+      "retail_price": "180.00",
+      "sale_price": "180.00",
+      "buy_link": "https://www.avantlink.com/click.php?tt=pl&ti=6969&pw=179682&mi=16517&pt=3&pri=313",
+      "availability": true,
+      "stock": "47"
+    }
+  }
+}
