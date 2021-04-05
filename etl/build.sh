@@ -32,5 +32,5 @@ while read line; do
 
     echo "\n";
 
-done < skus.txt
-#done < batch.txt
+#done < skus.txt
+done < batch.txt

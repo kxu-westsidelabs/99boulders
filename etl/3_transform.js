@@ -20,13 +20,61 @@ const LOAD = {
     126717: { low: 30, high: 50},       // osprey aura 65
     177498: { low: 30, high: 60},       // osprey ariel 55
     177499: { low: 30, high: 60},       // osprey ariel 65
-    186383: { low: 0, high: 0},         // osprey daylite plus
+    186383: { low: 5, high: 15},         // osprey daylite plus
     184887: { low: 13, high: 30},       // osprey talon 44
     164404: { low: 23.7, high: 48.5},   // osprey poco
     164405: { low: 23.89, high: 48.5},  // osprey poco plus
     125754: { low: 30, high: 50},       // gregory baltoro 65
     123205: { low: 35, high: 55},       // gregory baltoro 75
     147418: { low: 25, high: 48.5},     // deuter kid comfort active
+
+    // v1.2
+    184890: { low: 30, high: 40 },      // Osprey Women's Kyte 56 Pack
+    141492: { low: 20, high: 35 },      // Osprey Women's Kyte 46 Pack
+    126719: { low: 20, high: 40 },      // Osprey Women's Eja 58 Pack
+    126718: { low: 20, high: 40 },      // Osprey Women's Eja 48 Pack
+    142360: { low: 10, high: 25 },      // Osprey Women's Lumina 60 Pack
+    126714: { low: 5, high:  20 },      // Osprey Women's Lumina 45 Pack
+    177500: { low: 30, high: 60 },      // Osprey Women's Ariel Plus 60 Pack
+    126715: { low: 35, high: 60 },      // Osprey Women's Ariel Pro 65 Pack
+    177571: { low: 30, high: 60 },      // Osprey Women's Ariel Plus 70 Pack
+    177496: { low: 40, high: 70 },      // Osprey Men's Aether Plus 100 Pack
+    177497: { low: 40, high: 70 },      // Osprey Men's Aether Plus 85 Pack
+    177495: { low: 30, high: 60 },      // Osprey Men's Aether Plus 70 Pack
+    126710: { low: 35, high: 60 },      // Osprey Men's Aether Pro 70 Pack
+    177494: { low: 30, high: 60 },      // Osprey Men's Aether Plus 60 Pack
+    142359: { low: 10, high: 25 },      // Osprey Men's Levity 60 Pack
+    126706: { low: 5, high:  20 },      // Osprey Men's Levity 45 Pack
+    184888: { low: 30, high: 45 },      // Osprey Men's Kestrel 58 Pack
+    141491: { low: 20, high: 35 },      // Osprey Men's Kestrel 48 Pack
+    127753: { low: 30, high: 50 },      // Deuter Men's Aircontact Lite 65 + 10 Pack
+    125528: { low: 20, high: 40 },      // Deuter Men's Aircontact Lite 50 + 10 Pack
+    167624: { low: 15, high: 33 },      // Deuter Men's Aircontact Lite 40 + 10 Pack
+    127756: { low: 30, high: 50 },      // Deuter Women's Aircontact Lite 60 + 10 SL Pack
+    125529: { low: 25, high: 45 },      // Deuter Women's Aircontact Lite 45 + 10 SL Pack
+    167626: { low: 15, high: 25 },      // Deuter Women's Aircontact Lite 35 + 10 SL Pack
+    126934: { low: 30, high: 50 },      // REI Co-op Men's Traverse 70 Pack
+    185550: { low: 20, high: 40 },      // REI Co-op Men's Traverse 60 Pack
+    185561: { low: 20, high: 40 },      // REI Co-op Women's Traverse 60 Pack
+    148589: { low: 15, high: 30 },      // REI Co-op Men's Flash 55 Pack
+    148588: { low: 15, high: 30 },      // REI Co-op Men's Flash 45 Pack
+    148671: { low: 15, high: 30 },      // REI Co-op Women's Flash 55 Pack
+    168252: { low: 15, high: 35 },      // REI Co-op Women's Trailbreak 60 Pack
+    125758: { low: 30, high: 60 },      // Gregory Women's Deva 80 Pack
+    123206: { low: 35, high: 55 },      // Gregory Women's Deva 70 Pack
+    125757: { low: 30, high: 50 },      // Gregory Women's Deva 60 Pack
+    125756: { low: 55, high: 75 },      // Gregory Men's Baltoro 95 Pro Pack
+    125755: { low: 40, high: 60 },      // Gregory Men's Baltoro 85 Pack
+    165341: { low: 30, high: 50 },      // Gregory Women's Maven 65 Pack
+    159409: { low: 30, high: 50 },      // Gregory Women's Maven 55 Pack
+    165338: { low: 20, high: 40 },      // Gregory Women's Maven 45 Pack
+    165336: { low: 30, high: 50 },      // Gregory Men's Paragon 68 Pack
+    159408: { low: 30, high: 50 },      // Gregory Men's Paragon 58 Pack
+    165334: { low: 20, high: 40 },      // Gregory Men's Paragon 48 Pack
+    145640: { low: 20, high: 40 },      // Gregory Men's Zulu 65 Pack
+    145638: { low: 15, high: 35 },      // Gregory Men's Zulu 40 Pack
+    145653: { low: 20, high: 40 },      // Gregory Women's Jade 63 Pack
+    145651: { low: 15, high: 35 },      // Gregory Women's Jade 38 Pack
 
     // Not Active
     111298: { low: 10, high: 25 },    // osprey stratos 24
