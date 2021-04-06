@@ -18,7 +18,10 @@ async function main() {
 
     //const data = generateMadLibsData(products);
     //console.log(data);
-    const data = priceVsVolume(products);
+    //const data = priceVsVolume(products);
+    //console.log(JSON.stringify(data));
+
+    const data = priceVsWeight(products);
     console.log(JSON.stringify(data));
 
     /*
@@ -193,13 +196,13 @@ function priceVsVolume(products) {
             });
         }
     }
-    return { price_vs_volume : data };
+    return data;
 }
 
 // iterate over all files in ./data/products
 // fetch the weight field
 // aggregate them into a separate json object
-function createScatterData(products) {
+function priceVsWeight(products) {
     var data = [];
     for (const product of products) {
         for (const variant of product.weight.data) {
@@ -209,17 +212,14 @@ function createScatterData(products) {
 
             const lbs = convert(variant.val).from('oz').to('lb');
             data.push({
-                x: product.price,
-                y: Math.round(lbs * 100) / 100,
+                y: product.price,
+                x: Math.round(lbs * 100) / 100,
                 name: name,
             });
         }
     }
-    return {
-        weight_vs_price: data
-    };
+    return data;
 }
-
 
 function weightVsVolume(products) {
     var data = [];
