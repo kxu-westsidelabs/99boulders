@@ -213,14 +213,14 @@ function generateHTML(p1, p2) {
     </div>
 
     <!-- Scatter Plot -->
-    <h2>Packs: Weight vs. Price</h2>
+    <h2>Packs: Price vs. Weight</h2>
     <div class="scatter-weight-container">
         <canvas id="scatter-chart"></canvas>
     </div>
 
-    <h2>Packs: Weight vs. Volume</h2>
+    <h2>Packs: Price vs. Volume</h2>
     <div class="scatter-weight-container">
-        <canvas id="scatter-weight-volume-chart"></canvas>
+        <canvas id="scatter-volume-price-chart"></canvas>
     </div>
 `;
 }
@@ -308,7 +308,7 @@ function generateJS(p1, p2) {
         generateLoadChartJS(p1, p2) +
         PriceChart.generateChart(p1, p2) +
         ScatterPlot.generateChart(p1, p2) +
-        ScatterPlot.generateWeightVsVolumeChart(p1, p2) + `
+        ScatterPlot.generatePriceVsVolume(p1, p2) + `
     //--></script>`;
 }
 
