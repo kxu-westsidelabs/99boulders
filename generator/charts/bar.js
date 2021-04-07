@@ -58,7 +58,7 @@ function calculateStepSize(arr1, arr2) {
 }
 
 // TODO: how to handle empty data?
-function generateChart(chartId, label, p1, arr1, p2, arr2) {
+function generateChart(chartId, label, unit, p1, arr1, p2, arr2) {
     const stepSize = calculateStepSize(arr1, arr2);
 
     var dataset = '';
@@ -127,10 +127,18 @@ new Chart(
                 },
                 scaleLabel: {
                     display: true,
-                    labelString: "${label}",
+                    labelString: "${label} (${unit})",
                     fontSize: 16,
                 }
             }],
+        },
+        tooltips: {
+            displayColors: false,
+            callbacks: {
+                label: function(tooltipItem, all) {
+                    return '${label}: ' + tooltipItem.yLabel.toLocaleString() + ' ${unit}';
+                }
+            }
         },
         plugins: {
             datalabels: {
