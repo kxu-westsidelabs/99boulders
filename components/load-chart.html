@@ -38,13 +38,13 @@ new Chart(
                 {
                     label: "Osprey Men's Atmos AG 50 Pack",
                     data: [[25, 40]],
-                    backgroundColor: 'lightblue',
+                    backgroundColor: '#7AADE1',
                     barPercentage: 1.0,
                 },
                 {
                     label: "Osprey Men's Aether AG 50 Pack",
                     data: [[30, 50]],
-                    backgroundColor: '#6ba292',
+                    backgroundColor: '#2A70B7',
                     barPercentage: 1.0,
                 }
             ],
@@ -63,6 +63,7 @@ new Chart(
             tooltips: false,
             plugins: {
                 datalabels: {
+                    color: '#EDEDED',
                     formatter: function(value, context) {
                         var i = context.dataIndex;
                         var j = context.datasetIndex;
