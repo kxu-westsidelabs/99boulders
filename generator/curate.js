@@ -2,8 +2,8 @@ const fs = require("fs").promises;
 const convert = require('convert-units');
 const _ = require('lodash');
 
-// TODO: Run this in 99boulders/
-const BASE_URL = './data/products';
+// Run this in 99boulders/generator
+const BASE_URL = '../data/products';
 
 main();
 async function main() {
@@ -19,8 +19,8 @@ async function main() {
     //const data = priceVsVolume(products);
     //console.log(JSON.stringify(data));
 
-    const data = priceVsWeight(products);
-    console.log(JSON.stringify(data));
+    //const data = priceVsWeight(products);
+    //console.log(JSON.stringify(data));
 }
 
 async function loadProductsData(url) {
