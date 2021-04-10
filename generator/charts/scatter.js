@@ -86,8 +86,8 @@ new Chart(
                     },
                     label: function(tooltipItem, all) {
                         return [
-                            'Weight: ' + tooltipItem.xLabel.toLocaleString() + ' lbs',
                             'Price: $' + tooltipItem.yLabel.toLocaleString(),
+                            'Weight: ' + tooltipItem.xLabel.toLocaleString() + ' lbs',
                         ]
                     }
                 }
@@ -167,6 +167,8 @@ new Chart(
                         display: true,
                     },
                     ticks: {
+                        beginAtZero: true,
+                        stepSize: 50,
                         callback: function(value, index, values) {
                             return '$' + value.toLocaleString();
                         }
@@ -183,8 +185,8 @@ new Chart(
                     },
                     label: function(tooltipItem, all) {
                         return [
-                            'Volume: ' + tooltipItem.xLabel.toLocaleString() + ' L',
                             'Price: $' + tooltipItem.yLabel.toLocaleString(),
+                            'Volume: ' + tooltipItem.xLabel.toLocaleString() + ' L',
                         ]
                     }
                 }
