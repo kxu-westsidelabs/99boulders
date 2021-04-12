@@ -138,6 +138,13 @@ new Chart(
                             'month': 'MMM YY'
                         }
                     }
+                }],
+                yAxes: [{
+                    ticks: {
+                        callback: function(value, index, values) {
+                            return '$' + Math.round(value.toLocaleString());
+                        }
+                    },
                 }]
             }
         }
