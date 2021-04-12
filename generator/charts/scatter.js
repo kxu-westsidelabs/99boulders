@@ -6,6 +6,19 @@ const PRICE_VS_WEIGHT = `[{"y":"329.95","x":4.83,"name":"Gregory Men's Baltoro 7
 const PRICE_VS_VOLUME = `[{"x":72,"y":"329.95","name":"Gregory Men's Baltoro 75 Pack - S"},{"x":75,"y":"329.95","name":"Gregory Men's Baltoro 75 Pack - M"},{"x":78,"y":"329.95","name":"Gregory Men's Baltoro 75 Pack - L"},{"x":66,"y":"329.95","name":"Gregory Women's Deva 70 Pack - XS"},{"x":70,"y":"329.95","name":"Gregory Women's Deva 70 Pack - S"},{"x":74,"y":"329.95","name":"Gregory Women's Deva 70 Pack - M"},{"x":60,"y":"200.00","name":"Deuter Men's Aircontact Lite 50 + 10 Pack"},{"x":55,"y":"200.00","name":"Deuter Women's Aircontact Lite 45 + 10 SL Pack"},{"x":63,"y":"299.95","name":"Gregory Men's Baltoro 65 Pack - S"},{"x":65,"y":"299.95","name":"Gregory Men's Baltoro 65 Pack - M"},{"x":68,"y":"299.95","name":"Gregory Men's Baltoro 65 Pack - L"},{"x":80,"y":"349.95","name":"Gregory Men's Baltoro 85 Pack - S"},{"x":85,"y":"349.95","name":"Gregory Men's Baltoro 85 Pack - M"},{"x":92,"y":"379.95","name":"Gregory Men's Baltoro 95 Pro Pack - S"},{"x":95,"y":"379.95","name":"Gregory Men's Baltoro 95 Pro Pack - M"},{"x":56,"y":"299.95","name":"Gregory Women's Deva 60 Pack - XS"},{"x":60,"y":"299.95","name":"Gregory Women's Deva 60 Pack - S"},{"x":64,"y":"299.95","name":"Gregory Women's Deva 60 Pack - M"},{"x":80,"y":"349.95","name":"Gregory Women's Deva 80 Pack"},{"x":45,"y":"200.00","name":"Osprey Men's Exos 48 Pack - S"},{"x":48,"y":"200.00","name":"Osprey Men's Exos 48 Pack - M"},{"x":51,"y":"200.00","name":"Osprey Men's Exos 48 Pack - L"},{"x":42,"y":"250.00","name":"Osprey Men's Levity 45 Pack - S"},{"x":45,"y":"250.00","name":"Osprey Men's Levity 45 Pack - M"},{"x":48,"y":"250.00","name":"Osprey Men's Levity 45 Pack - L"},{"x":47,"y":"240.00","name":"Osprey Men's Atmos AG 50 Pack - S"},{"x":50,"y":"240.00","name":"Osprey Men's Atmos AG 50 Pack - M"},{"x":53,"y":"240.00","name":"Osprey Men's Atmos AG 50 Pack - L"},{"x":55,"y":"220.00","name":"Osprey Men's Exos 58 Pack - S"},{"x":58,"y":"220.00","name":"Osprey Men's Exos 58 Pack - M"},{"x":61,"y":"220.00","name":"Osprey Men's Exos 58 Pack - L"},{"x":67,"y":"375.00","name":"Osprey Men's Aether Pro 70 Pack - S"},{"x":38,"y":"250.00","name":"Osprey Women's Lumina 45 Pack - XS"},{"x":41,"y":"250.00","name":"Osprey Women's Lumina 45 Pack - S"},{"x":45,"y":"250.00","name":"Osprey Women's Lumina 45 Pack - M"},{"x":62,"y":"375.00","name":"Osprey Women's Ariel Pro 65 Pack - XS"},{"x":65,"y":"375.00","name":"Osprey Women's Ariel Pro 65 Pack - S"},{"x":68,"y":"375.00","name":"Osprey Women's Ariel Pro 65 Pack - M"},{"x":44,"y":"240.00","name":"Osprey Women's Aura AG 50 Pack - XS"},{"x":47,"y":"240.00","name":"Osprey Women's Aura AG 50 Pack - S"},{"x":50,"y":"240.00","name":"Osprey Women's Aura AG 50 Pack - M"},{"x":60,"y":"270.00","name":"Osprey Women's Aura AG 65 Pack - XS"},{"x":62,"y":"270.00","name":"Osprey Women's Aura AG 65 Pack - S"},{"x":65,"y":"270.00","name":"Osprey Women's Aura AG 65 Pack - M"},{"x":42,"y":"200.00","name":"Osprey Women's Eja 48 Pack - XS"},{"x":45,"y":"200.00","name":"Osprey Women's Eja 48 Pack - S"},{"x":52,"y":"220.00","name":"Osprey Women's Eja 58 Pack - XS"},{"x":55,"y":"220.00","name":"Osprey Women's Eja 58 Pack - S"},{"x":58,"y":"220.00","name":"Osprey Women's Eja 58 Pack - M"},{"x":66,"y":"249.00","name":"REI Co-op Men's Traverse 70 Pack - S"},{"x":75,"y":"220.00","name":"Deuter Men's Aircontact Lite 65 + 10 Pack"},{"x":70,"y":"220.00","name":"Deuter Women's Aircontact Lite 60 + 10 SL Pack"},{"x":62,"y":"270.00","name":"Osprey Men's Atmos AG 65 Pack - S"},{"x":68,"y":"270.00","name":"Osprey Men's Atmos AG 65 Pack - L"},{"x":46,"y":"180.00","name":"Osprey Men's Kestrel 48 Pack - S/M"},{"x":48,"y":"180.00","name":"Osprey Men's Kestrel 48 Pack - M/L"},{"x":44,"y":"180.00","name":"Osprey Women's Kyte 46 Pack - XS/S"},{"x":46,"y":"180.00","name":"Osprey Women's Kyte 46 Pack - S/M"},{"x":57,"y":"270.00","name":"Osprey Men's Levity 60 Pack - S"},{"x":60,"y":"270.00","name":"Osprey Men's Levity 60 Pack - M"},{"x":63,"y":"270.00","name":"Osprey Men's Levity 60 Pack - L"},{"x":54,"y":"270.00","name":"Osprey Women's Lumina 60 Pack - XS"},{"x":57,"y":"270.00","name":"Osprey Women's Lumina 60 Pack - S"},{"x":60,"y":"270.00","name":"Osprey Women's Lumina 60 Pack - M"},{"x":38,"y":"179.95","name":"Gregory Men's Zulu 40 Pack - S/M"},{"x":40,"y":"179.95","name":"Gregory Men's Zulu 40 Pack - M/L"},{"x":63,"y":"229.95","name":"Gregory Men's Zulu 65 Pack - S/M"},{"x":65,"y":"229.95","name":"Gregory Men's Zulu 65 Pack - M/L"},{"x":35,"y":"179.95","name":"Gregory Women's Jade 38 Pack - XS/S"},{"x":38,"y":"179.95","name":"Gregory Women's Jade 38 Pack - S/M"},{"x":60,"y":"229.95","name":"Gregory Women's Jade 63 Pack - XS/S"},{"x":63,"y":"229.95","name":"Gregory Women's Jade 63 Pack - S/M"},{"x":43,"y":"159.00","name":"REI Co-op Men's Flash 45 Pack - S"},{"x":45,"y":"159.00","name":"REI Co-op Men's Flash 45 Pack - M"},{"x":53,"y":"199.00","name":"REI Co-op Men's Flash 55 Pack - S"},{"x":55,"y":"199.00","name":"REI Co-op Men's Flash 55 Pack - M"},{"x":57,"y":"199.00","name":"REI Co-op Men's Flash 55 Pack - L"},{"x":53,"y":"199.00","name":"REI Co-op Women's Flash 55 Pack - XS"},{"x":55,"y":"199.00","name":"REI Co-op Women's Flash 55 Pack - S"},{"x":57,"y":"199.00","name":"REI Co-op Women's Flash 55 Pack - M"},{"x":55,"y":"229.95","name":"Gregory Men's Paragon 58 Pack - S/M"},{"x":58,"y":"229.95","name":"Gregory Men's Paragon 58 Pack - M/L"},{"x":52,"y":"229.95","name":"Gregory Women's Maven 55 Pack - XS/S"},{"x":55,"y":"229.95","name":"Gregory Women's Maven 55 Pack - S/M"},{"x":20,"y":"290.00","name":"Osprey Poco Child Carrier"},{"x":26,"y":"330.00","name":"Osprey Poco Plus Child Carrier"},{"x":48,"y":"199.95","name":"Gregory Men's Paragon 48 Pack"},{"x":68,"y":"249.95","name":"Gregory Men's Paragon 68 Pack"},{"x":45,"y":"199.95","name":"Gregory Women's Maven 45 Pack"},{"x":65,"y":"249.95","name":"Gregory Women's Maven 65 Pack"},{"x":50,"y":"190.00","name":"Deuter Men's Aircontact Lite 40 + 10 Pack"},{"x":45,"y":"190.00","name":"Deuter Women's Aircontact Lite 35 + 10 SL Pack"},{"x":60,"y":"149.00","name":"REI Co-op Women's Trailbreak 60 Pack"},{"x":55,"y":"260.00","name":"Osprey Men's Aether 55 Pack"},{"x":65,"y":"280.00","name":"Osprey Men's Aether 65 Pack"},{"x":58,"y":"340.00","name":"Osprey Men's Aether Plus 60 Pack - S/M"},{"x":60,"y":"340.00","name":"Osprey Men's Aether Plus 60 Pack - L/XL"},{"x":68,"y":"360.00","name":"Osprey Men's Aether Plus 70 Pack - S/M"},{"x":98,"y":"390.00","name":"Osprey Men's Aether Plus 100 Pack - S/M"},{"x":100,"y":"390.00","name":"Osprey Men's Aether Plus 100 Pack - L/XL"},{"x":85,"y":"380.00","name":"Osprey Men's Aether Plus 85 Pack"},{"x":55,"y":"260.00","name":"Osprey Women's Ariel 55 Pack"},{"x":65,"y":"280.00","name":"Osprey Women's Ariel 65 Pack"},{"x":58,"y":"340.00","name":"Osprey Women's Ariel Plus 60 Pack - XS/S"},{"x":60,"y":"340.00","name":"Osprey Women's Ariel Plus 60 Pack - M/L"},{"x":70,"y":"360.00","name":"Osprey Women's Ariel Plus 70 Pack"},{"x":42,"y":"180.00","name":"Osprey Men's Talon 44 Pack - S/M"},{"x":44,"y":"180.00","name":"Osprey Men's Talon 44 Pack - L/XL"},{"x":56,"y":"195.00","name":"Osprey Men's Kestrel 58 Pack - S/M"},{"x":58,"y":"195.00","name":"Osprey Men's Kestrel 58 Pack - M/L"},{"x":54,"y":"195.00","name":"Osprey Women's Kyte 56 Pack - XS/S"},{"x":56,"y":"195.00","name":"Osprey Women's Kyte 56 Pack - S/M"},{"x":58,"y":"229.00","name":"REI Co-op Men's Traverse 60 Pack - S"},{"x":60,"y":"229.00","name":"REI Co-op Men's Traverse 60 Pack - M"},{"x":62,"y":"229.00","name":"REI Co-op Men's Traverse 60 Pack - L"},{"x":62,"y":"229.00","name":"REI Co-op Men's Traverse 60 Pack - L Torso x S Hipbelt"},{"x":58,"y":"229.00","name":"REI Co-op Women's Traverse 60 Pack - XS"},{"x":58,"y":"229.00","name":"REI Co-op Women's Traverse 60 Pack - XS Torso x M Hipbelt"},{"x":60,"y":"229.00","name":"REI Co-op Women's Traverse 60 Pack - S"},{"x":62,"y":"229.00","name":"REI Co-op Women's Traverse 60 Pack - M"},{"x":20,"y":"70.00","name":"Osprey Daylite Plus Pack"}]`;
 
 function generatePriceVsWeight(p1, p2) {
+
+    // re-order the data so that the compared products are rendered LAST
+    // to prevent overlaps
+    const data = JSON.parse(PRICE_VS_WEIGHT);
+    var background = [];
+    var products = [];
+    for (var i = 0; i < data.length; i++) {
+        (data[i].name.includes(p1.name) || data[i].name.includes(p2.name)) ?
+            products.push(data[i]) :
+            background.push(data[i]);
+    }
+    const merged = background.concat(products);
+
     return `
 new Chart(
     document.getElementById('scatter-price-weight-chart').getContext("2d"),
@@ -14,7 +27,7 @@ new Chart(
         data: {
             datasets: [{
                 label: 'Pack Weight vs. Price',
-                data: ${PRICE_VS_WEIGHT},
+                data: ${JSON.stringify(merged)},
                 backgroundColor: function(context) {
                     var index = context.dataIndex;
                     var value = context.dataset.data[index];
@@ -105,6 +118,18 @@ new Chart(
 
 function generatePriceVsVolume(p1, p2) {
 
+    // re-order the data so that the compared products are rendered LAST
+    // to prevent overlaps
+    const data = JSON.parse(PRICE_VS_VOLUME);
+    var background = [];
+    var products = [];
+    for (var i = 0; i < data.length; i++) {
+        (data[i].name.includes(p1.name) || data[i].name.includes(p2.name)) ?
+            products.push(data[i]) :
+            background.push(data[i]);
+    }
+    const merged = background.concat(products);
+
     return `
 new Chart(
     document.getElementById('scatter-price-volume-chart').getContext("2d"),
@@ -113,7 +138,7 @@ new Chart(
         data: {
             datasets: [{
                 label: 'Pack Volume vs. Price',
-                data: ${PRICE_VS_VOLUME},
+                data: ${JSON.stringify(merged)},
                 backgroundColor: function(context) {
                     var index = context.dataIndex;
                     var value = context.dataset.data[index];
