@@ -4,11 +4,26 @@ const ScatterPlot = require("./charts/scatter.js");
 const fs = require("fs").promises;
 const convert = require('convert-units');
 
-(async function() {
+/*
+main();
+async function main() {
     try {
         const sku1 = process.argv[2];
         const sku2 = process.argv[3];
+        const html = await generate(sku1, sku2);
+        console.log(html);
+    } catch (err) {
+        console.log("ERR:", err);
+    }
+}
+*/
 
+/************************************************
+ * Entry Point
+ ***********************************************/
+
+async function generate(sku1, sku2) {
+    try {
         const p1 = JSON.parse(
             await fs.readFile(`../data/products/${sku1}.json`, "utf-8")
         );
@@ -17,13 +32,11 @@ const convert = require('convert-units');
         );
 
         const html = generateHTML(p1, p2) + generateJS(p1, p2);
-        console.log(html);
-
+        return html;
     } catch (err) {
         console.log(err);
     }
-
-})();
+}
 
 /************************************************
  * Madlibs
@@ -38,7 +51,7 @@ const CPL_PREMIUM = 5.25;
 function madlibsIntro(product) {
     var numVariants = "one size";
     if (product.sizes.data.length === 2) {
-        numVariants = `two variations (${product.sizes.data.join(", ")})`;
+        numVariants = `two sizes (${product.sizes.data.join(", ")})`;
     }
     if (product.sizes.data.length === 3) {
         numVariants = `three sizes (${product.sizes.data.join(", ")})`;
@@ -52,7 +65,7 @@ function madlibsIntro(product) {
     }
 
     const bestUsedFor = (product.best_used_for == 'Hiking') ? "hiking" : "backpacking";
-    return `${product.name} is a ${segment} ${bestUsedFor} pack that comes in ${numVariants}`;
+    return `${product.name} is a ${segment} ${bestUsedFor} backpack that comes in ${numVariants}`;
 }
 
 
@@ -62,7 +75,7 @@ function madlibsIntro(product) {
  * The lightest Osprey Women's Aura AG 50 Pack weighs 4 ounces less than the lightest Osprey Women's Aura AG 65 Pack."
  */
 function madlibsWeight(p1, p2) {
-    var madlib = `<p>See the weight difference between the ${p1.name} and ${p2.name}.</p>`;
+    var madlib = `<p>See the weight difference between the ${p1.name} vs ${p2.name}.</p>`;
 
     try {
         const w1_lbs = convert(p1.weight.data[0].val).from('oz').to('lb');
@@ -72,8 +85,8 @@ function madlibsWeight(p1, p2) {
         const w2_kg = convert(p2.weight.data[0].val).from('oz').to('kg');
 
         const diff_oz = Math.round(
-            ((p1.weight.data[0].val - p2.weight.data[0].val) + Number.EPSILON) * 100 / 100
-        );
+            (p1.weight.data[0].val - p2.weight.data[0].val) * 100
+        ) / 100;
         const adjective = (diff_oz > 0) ? 'more' : 'less';
         if (w1_lbs === w2_lbs) {
             madlib += `<p>The ${p1.name} and ${p2.name} both weigh ${w1_lbs} lbs (${w1_kg} kg)</p>`;
@@ -92,7 +105,7 @@ function madlibsWeight(p1, p2) {
  * The smallest Osprey Women's Aura AG 50 Pack holds 4 liters less than the smallest Osprey Women's Aura AG 65 Pack."
  */
 function madlibsVolume(p1, p2) {
-    var madlib = `<p>See how much gear each pack carries.</p>`;
+    var madlib = `<p>See how much gear each pack carries:</p>`;
     try {
         const v1_l = p1.volume.data[0].val;
         const v2_l = p2.volume.data[0].val;
@@ -101,9 +114,9 @@ function madlibsVolume(p1, p2) {
         const adjective = (diff_liters > 0) ? 'more' : 'less';
 
         if (v1_l === v2_l) {
-            madlib += `<p>The ${p1.name} and ${p2.name} both hold ${v1_l} liters.</p>`;
+            madlib = `<p>The ${p1.name} and ${p2.name} both hold ${v1_l} liters.</p>` + madlib;
         } else {
-            madlib += `<p>The smallest size ${p1.name} holds <b>${Math.abs(diff_liters)} liters ${adjective}</b> than the smallest version of the ${p2.name}.</p>`;
+            madlib = `<p>The smallest size ${p1.name} holds <b>${Math.abs(diff_liters)} liters ${adjective}</b> than the smallest size of the ${p2.name}.</p>` + madlib;
         }
         return madlib;
     } catch (err) {
@@ -115,7 +128,7 @@ function madlibsPriceTable(p1, p2) {
     const price1 = parseFloat(p1.price);
     const price2 = parseFloat(p2.price);
 
-    const diff = Math.round((price1 - price2) * 100 / 100);
+    const diff = Math.round((price1 - price2) * 100) / 100;
     const adjective = (diff > 0) ? 'more' : 'less';
 
     if (price1 == price2) {
@@ -201,8 +214,8 @@ function generateHTML(p1, p2, madlibs) {
                 <!-- Full-Text -->
                 <tr>
                     <td>Gender</td>
-                    <td>${p1.gender.charAt(0).toUpperCase() + p1.gender.slice(1)}</td>
-                    <td>${p2.gender.charAt(0).toUpperCase() + p2.gender.slice(1)}</td>
+                    <td>${(p1.gender === "female") ? "Women's" : "Men's"}</td>
+                    <td>${(p2.gender === "female") ? "Women's" : "Men's"}</td>
                 </tr>
                 <tr>
                     <td>Fit - Waist</td>
@@ -475,3 +488,7 @@ new Chart(
     }
 );`;
 }
+
+module.exports = {
+    generate
+};
