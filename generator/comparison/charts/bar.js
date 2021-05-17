@@ -1,5 +1,3 @@
-const convert = require("./convert.js");
-
 const BREAKPOINT = 900;
 const MOBILE_FONTSIZE = 10;
 const DESKTOP_FONTSIZE = 16;

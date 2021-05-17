@@ -25,10 +25,10 @@ async function main() {
 async function generate(sku1, sku2) {
     try {
         const p1 = JSON.parse(
-            await fs.readFile(`../data/products/${sku1}.json`, "utf-8")
+            await fs.readFile(`../../data/products/${sku1}.json`, "utf-8")
         );
         const p2 = JSON.parse(
-            await fs.readFile(`../data/products/${sku2}.json`, "utf-8")
+            await fs.readFile(`../../data/products/${sku2}.json`, "utf-8")
         );
 
         const html = generateHTML(p1, p2) + generateJS(p1, p2);
