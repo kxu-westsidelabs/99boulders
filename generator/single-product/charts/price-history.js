@@ -1,39 +1,10 @@
 const fs = require("fs").promises;
 
-/*
-(async function() {
-    const sku1 = process.argv[2];
-    const sku2 = process.argv[3];
-    const p1 = JSON.parse(
-        await fs.readFile(`../data/products/${sku1}.json`, "utf-8")
-    );
-    const p2 = JSON.parse(
-        await fs.readFile(`../data/products/${sku2}.json`, "utf-8")
-    );
-    console.log(
-        generateChart(p1, p2)
-    );
-})();
-*/
-
-function generateChart(p1, p2) {
+function generateChart(p1) {
     return `
-var currentValue = 'price1';
-function handleClick(myRadio) {
-    var hide = document.getElementById(currentValue);
-    hide.style.display = 'none';
-
-    var show = document.getElementById(myRadio.value);
-    show.style.display = 'block';
-
-    currentValue = myRadio.value;
-}
-
 const p1 = JSON.parse('${JSON.stringify(p1.price_history)}');
-const p2 = JSON.parse('${JSON.stringify(p2.price_history)}');
 
 ${generatePriceChart(p1, 'p1')}
-${generatePriceChart(p2, 'p2')}
 `;
 }
 
