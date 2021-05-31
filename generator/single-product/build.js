@@ -17,40 +17,36 @@ const SKUS = [
     184887,     // osprey talon 44
 ];
 
-main();
-
-async function main() {
-    try {
-        for (const sku of SKUS) {
-            const html = await Generator.generate(sku);
-            const fileName = await getFileName(sku);
-
-            await fs.writeFile(fileName, html);
-            console.log(`✅ ${fileName}...`);
-
-            break;
-        }
-
-    } catch (err) {
-        console.error("ERR while generating/writing vs.html", err);
+(async () => {
+    for (const sku of SKUS) {
+        await generate(sku);
     }
-
-}
+})();
 
 /**
  * Generate the file path for the sku
  * 
  * getFileName(177499) --> ./pages/osprey-men's-atmos-ag-65-pack.html
  */
-async function getFileName(sku) {
+async function generate(sku) {
     try {
-        const filePath = path.resolve(__dirname, `../../data/products/${sku}.json`);
+        // build input file path (data/products/$sku.json)
+        const filePath = path.resolve(
+            __dirname,
+            `../../data/products/${sku}.json`
+        );
         const product = JSON.parse(
             await fs.readFile(filePath, "utf-8")
         );
+
+        const html = await Generator.generate(product);
+
+        // build output file path from product name
         const name = product.name.toLowerCase().replace(/ /g, "-");
-        return `${BASE_URL}/${name}.html`;
+        const fileName = `${BASE_URL}/${name}.html`;
+
+        await fs.writeFile(fileName, html);
     } catch (err) {
-        console.log("ERR:", err);
+        console.log("ERR while generating/writing single-page html:", err);
     }
 }
