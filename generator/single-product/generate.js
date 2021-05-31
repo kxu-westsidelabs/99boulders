@@ -110,11 +110,11 @@ function generateHTML(p1, madlibs) {
             <thead>
                 <tr>
                     <th></th>
-                    <th><a href="${p1.buy_link}"><img src="${p1.image}?size=1000"></a></th>
+                    <th><a href="${p1.buy_link}&ctc=geartool"><img src="${p1.image}?size=1000"></a></th>
                 </tr>
                 <tr>
                     <th></th>
-                    <th><a href="${p1.buy_link}">${p1.name}</a></th>
+                    <th><a href="${p1.buy_link}&ctc=geartool">${p1.name}</a></th>
                 </tr>
             </thead>
             <tbody>
@@ -125,7 +125,7 @@ function generateHTML(p1, madlibs) {
                 <tr>
                     <td>Shop Online</td>
                     <td>
-                        <a class="specs-table-link" href="${p1.buy_link}">$${p1.price} at REI</a>
+                        <a class="specs-table-link" href="${p1.buy_link}&ctc=geartool">$${p1.price} at REI</a>
                     </td>
                 </tr>
                 <tr>
@@ -230,14 +230,14 @@ function generateHTML(p1, madlibs) {
                 </tr>
                 <tr>
                     <th></th>
-                    <th><a href="${p1.buy_link}">${p1.name}</a></th>
+                    <th><a href="${p1.buy_link}&ctc=geartool">${p1.name}</a></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>REI</td>
                     <td>
-                        <a class="specs-table-link" href="${p1.buy_link}">$${p1.price}</a>
+                        <a class="specs-table-link" href="${p1.buy_link}&ctc=geartool">$${p1.price}</a>
                     </td>
                 </tr>
                 ${insertBuyInfoBC(p1)}
@@ -266,7 +266,7 @@ function insertBuyInfoBC(p1) {
     const td1 = (!p1.purchase_info.backcountry) ?
         `<td></td>` :
         `<td>
-            <a class="specs-table-link" href="${p1.purchase_info.backcountry.buy_link}">$${p1.purchase_info.backcountry.retail_price}</a>
+            <a class="specs-table-link" href="${p1.purchase_info.backcountry.buy_link}&ctc=geartool">$${p1.purchase_info.backcountry.retail_price}</a>
         </td>`;
 
     return `
@@ -284,7 +284,7 @@ function insertBuyInfoOsprey(p1) {
     const td1 = (!p1.purchase_info.osprey) ?
         `<td></td>` :
         `<td>
-            <a class="specs-table-link" href="${p1.purchase_info.osprey.buy_link}">$${p1.purchase_info.osprey.retail_price}</a>
+            <a class="specs-table-link" href="${p1.purchase_info.osprey.buy_link}&ctc=geartool">$${p1.purchase_info.osprey.retail_price}</a>
         </td>`;
 
     return `
