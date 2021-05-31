@@ -4,17 +4,6 @@ const ScatterPlot = require("./charts/scatter.js");
 const fs = require("fs").promises;
 const convert = require('convert-units');
 
-main();
-async function main() {
-    try {
-        const sku1 = process.argv[2];
-        const html = await generate(sku1);
-        console.log(html);
-    } catch (err) {
-        console.log("ERR:", err);
-    }
-}
-
 /************************************************
  * Entry Point
  ***********************************************/
