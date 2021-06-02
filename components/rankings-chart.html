@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0/dist/chartjs-plugin-datalabels.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" type="text/javascript"></script>
+
+<style>
+.main-container {
+    padding: 35px 30px;
+}
+.chart-container {
+    padding: 0 0 4em 0;
+    width: 100%;
+    height: 400px;
+}
+</style>
+</head>
+<body>
+
+<div class="main-container">
+    <h2>Rankings Chart</h2>
+    <div class="chart-container">
+        <canvas id="loadRange"></canvas>
+    </div>
+</div>
+
+<script>
+new Chart(
+    document.getElementById('loadRange').getContext("2d"),
+    {
+        type: 'horizontalBar',
+        data: {
+            datasets: [
+                {
+                    label: "Osprey Men's Aether AG 50 Pack",
+                    data: [[30, 50]],
+                    backgroundColor: '#7AADE1',
+                    barPercentage: 0.8,
+                },
+                {
+                    label: "Osprey Men's Aether AG 50 Pack",
+                    data: [[30, 50]],
+                    backgroundColor: '#7AADE1',
+                    barPercentage: 0.8,
+                },
+                {
+                    label: "Osprey Men's Atmos AG 50 Pack",
+                    data: [[25, 40]],
+                    backgroundColor: '#7AADE1',
+                    barPercentage: 0.8,
+                },
+                {
+                    label: "Osprey Men's Aether AG 50 Pack",
+                    data: [[20, 40]],
+                    backgroundColor: '#7AADE1',
+                    barPercentage: 0.8,
+                },
+                {
+                    label: "Osprey Men's Atmos AG 50 Pack",
+                    data: [[20, 40]],
+                    backgroundColor: '#7AADE1',
+                    barPercentage: 0.8,
+                },
+            ],
+        },
+        plugins: [{
+            beforeLayout: function(context) {
+                var fontSize = (context.chart.width < 900) ? 10 : 16;
+                context.chart.options.plugins.datalabels.font.size = fontSize;
+                context.chart.options.legend.labels.fontSize = fontSize;
+
+                //console.log("datasets", context.chart.data.datasets);
+                //console.log(context.chart.yAxes);
+            }
+        }],
+        options: {
+            title: false,
+            responsive: true,
+            maintainAspectRatio: false,
+            tooltips: false,
+            legend: {
+                display: false
+             },
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        fontSize: 16,
+                    },
+                }],
+                yAxes: [{
+                    ticks: {
+                        callback: function(val, index) {
+                            console.log(val, index);
+                            return index % 2 === 0 ? this.getLabelForValue(val) : '';
+                            //console.log(label, index, labels);
+                            //return console.log(value);
+                        }
+                    },
+                }],
+            },
+
+            plugins: {
+                datalabels: {
+                    color: '#EDEDED',
+                    formatter: function(value, context) {
+                        var i = context.dataIndex;
+                        var j = context.datasetIndex;
+                        if (i == 0 && j == 0) return "25-40 lbs";
+                        if (i == 0 && j == 1) return "30-50 lbs";
+                    }
+                }
+            },
+        },
+    }
+);
+
+</script>
+</body>
+
