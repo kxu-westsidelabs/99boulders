@@ -18,35 +18,40 @@ const SKUS = [
 ];
 
 (async () => {
+    // load all products
+    const filePath = path.resolve(__dirname, `../../data/products/`);
+    const allProducts = await loadProductsData(filePath);
+
     for (const sku of SKUS) {
-        await generate(sku);
+        generate(sku, allProducts);
+        break;
     }
 })();
 
+async function loadProductsData(url) {
+    var products = [];
+    const files = await fs.readdir(url);
+    for (const file of files) {
+        if ([ '.DS_Store' ].includes(file)) {
+            continue;
+        }
+        products.push(JSON.parse(
+            await fs.readFile(`${url}/${file}`, "utf-8")
+        ));
+    }
+    return products;
+}
+
 /**
  * Generate the file path for the sku
- * 
  * getFileName(177499) --> ./pages/osprey-men's-atmos-ag-65-pack.html
  */
-async function generate(sku) {
-    try {
-        // build input file path (data/products/$sku.json)
-        const filePath = path.resolve(
-            __dirname,
-            `../../data/products/${sku}.json`
-        );
-        const product = JSON.parse(
-            await fs.readFile(filePath, "utf-8")
-        );
+async function generate(sku, products) {
+    const product = products.find(product => product.sku == sku);
+    const html = await Generator.generate(product, products);
 
-        const html = await Generator.generate(product);
-
-        // build output file path from product name
-        const name = product.name.toLowerCase().replace(/ /g, "-");
-        const fileName = `${BASE_URL}/${name}.html`;
-
-        await fs.writeFile(fileName, html);
-    } catch (err) {
-        console.log("ERR while generating/writing single-page html:", err);
-    }
+    // build output file path from product name
+    const name = product.name.toLowerCase().replace(/ /g, "-");
+    const fileName = `${BASE_URL}/${name}.html`;
+    await fs.writeFile(fileName, html);
 }
