@@ -1,10 +1,6 @@
-const BarChart = require("./charts/bar.js");
-const PriceChart = require("./charts/price-history.js");
-const ScatterPlot = require("./charts/scatter.js");
-const RankingCharts = require("./charts/rankings.js");
-const Rankings = require("./rankings.js");
-const fs = require("fs").promises;
+const charts = require("./charts.js");
 const convert = require('convert-units');
+const Rankings = require("./rankings.js");
 
 /************************************************
  * Entry Point
@@ -378,70 +374,15 @@ function generateJS(p1, products) {
     return `
     <script type="text/javascript">
     <!--` +
-        BarChart.generateChart(
-            "volume-bar-chart", "Volume", "L",
-            p1.name, p1.volume.data,
-        ) +
-        BarChart.generateChart(
-            "weight-bar-chart", "Weight", "oz",
-            p1.name, p1.weight.data,
-        ) +
-        generateLoadChartJS(p1) +
-        PriceChart.generateChart(p1) +
-        RankingCharts.generateWeight(p1, filteredPacksByWeight) +
-        ScatterPlot.generatePriceVsWeight(p1) +
-
-        RankingCharts.generateVolume(p1, filteredPacksByVolume) +
-        ScatterPlot.generatePriceVsVolume(p1) + `
-    //--></script>`;
-}
-
-function generateLoadChartJS(p1) {
-    const label1 = `${Math.round(p1.load.low)}-${Math.round(p1.load.high)} lbs.`;
-
-    return `
-new Chart(
-    document.getElementById('load-range-chart').getContext("2d"),
-    {
-        type: 'horizontalBar',
-        data: {
-            datasets: [
-                {
-                    label: "${p1.name}",
-                    data: [[ ${p1.load.low}, ${p1.load.high}]],
-                    backgroundColor: '#7AADE1',
-                    barPercentage: 0.9,
-                },
-            ],
-        },
-        plugins: [{
-            beforeLayout: function(context) {
-                var fontSize = (context.chart.width < 900) ? 10 : 16;
-                context.chart.options.plugins.datalabels.font.size = fontSize;
-                context.chart.options.legend.labels.fontSize = fontSize;
-            }
-        }],
-        options: {
-            title: false,
-            responsive: true,
-            maintainAspectRatio: false,
-            tooltips: false,
-            legend: {
-                display: false,
-            },
-            plugins: {
-                datalabels: {
-                    color: '#EDEDED',
-                    formatter: function(value, context) {
-                        var i = context.dataIndex;
-                        var j = context.datasetIndex;
-                        if (i == 0 && j == 0) return "${label1}";
-                    }
-                }
-            }
-        },
-    }
-);`;
+        charts.generateBarChartVolume(p1) +
+        charts.generateBarChartWeight(p1) +
+        charts.generateLoadChart(p1) +
+        charts.generatePriceHistory(p1) +
+        charts.generateRankingsWeight(p1, filteredPacksByWeight) +
+        charts.generateScatterPriceVsWeight(p1) +
+        charts.generateRankingsVolume(p1, filteredPacksByVolume) +
+        charts.generateScatterPriceVsVolume(p1) +
+    `//--></script>`;
 }
 
 module.exports = {
