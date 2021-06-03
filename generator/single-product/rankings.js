@@ -79,7 +79,7 @@ function fetchMensByVolumeDesc(products) {
 }
 function fetchByVolume(products, gender) {
 	const sql = `
-        SELECT sku, name, gender, volume->data->0->raw as volume, load
+        SELECT sku, name, gender, volume->data->0 as volume, load
 		FROM ? WHERE name LIKE '%Osprey%' AND (gender = '${gender}' OR gender = 'unisex')
 		ORDER BY volume->data->0->val DESC
 	`;

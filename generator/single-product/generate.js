@@ -10,14 +10,53 @@ const convert = require('convert-units');
  * Entry Point
  ***********************************************/
 
-function generate(product, products) {
-    const weightChart = RankingCharts.generateWeight(
-        product,
-        Rankings.fetchMensByWeightAsc(products)
-    );
-    console.log(weightChart);
+/**
+ * TODO:
+ *
+ * - generating the single page template
+ *      - take in ALL of the products
+ *      - filter the products - only Osprey / mens
+ *
+ * - generating the rankings madlibs / specs table
+ * - generating the rankings charts
+ *      - charts need the sorted, filtered subset of products
+ *      - weight chart (increasing)
+ *      - volume chart (decreasing)
+ *      - load range charts
+ *          - add queries for load range charts
+ *
+ *
+ * generateHTML(product, products);
+ *  - madlibs
+ *      - CALL THE EXISTING METHODS?
+ *      - filter only relevant products, sort
+ *      - compute the rankings
+ *  - entry points for charts
+ *
+ * generateJS(product, products);
+ *  - charts
+ *
+ * Question:
+ *  - how do I pass around this data?
+ *      - filtered data is all the same, but the sorting is different
+ *      - filter and sort every time in each spot?
+ *      - filter and sort for each chart and rankings madlibs?
+ *
+ * TODO:
+ *  - rankings code includes filtering methods, which are used for the charts too
+ *      - combine rankings code with charts?
+ *  - refactor charts code
+ *      - combine all charts code into a single file?
+ *      - combine by chart type
+ *  - gender specific checks should be abstracted into the rankings code
+ *  - import specific methods instead of classes
+ *  - @Alex - update CSS with chart-container-lg
+ */
 
-    //return generateHTML(product) + generateJS(product);
+function generate(product, products) {
+    //return generateHTML(product) + generateJS(product, products);
+    const res =  generateHTML(product, products) + generateJS(product, products);
+    console.log(res);
 
     /*
     const rankings = (product.gender === 'male') ?
@@ -59,10 +98,17 @@ function madlibsIntro(product) {
 
 
 /**
- * "See the weight breakdodwn for the Osprey Women's Aura AG 50 Pack."
- * The Osprey Women's Aura AG 50 Pack weighs 3 lbs (4.5 kg)."
+ * | See the weight breakdodwn for the Osprey Women's Aura AG 50 Pack.
+ * | The Osprey Women's Aura AG 50 Pack weighs 3 lbs (4.5 kg), making it the
+ * | 5th lightest (top 50%) backpacking backpack for women.
  */
-function madlibsWeight(p1) {
+function madlibsWeight(p1, products) {
+
+    const rankings = (p1.gender === 'male') ?
+        Rankings.computeRankingsOspreyMens(p1.sku, products) :
+        Rankings.computeRankingsOspreyWomens(p1.sku, products);
+    console.log(rankings);
+
     var madlib = `<p>See the weight breakdown for the ${p1.name}.</p>`;
     const w1_lbs = convert(p1.weight.data[0].val).from('oz').to('lb');
     const w1_kg = convert(p1.weight.data[0].val).from('oz').to('kg');
@@ -70,10 +116,10 @@ function madlibsWeight(p1) {
 }
 
 /**
- * "See the volume breakdown for the Osprey Women's Aura AG 50 Pack.
- * The Osprey Women's Aura AG 50 Pack holds 4 liters."
+ * | See the volume breakdown for the Osprey Women's Aura AG 50 Pack.
+ * | The Osprey Women's Aura AG 50 Pack holds 4 liters
  */
-function madlibsVolume(p1) {
+function madlibsVolume(p1, products) {
     var madlib = `<p>See the volume breakdown for the ${p1.name}.</p>`;
 
     const v1_l = p1.volume.data[0].val;
@@ -96,7 +142,7 @@ function madlibsPriceTable(p1) {
  * HTML
  ***********************************************/
 
-function generateHTML(p1) {
+function generateHTML(p1, products) {
     return `
     <div class="affiliate-link-disclosure">
         Just so you know, this page contains affiliate links. This means if you make a purchase after clicking through one, at no extra cost to you we may earn a commission.
@@ -187,9 +233,14 @@ function generateHTML(p1) {
 
     <!-- Weight -->
     <h2>Weight</h2>
-    ${madlibsWeight(p1)}
+    ${madlibsWeight(p1, products)}
     <div class="chart-container">
         <canvas id="weight-bar-chart"></canvas>
+    </div>
+
+    <h2>Weight - Brand Comparison</h2>
+    <div class="chart-container-lg">
+        <canvas id="weight-rankings-chart"></canvas>
     </div>
 
     <h2>Price vs. Weight</h2>
@@ -200,9 +251,14 @@ function generateHTML(p1) {
 
     <!-- Volume -->
     <h2>Volume</h2>
-    ${madlibsVolume(p1)}
+    ${madlibsVolume(p1, products)}
     <div class="chart-container">
         <canvas id="volume-bar-chart"></canvas>
+    </div>
+
+    <h2>Volume - Brand Comparison</h2>
+    <div class="chart-container-lg">
+        <canvas id="volume-rankings-chart"></canvas>
     </div>
 
     <h2>Price vs. Volume</h2>
@@ -309,7 +365,16 @@ function formatVariantFields(val) {
  * Javascript
  ***********************************************/
 
-function generateJS(p1) {
+function generateJS(p1, products) {
+
+    const filteredPacksByWeight = (p1.gender == 'male') ?
+        Rankings.fetchMensByWeightAsc(products) :
+        Rankings.fetchWomensByWeightAsc(products);
+
+    const filteredPacksByVolume = (p1.gender == 'male') ?
+        Rankings.fetchMensByVolumeDesc(products) :
+        Rankings.fetchWomensByVolumeDesc(products);
+
     return `
     <script type="text/javascript">
     <!--` +
@@ -323,7 +388,10 @@ function generateJS(p1) {
         ) +
         generateLoadChartJS(p1) +
         PriceChart.generateChart(p1) +
+        RankingCharts.generateWeight(p1, filteredPacksByWeight) +
         ScatterPlot.generatePriceVsWeight(p1) +
+
+        RankingCharts.generateVolume(p1, filteredPacksByVolume) +
         ScatterPlot.generatePriceVsVolume(p1) + `
     //--></script>`;
 }
