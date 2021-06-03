@@ -229,7 +229,6 @@ body {
 </style>
 </head>
 <body>
-
     <div class="affiliate-link-disclosure">
         Just so you know, this page contains affiliate links. This means if you make a purchase after clicking through one, at no extra cost to you we may earn a commission.
     </div>
@@ -245,11 +244,11 @@ body {
             <thead>
                 <tr>
                     <th></th>
-                    <th><a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631830"><img src="https://www.rei.com/media/07325538-a1f2-4d5b-8949-ac3082c62f59?size=1000"></a></th>
+                    <th><a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631830&ctc=geartool"><img src="https://www.rei.com/media/07325538-a1f2-4d5b-8949-ac3082c62f59?size=1000"></a></th>
                 </tr>
                 <tr>
                     <th></th>
-                    <th><a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631830">Osprey Men's Atmos AG 65 Pack</a></th>
+                    <th><a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631830&ctc=geartool">Osprey Men's Atmos AG 65 Pack</a></th>
                 </tr>
             </thead>
             <tbody>
@@ -260,7 +259,7 @@ body {
                 <tr>
                     <td>Shop Online</td>
                     <td>
-                        <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631830">$270.00 at REI</a>
+                        <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631830&ctc=geartool">$270.00 at REI</a>
                     </td>
                 </tr>
                 <tr>
@@ -324,6 +323,11 @@ body {
         <canvas id="weight-bar-chart"></canvas>
     </div>
 
+    <h2>Weight - Brand Comparison</h2>
+    <div class="chart-container-lg">
+        <canvas id="weight-rankings-chart"></canvas>
+    </div>
+
     <h2>Price vs. Weight</h2>
     <p>Compare the price-to-weight ratio of the Osprey Men's Atmos AG 65 Pack to all the other backpacking backpacks in our database.</p>
     <div class="scatter-container">
@@ -335,6 +339,11 @@ body {
     <p>The Osprey Men's Atmos AG 65 Pack holds 62 liters.</p>
     <div class="chart-container">
         <canvas id="volume-bar-chart"></canvas>
+    </div>
+
+    <h2>Volume - Brand Comparison</h2>
+    <div class="chart-container-lg">
+        <canvas id="volume-rankings-chart"></canvas>
     </div>
 
     <h2>Price vs. Volume</h2>
@@ -365,28 +374,28 @@ body {
                 </tr>
                 <tr>
                     <th></th>
-                    <th><a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631830">Osprey Men's Atmos AG 65 Pack</a></th>
+                    <th><a href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631830&ctc=geartool">Osprey Men's Atmos AG 65 Pack</a></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>REI</td>
                     <td>
-                        <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631830">$270.00</a>
+                        <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=115&pw=179682&mi=16517&pt=3&pri=631830&ctc=geartool">$270.00</a>
                     </td>
                 </tr>
                 
     <tr>
         <td>Backcountry</td>
         <td>
-            <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1213830">$269.95</a>
+            <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=52&pw=179682&mi=16517&pt=3&pri=1213830&ctc=geartool">$269.95</a>
         </td>
     </tr>
                 
     <tr>
         <td>Osprey</td>
         <td>
-            <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=6969&pw=179682&mi=16517&pt=3&pri=117">$270.00</a>
+            <a class="specs-table-link" href="https://www.avantlink.com/click.php?tt=pl&ti=6969&pw=179682&mi=16517&pt=3&pri=117&ctc=geartool">$270.00</a>
         </td>
     </tr>
 
@@ -667,6 +676,43 @@ new Chart(
 );
 
 new Chart(
+    document.getElementById('weight-rankings-chart').getContext("2d"),
+    {
+        type: 'horizontalBar',
+        data: {
+            labels: ["Osprey Daylite Plus Pack","Osprey Men's Levity 45 Pack","Osprey Men's Levity 60 Pack","Osprey Men's Exos 48 Pack","Osprey Men's Exos 58 Pack","Osprey Men's Talon 44 Pack","Osprey Men's Kestrel 48 Pack","Osprey Men's Kestrel 58 Pack","Osprey Men's Aether Pro 70 Pack","Osprey Men's Atmos AG 50 Pack","Osprey Men's Atmos AG 65 Pack","Osprey Men's Aether 55 Pack","Osprey Men's Aether 65 Pack","Osprey Men's Aether Plus 70 Pack","Osprey Men's Aether Plus 60 Pack","Osprey Men's Aether Plus 85 Pack","Osprey Men's Aether Plus 100 Pack","Osprey Poco Child Carrier","Osprey Poco Plus Child Carrier"],
+            datasets: [{
+                label: 'data',
+                data: [[0,21],[0,28],[0,29.9],[0,40.8],[0,42],[0,47],[0,55],[0,60],[0,61],[0,66],[0,72],[0,77.3],[0,78.7],[0,88],[0,90],[0,99.7],[0,102],[0,123.2],[0,126.4]],
+                backgroundColor: ["lightblue","lightblue","lightblue","lightblue","lightblue","lightblue","lightblue","lightblue","lightblue","lightblue","green","lightblue","lightblue","lightblue","lightblue","lightblue","lightblue","lightblue","lightblue"],
+            }]
+        },
+        options: {
+            title: false,
+            responsive: true,
+            maintainAspectRatio: false,
+            tooltips: false,
+            legend: false,
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        fontSize: 16,
+                    },
+                }],
+            },
+            plugins: {
+                datalabels: {
+                    color: '#EDEDED',
+                    formatter: function(value, context) {
+                        return value[1] + ' oz';
+                    }
+                }
+            },
+        },
+    }
+);
+new Chart(
     document.getElementById('scatter-price-weight-chart').getContext("2d"),
     {
         type: 'scatter',
@@ -754,6 +800,43 @@ new Chart(
                 },
             },
         }
+    }
+);
+new Chart(
+    document.getElementById('volume-rankings-chart').getContext("2d"),
+    {
+        type: 'horizontalBar',
+        data: {
+            labels: ["Osprey Men's Aether Plus 100 Pack","Osprey Men's Aether Plus 85 Pack","Osprey Men's Aether Plus 70 Pack","Osprey Men's Aether Pro 70 Pack","Osprey Men's Aether 65 Pack","Osprey Men's Atmos AG 65 Pack","Osprey Men's Aether Plus 60 Pack","Osprey Men's Levity 60 Pack","Osprey Men's Kestrel 58 Pack","Osprey Men's Exos 58 Pack","Osprey Men's Aether 55 Pack","Osprey Men's Atmos AG 50 Pack","Osprey Men's Kestrel 48 Pack","Osprey Men's Exos 48 Pack","Osprey Men's Levity 45 Pack","Osprey Men's Talon 44 Pack","Osprey Poco Plus Child Carrier","Osprey Poco Child Carrier","Osprey Daylite Plus Pack"],
+            datasets: [{
+                label: 'data',
+                data: [[0,98],[0,85],[0,68],[0,67],[0,65],[0,62],[0,58],[0,57],[0,56],[0,55],[0,55],[0,47],[0,46],[0,45],[0,42],[0,42],[0,26],[0,20],[0,20]],
+                backgroundColor: ["lightblue","lightblue","lightblue","lightblue","lightblue","green","lightblue","lightblue","lightblue","lightblue","lightblue","lightblue","lightblue","lightblue","lightblue","lightblue","lightblue","lightblue","lightblue"],
+            }]
+        },
+        options: {
+            title: false,
+            responsive: true,
+            maintainAspectRatio: false,
+            tooltips: false,
+            legend: false,
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        fontSize: 16,
+                    },
+                }],
+            },
+            plugins: {
+                datalabels: {
+                    color: '#EDEDED',
+                    formatter: function(value, context) {
+                        return value[1] + ' liters';
+                    }
+                }
+            },
+        },
     }
 );
 new Chart(
