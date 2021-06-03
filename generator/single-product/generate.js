@@ -1,65 +1,37 @@
 const charts = require("./charts.js");
 const convert = require('convert-units');
-const Rankings = require("./rankings.js");
+const alasql = require("alasql");
 
 /************************************************
  * Entry Point
  ***********************************************/
 
-/**
- * TODO:
- *
- * - generating the single page template
- *      - take in ALL of the products
- *      - filter the products - only Osprey / mens
- *
- * - generating the rankings madlibs / specs table
- * - generating the rankings charts
- *      - charts need the sorted, filtered subset of products
- *      - weight chart (increasing)
- *      - volume chart (decreasing)
- *      - load range charts
- *          - add queries for load range charts
- *
- *
- * generateHTML(product, products);
- *  - madlibs
- *      - CALL THE EXISTING METHODS?
- *      - filter only relevant products, sort
- *      - compute the rankings
- *  - entry points for charts
- *
- * generateJS(product, products);
- *  - charts
- *
- * Question:
- *  - how do I pass around this data?
- *      - filtered data is all the same, but the sorting is different
- *      - filter and sort every time in each spot?
- *      - filter and sort for each chart and rankings madlibs?
- *
- * TODO:
- *  - rankings code includes filtering methods, which are used for the charts too
- *      - combine rankings code with charts?
- *  - refactor charts code
- *      - combine all charts code into a single file?
- *      - combine by chart type
- *  - gender specific checks should be abstracted into the rankings code
- *  - import specific methods instead of classes
- *  - @Alex - update CSS with chart-container-lg
- */
+function generate(p, products) {
+    //const res =  generateHTML(p, products) + generateJS(p, products);
+    //console.log(res);
+    return generateHTML(p) + generateJS(p, products);
+}
 
-function generate(product, products) {
-    //return generateHTML(product) + generateJS(product, products);
-    const res =  generateHTML(product, products) + generateJS(product, products);
-    console.log(res);
+/************************************************
+ * Product Segmentation (brand, gender)
+ ***********************************************/
 
-    /*
-    const rankings = (product.gender === 'male') ?
-        Rankings.computeRankingsOspreyMens(product.sku, products) :
-        Rankings.computeRankingsOspreyWomens(product.sku, products);
-    console.log(rankings);
-    */
+function segmentByWeight(gender, products) {
+	const sql = `
+		SELECT *
+		FROM ? WHERE name LIKE '%Osprey%' AND (gender = '${gender}' OR gender = 'unisex')
+		ORDER BY weight->data->0->val ASC
+	`;
+	return alasql(sql, [products]);
+}
+
+function segmentByVolume(gender, products) {
+	const sql = `
+        SELECT *
+		FROM ? WHERE name LIKE '%Osprey%' AND (gender = '${gender}' OR gender = 'unisex')
+		ORDER BY volume->data->0->val DESC
+	`;
+	return alasql(sql, [products]);
 }
 
 /************************************************
@@ -71,8 +43,21 @@ const CPL_BUDGET = 0;
 const CPL_MIDRANGE = 3.5;
 const CPL_PREMIUM = 5.25;
 
-// "The Osprey Women's Aura AG 50 Pack is a premium backpacking pack that comes in three sizes (XS, S, M), while the Gregory Men's Baltoro 65 Pack is a midrange backpacking pack that comes in three sizes (S, M, L)."
-function madlibsIntro(product) {
+function generateMadlibs(p, products) {
+    return {
+        intro:  generateMadlibsIntro(p),
+        buy:    generateMadlibsBuy(p),
+        volume: generateMadlibsVolume(p, products),
+        weight: generateMadlibsWeight(p, products),
+    };
+}
+
+/**
+ * Output:
+ * | The Osprey Women's Aura AG 50 Pack is a premium backpacking pack that
+ * | comes in three sizes (XS, S, M).
+ */
+function generateMadlibsIntro(product) {
     var numVariants = "one size";
     if (product.sizes.data.length === 2) {
         numVariants = `two sizes (${product.sizes.data.join(", ")})`;
@@ -89,63 +74,128 @@ function madlibsIntro(product) {
     }
 
     const bestUsedFor = (product.best_used_for == 'Hiking') ? "hiking" : "backpacking";
-    return `${product.name} is a ${segment} ${bestUsedFor} backpack that comes in ${numVariants}`;
+    return `<p>The ${product.name} is a ${segment} ${bestUsedFor} backpack that comes in ${numVariants}.</p>`;
 }
 
+/**
+ * Output:
+ * | At the time of publishing, the Osprey Women's Aura AG 50 Pack retails for $290.
+ * |
+ * | See the latest deals from top retailers:
+ */
+function generateMadlibsBuy(p) {
+    return `<p>At the time of publishing, the ${p.name} retails for $${parseFloat(p.price)}.</p>
+            <p>See the latest deals at top retailers:</p>`;
+}
 
 /**
- * | See the weight breakdodwn for the Osprey Women's Aura AG 50 Pack.
+ * Output:
+ * | See the weight breakdown for the Osprey Women's Aura AG 50 Pack.
+ * |
  * | The Osprey Women's Aura AG 50 Pack weighs 3 lbs (4.5 kg), making it the
- * | 5th lightest (top 50%) backpacking backpack for women.
+ * | 5th lightest backpacking backpack for women.
  */
-function madlibsWeight(p1, products) {
+function generateMadlibsWeight(p, products) {
+    const lbs   = convert(p.weight.data[0].val).from('oz').to('lb');
+    const kg    = Math.round(convert(p.weight.data[0].val).from('oz').to('kg') * 100) / 100;
 
-    const rankings = (p1.gender === 'male') ?
-        Rankings.computeRankingsOspreyMens(p1.sku, products) :
-        Rankings.computeRankingsOspreyWomens(p1.sku, products);
-    console.log(rankings);
+    var clause = null;
+    if (p.gender == 'male') {
+        const weight = getStats(p, segmentByWeight(p.gender, products));
+        clause = `making it the ${ordinal(weight.position)} lightest backpacking backpack for men`;
+    } else if (p.gender == 'female') {
+        const weight = getStats(p, segmentByWeight(p.gender, products));
+        clause = `making it the ${ordinal(weight.position)} lightest backpacking backpack for women`;
+    } else {    // unisex
+        const weightFemale= getStats(p, segmentByWeight('female', products));
+        const weightMale = getStats(p, segmentByWeight('male', products));
+        clause = `making it the ${ordinal(weightMale.position)} lightest backpacking backpack for men and the ${ordinal(weightFemale.position)} lightest backpack for women`;
+    }
 
-    var madlib = `<p>See the weight breakdown for the ${p1.name}.</p>`;
-    const w1_lbs = convert(p1.weight.data[0].val).from('oz').to('lb');
-    const w1_kg = convert(p1.weight.data[0].val).from('oz').to('kg');
-    return madlib + `<p>The ${p1.name} weighs ${w1_lbs} lbs (${w1_kg} kg).</p>`;
+    return `<p>See the weight breakdown for the ${p.name}.</p>
+            <p>The ${p.name} weighs ${lbs} lbs (${kg} kg), ${clause}.</p>`;
 }
 
 /**
+ * Output:
  * | See the volume breakdown for the Osprey Women's Aura AG 50 Pack.
- * | The Osprey Women's Aura AG 50 Pack holds 4 liters
+ * |
+ * | The Osprey Women's Aura AG 50 Pack holds 55 liters, which is the 4th highest
+ * | capacity backpacking backpack for women [, and the 3rd highest capacity pack for men].
  */
-function madlibsVolume(p1, products) {
-    var madlib = `<p>See the volume breakdown for the ${p1.name}.</p>`;
-
-    const v1_l = p1.volume.data[0].val;
-    return `<p>The ${p1.name} holds ${v1_l} liters.</p>`;
+function generateMadlibsVolume(p, products) {
+    var clause = null;
+    if (p.gender == 'male') {
+        const volume = getStats(p, segmentByVolume(p.gender, products));
+        clause = `which is the ${ordinal(volume.position)} highest capacity backpacking backpack for men`;
+    } else if (p.gender == 'female') {
+        const volume = getStats(p, segmentByVolume(p.gender, products));
+        clause = `which is the ${ordinal(volume.position)} highest capacity backpacking backpack for women`;
+    } else {    // unisex
+        // volume
+        const volumeFemale= getStats(p, segmentByVolume('female', products));
+        const volumeMale = getStats(p, segmentByVolume('male', products));
+        clause = `which is the ${ordinal(volumeFemale.position)} highest capacity backpacking backpack for women and the ${ordinal(volumeMale.position)} highest capacity pack for men`;
+    }
+    return `<p>See the volume breakdown for the ${p.name}.</p>
+            <p>The ${p.name} holds ${p.volume.data[0].val} liters, ${clause}.</p>`;
 }
 
-function madlibsPriceTable(p1) {
-    const price1 = parseFloat(p1.price);
-    return `<p>At the time of publishing, the ${p1.name} retails for ${price1}.</p><p>See the latest deals at top retailers:</p>`;
+function ordinal(i) {
+    var j = i % 10,
+        k = i % 100;
+    if (j == 1 && k != 11) {
+        return i + "st";
+    }
+    if (j == 2 && k != 12) {
+        return i + "nd";
+    }
+    if (j == 3 && k != 13) {
+        return i + "rd";
+    }
+    return i + "th";
 }
 
 /************************************************
- * Rankings
+ * Rankings / Stats
  ***********************************************/
 
-
-
+function getStats(p, products) {
+	const position = getPosition(p.sku, products);
+	const total = products.length;
+	const percentage = getPercentage(position, total);
+	return {
+		position: position,
+		total: total,
+		percentage: percentage,
+	};
+}
+function getPercentage(position, total) {
+	const p = position / total;
+	if (p < .05) 		return 5;
+	else if (p < .1) 	return 10;
+	else if (p < .25) 	return 25;
+	else if (p < .5)	return 50;
+	else return 100;
+}
+function getPosition(sku, products) {
+	return products.findIndex(product => product.sku == sku) + 1;
+}
 
 /************************************************
  * HTML
  ***********************************************/
 
-function generateHTML(p1, products) {
+function generateHTML(p, products) {
+    const madlibs = generateMadlibs(p, products);
+
     return `
     <div class="affiliate-link-disclosure">
         Just so you know, this page contains affiliate links. This means if you make a purchase after clicking through one, at no extra cost to you we may earn a commission.
     </div>
 
     <!-- Specs Table -->
-    <p>The ${madlibsIntro(p1)}.</p>
+    ${madlibs.intro}
     <div class="specs-table-wrapper">
         <table class="specs-table">
             <colgroup>
@@ -155,71 +205,79 @@ function generateHTML(p1, products) {
             <thead>
                 <tr>
                     <th></th>
-                    <th><a href="${p1.buy_link}&ctc=geartool"><img src="${p1.image}?size=1000"></a></th>
+                    <th><a href="${p.buy_link}&ctc=geartool"><img src="${p.image}?size=1000"></a></th>
                 </tr>
                 <tr>
                     <th></th>
-                    <th><a href="${p1.buy_link}&ctc=geartool">${p1.name}</a></th>
+                    <th><a href="${p.buy_link}&ctc=geartool">${p.name}</a></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>MSRP</td>
-                    <td>$${p1.price}</td>
+                    <td>$${p.price}</td>
                 </tr>
                 <tr>
                     <td>Shop Online</td>
                     <td>
-                        <a class="specs-table-link" href="${p1.buy_link}&ctc=geartool">$${p1.price} at REI</a>
+                        <a class="specs-table-link" href="${p.buy_link}&ctc=geartool">$${p.price} at REI</a>
                     </td>
                 </tr>
                 <tr>
                     <td>Best Used For</td>
-                    <td>${p1.best_used_for}</td>
+                    <td>${p.best_used_for}</td>
                 </tr>
 
                 <!-- Variant Specs -->
                 <tr>
                     <td>Weight</td>
                     <td>
-                        ${formatVariantFields(p1.weight.data)}
+                        ${formatVariantFields(p.weight.data)}
                     </td>
+                </tr>
+                <tr>
+                    <td>Weight Stats</td>
+                    <td>3rd (Top 15%) in Mens</td>
                 </tr>
                 <tr>
                     <td>Volume</td>
                     <td>
-                        ${formatVariantFields(p1.volume.data)}
+                        ${formatVariantFields(p.volume.data)}
                     </td>
+                </tr>
+                <tr>
+                    <td>Volume Stats</td>
+                    <td>3rd in Womens (Top 15%)</td>
                 </tr>
 
                 <!-- Full-Text -->
                 <tr>
                     <td>Gender</td>
-                    <td>${(p1.gender === "female") ? "Women's" : "Men's"}</td>
+                    <td>${(p.gender === "female") ? "Women's" : "Men's"}</td>
                 </tr>
                 <tr>
                     <td>Fit - Waist</td>
-                    <td>${p1.fit_waist_in}</td>
+                    <td>${p.fit_waist_in}</td>
                 </tr>
                 <tr>
                     <td>Dimensions</td>
-                    <td>${p1.dimensions}</td>
+                    <td>${p.dimensions}</td>
                 </tr>
                 <tr>
                     <td>Sizes</td>
-                    <td>${p1.sizes.raw}</td>
+                    <td>${p.sizes.raw}</td>
                 </tr>
                 <tr>
                     <td>Colors</td>
-                    <td>${p1.colors.raw}</td>
+                    <td>${p.colors.raw}</td>
                 </tr>
                 <tr>
                     <td>Materials</td>
-                    <td>${p1.materials}</td>
+                    <td>${p.materials}</td>
                 </tr>
                 <tr>
                     <td>Description</td>
-                    <td>${p1.long_description}</td>
+                    <td>${p.long_description}</td>
                 </tr>
             </tbody>
         </table>
@@ -229,7 +287,7 @@ function generateHTML(p1, products) {
 
     <!-- Weight -->
     <h2>Weight</h2>
-    ${madlibsWeight(p1, products)}
+    ${madlibs.weight}
     <div class="chart-container">
         <canvas id="weight-bar-chart"></canvas>
     </div>
@@ -240,14 +298,14 @@ function generateHTML(p1, products) {
     </div>
 
     <h2>Price vs. Weight</h2>
-    <p>Compare the price-to-weight ratio of the ${p1.name} to all the other backpacking backpacks in our database.</p>
+    <p>Compare the price-to-weight ratio of the ${p.name} to all the other backpacking backpacks in our database.</p>
     <div class="scatter-container">
         <canvas id="scatter-price-weight-chart"></canvas>
     </div>
 
     <!-- Volume -->
     <h2>Volume</h2>
-    ${madlibsVolume(p1, products)}
+    ${madlibs.volume}
     <div class="chart-container">
         <canvas id="volume-bar-chart"></canvas>
     </div>
@@ -258,7 +316,7 @@ function generateHTML(p1, products) {
     </div>
 
     <h2>Price vs. Volume</h2>
-    <p>Compare the price-to-volume ratio of the ${p1.name} to all the other backpacking backpacks in our database.</p>
+    <p>Compare the price-to-volume ratio of the ${p.name} to all the other backpacking backpacks in our database.</p>
     <div class="scatter-container">
         <canvas id="scatter-price-volume-chart"></canvas>
     </div>
@@ -271,7 +329,7 @@ function generateHTML(p1, products) {
 
     <!-- Purchase Table -->
     <h2>Where to Buy</h2>
-    ${madlibsPriceTable(p1)}
+    ${madlibs.buy}
     <div class="specs-table-wrapper">
         <table class="specs-table">
             <colgroup>
@@ -285,18 +343,18 @@ function generateHTML(p1, products) {
                 </tr>
                 <tr>
                     <th></th>
-                    <th><a href="${p1.buy_link}&ctc=geartool">${p1.name}</a></th>
+                    <th><a href="${p.buy_link}&ctc=geartool">${p.name}</a></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>REI</td>
                     <td>
-                        <a class="specs-table-link" href="${p1.buy_link}&ctc=geartool">$${p1.price}</a>
+                        <a class="specs-table-link" href="${p.buy_link}&ctc=geartool">$${p.price}</a>
                     </td>
                 </tr>
-                ${insertBuyInfoBC(p1)}
-                ${insertBuyInfoOsprey(p1)}
+                ${insertBuyInfoBC(p)}
+                ${insertBuyInfoOsprey(p)}
 
             </tbody>
         </table>
@@ -361,27 +419,22 @@ function formatVariantFields(val) {
  * Javascript
  ***********************************************/
 
-function generateJS(p1, products) {
+function generateJS(p, products) {
 
-    const filteredPacksByWeight = (p1.gender == 'male') ?
-        Rankings.fetchMensByWeightAsc(products) :
-        Rankings.fetchWomensByWeightAsc(products);
-
-    const filteredPacksByVolume = (p1.gender == 'male') ?
-        Rankings.fetchMensByVolumeDesc(products) :
-        Rankings.fetchWomensByVolumeDesc(products);
+    const weight = (p.gender == 'unisex') ? products : segmentByWeight(p.gender, products);
+    const volume = (p.gender == 'unisex') ? products : segmentByVolume(p.gender, products);
 
     return `
     <script type="text/javascript">
     <!--` +
-        charts.generateBarChartVolume(p1) +
-        charts.generateBarChartWeight(p1) +
-        charts.generateLoadChart(p1) +
-        charts.generatePriceHistory(p1) +
-        charts.generateRankingsWeight(p1, filteredPacksByWeight) +
-        charts.generateScatterPriceVsWeight(p1) +
-        charts.generateRankingsVolume(p1, filteredPacksByVolume) +
-        charts.generateScatterPriceVsVolume(p1) +
+        charts.generateBarChartVolume(p) +
+        charts.generateBarChartWeight(p) +
+        charts.generateLoadChart(p) +
+        charts.generatePriceHistory(p) +
+        charts.generateRankingsWeight(p, weight) +
+        charts.generateScatterPriceVsWeight(p) +
+        charts.generateRankingsVolume(p, volume) +
+        charts.generateScatterPriceVsVolume(p) +
     `//--></script>`;
 }
 

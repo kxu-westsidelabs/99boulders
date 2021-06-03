@@ -519,15 +519,15 @@ new Chart(
  * Horizontal Bar - Rankings
  ***********************************************/
 
-function generateRankingsWeight(p1, products) {
+function generateRankingsWeight(p, products) {
     var labels = [];
     var data = [];
     var colors = [];
     for (const product of products) {
         labels.push(product.name);
-        data.push([0, product.weight.val]);
+        data.push([0, product.weight.data[0].val]);
         colors.push(
-            (product.sku == p1.sku) ? 'green' : 'lightblue'
+            (product.sku == p.sku) ? 'green' : 'lightblue'
         );
     }
 
@@ -577,7 +577,7 @@ function generateRankingsVolume(p1, products) {
     var colors = [];
     for (const product of products) {
         labels.push(product.name);
-        data.push([0, product.volume.val]);
+        data.push([0, product.volume.data[0].val]);
         colors.push(
             (product.sku == p1.sku) ? 'green' : 'lightblue'
         );
