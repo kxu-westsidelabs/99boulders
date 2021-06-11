@@ -1,5 +1,6 @@
 const GeneratorVs = require("./generate-vs.js");
 const fs = require("fs").promises;
+const path = require("path");
 
 const BASE_URL = "./pages";
 const PAIRS = [
@@ -72,12 +73,11 @@ async function main() {
 
 async function getFileName(sku1, sku2) {
     try {
-        const p1 = JSON.parse(
-            await fs.readFile(`../data/products/${sku1}.json`, "utf-8")
-        );
-        const p2 = JSON.parse(
-            await fs.readFile(`../data/products/${sku2}.json`, "utf-8")
-        );
+        const f1 = path.resolve(__dirname, `../../data/products/${sku1}.json`);
+        const p1 = JSON.parse(await fs.readFile(f1, "utf-8"));
+
+        const f2 = path.resolve(__dirname, `../../data/products/${sku2}.json`);
+        const p2 = JSON.parse(await fs.readFile(f2, "utf-8"));
 
         const n1 = p1.name.toLowerCase().replace(/ /g, "-");
         const n2 = p2.name.toLowerCase().replace(/ /g, "-");

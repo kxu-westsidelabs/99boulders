@@ -161,13 +161,13 @@ function generateHTML(p1, p2, madlibs) {
             <thead>
                 <tr>
                     <th></th>
-                    <th><a href="${p1.buy_link}"><img src="${p1.image}?size=1000"></a></th>
-                    <th><a href="${p2.buy_link}"><img src="${p2.image}?size=1000"></a></th>
+                    <th><a href="${p1.buy_link}&ctc=geartool"><img src="${p1.image}?size=1000"></a></th>
+                    <th><a href="${p2.buy_link}&ctc=geartool"><img src="${p2.image}?size=1000"></a></th>
                 </tr>
                 <tr>
                     <th></th>
-                    <th><a href="${p1.buy_link}">${getTitle(p1.name, p2.name)}</a></th>
-                    <th><a href="${p2.buy_link}">${getTitle(p2.name, p1.name)}</a></th>
+                    <th><a href="${p1.buy_link}&ctc=geartool">${getTitle(p1.name, p2.name)}</a></th>
+                    <th><a href="${p2.buy_link}&ctc=geartool">${getTitle(p2.name, p1.name)}</a></th>
                 </tr>
             </thead>
             <tbody>
@@ -179,10 +179,10 @@ function generateHTML(p1, p2, madlibs) {
                 <tr>
                     <td>Shop Online</td>
                     <td>
-                        <a class="specs-table-link" href="${p1.buy_link}">$${p1.price} at REI</a>
+                        <a class="specs-table-link" href="${p1.buy_link}&ctc=geartool">$${p1.price} at REI</a>
                     </td>
                     <td>
-                        <a class="specs-table-link" href="${p2.buy_link}">$${p2.price} at REI</a>
+                        <a class="specs-table-link" href="${p2.buy_link}&ctc=geartool">$${p2.price} at REI</a>
                     </td>
                 </tr>
                 <tr>
@@ -303,18 +303,18 @@ function generateHTML(p1, p2, madlibs) {
                 </tr>
                 <tr>
                     <th></th>
-                    <th><a href="${p1.buy_link}">${p1.name}</a></th>
-                    <th><a href="${p2.buy_link}">${p2.name}</a></th>
+                    <th><a href="${p1.buy_link}&ctc=geartool">${p1.name}</a></th>
+                    <th><a href="${p2.buy_link}&ctc=geartool">${p2.name}</a></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>REI</td>
                     <td>
-                        <a class="specs-table-link" href="${p1.buy_link}">$${p1.price}</a>
+                        <a class="specs-table-link" href="${p1.buy_link}&ctc=geartool">$${p1.price}</a>
                     </td>
                     <td>
-                        <a class="specs-table-link" href="${p2.buy_link}">$${p2.price}</a>
+                        <a class="specs-table-link" href="${p2.buy_link}&ctc=geartool">$${p2.price}</a>
                     </td>
                 </tr>
                 ${insertBuyInfoBC(p1, p2)}
@@ -361,12 +361,12 @@ function insertBuyInfoBC(p1, p2) {
     const td1 = (!p1.purchase_info.backcountry) ?
         `<td></td>` :
         `<td>
-            <a class="specs-table-link" href="${p1.purchase_info.backcountry.buy_link}">$${p1.purchase_info.backcountry.retail_price}</a>
+            <a class="specs-table-link" href="${p1.purchase_info.backcountry.buy_link}&ctc=geartool">$${p1.purchase_info.backcountry.retail_price}</a>
         </td>`;
     const td2 = (!p2.purchase_info.backcountry) ?
         `<td></td>` :
         `<td>
-            <a class="specs-table-link" href="${p2.purchase_info.backcountry.buy_link}">$${p2.purchase_info.backcountry.retail_price}</a>
+            <a class="specs-table-link" href="${p2.purchase_info.backcountry.buy_link}&ctc=geartool">$${p2.purchase_info.backcountry.retail_price}</a>
         </td>`;
 
     return `
@@ -385,12 +385,12 @@ function insertBuyInfoOsprey(p1, p2) {
     const td1 = (!p1.purchase_info.osprey) ?
         `<td></td>` :
         `<td>
-            <a class="specs-table-link" href="${p1.purchase_info.osprey.buy_link}">$${p1.purchase_info.osprey.retail_price}</a>
+            <a class="specs-table-link" href="${p1.purchase_info.osprey.buy_link}&ctc=geartool">$${p1.purchase_info.osprey.retail_price}</a>
         </td>`;
     const td2 = (!p2.purchase_info.osprey) ?
         `<td></td>` :
         `<td>
-            <a class="specs-table-link" href="${p2.purchase_info.osprey.buy_link}">$${p2.purchase_info.osprey.retail_price}</a>
+            <a class="specs-table-link" href="${p2.purchase_info.osprey.buy_link}&ctc=geartool">$${p2.purchase_info.osprey.retail_price}</a>
         </td>`;
 
     return `
