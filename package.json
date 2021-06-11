@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.js",
   "dependencies": {
+    "alasql": "^1.7.2",
     "chart.js": "^2.9.4",
     "convert-units": "^2.3.4",
     "html-minifier": "^4.0.0",

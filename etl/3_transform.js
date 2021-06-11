@@ -1,6 +1,6 @@
 const fs = require("fs").promises;
 const util = require('util')
-const c = require("../generator/charts/convert.js");
+const c = require("../generator/convert.js");
 
 /************************************************
  * Data
