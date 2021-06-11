@@ -7,9 +7,15 @@ const alasql = require("alasql");
  ***********************************************/
 
 function generate(p, products) {
+
+    //console.log(generateMadlibs(p, products));
+
+    //const res = segmentByWeight('unisex', products);
+    //console.log(res);
+
     //const res =  generateHTML(p, products) + generateJS(p, products);
     //console.log(res);
-    return generateHTML(p) + generateJS(p, products);
+    return generateHTML(p, products) + generateJS(p, products);
 }
 
 /************************************************
@@ -49,6 +55,7 @@ function generateMadlibs(p, products) {
         buy:    generateMadlibsBuy(p),
         volume: generateMadlibsVolume(p, products),
         weight: generateMadlibsWeight(p, products),
+        specs: generateMadlibsSpecsTable(p, products),
     };
 }
 
@@ -127,18 +134,40 @@ function generateMadlibsVolume(p, products) {
     var clause = null;
     if (p.gender == 'male') {
         const volume = getStats(p, segmentByVolume(p.gender, products));
-        clause = `which is the ${ordinal(volume.position)} highest capacity backpacking backpack for men`;
+        clause = `which is the ${ordinal(volume.position)} highest capacity backpacking backpack for men in our database`;
     } else if (p.gender == 'female') {
         const volume = getStats(p, segmentByVolume(p.gender, products));
-        clause = `which is the ${ordinal(volume.position)} highest capacity backpacking backpack for women`;
-    } else {    // unisex
+        clause = `which is the ${ordinal(volume.position)} highest capacity backpacking backpack for women in our database`;
+    } else {   
+        // TODO: unisex
         // volume
         const volumeFemale= getStats(p, segmentByVolume('female', products));
         const volumeMale = getStats(p, segmentByVolume('male', products));
-        clause = `which is the ${ordinal(volumeFemale.position)} highest capacity backpacking backpack for women and the ${ordinal(volumeMale.position)} highest capacity pack for men`;
+        clause = `which is the ${ordinal(volumeFemale.position)} highest capacity backpacking backpack for women and the ${ordinal(volumeMale.position)} highest capacity pack for men in our database`;
     }
     return `<p>See the volume breakdown for the ${p.name}.</p>
             <p>The ${p.name} holds ${p.volume.data[0].val} liters, ${clause}.</p>`;
+}
+
+function generateMadlibsSpecsTable(p, products) {
+    if (p.gender == 'male' || p.gender == 'female') {
+        const weight = getStats(p, segmentByWeight(p.gender, products));
+
+        const volume = getStats(p, segmentByVolume(p.gender, products));
+        const gender = (p.gender == 'male') ? "men's" : "women's";
+        const weightP = (weight.percentage == 100) ? '' : `(top ${weight.percentage}%) `;
+        const volumeP = (volume.percentage == 100) ? '' : `(top ${volume.percentage}%) `;
+
+        return {
+            weight: `<br><br><b>${ordinal(weight.position)}</b> lightest ${gender} pack ${weightP}in our database`,
+            volume: `<br><br><b>${ordinal(volume.position)}</b> highest capacity ${gender} pack ${volumeP}in our database`,
+        }
+    } else {
+        // TODO: unisex
+        return {
+            weight: '', volume: ''
+        }
+    }
 }
 
 function ordinal(i) {
@@ -233,21 +262,15 @@ function generateHTML(p, products) {
                     <td>Weight</td>
                     <td>
                         ${formatVariantFields(p.weight.data)}
+                        ${madlibs.specs.weight}
                     </td>
-                </tr>
-                <tr>
-                    <td>Weight Stats</td>
-                    <td>3rd (Top 15%) in Mens</td>
                 </tr>
                 <tr>
                     <td>Volume</td>
                     <td>
                         ${formatVariantFields(p.volume.data)}
+                        ${madlibs.specs.volume}
                     </td>
-                </tr>
-                <tr>
-                    <td>Volume Stats</td>
-                    <td>3rd in Womens (Top 15%)</td>
                 </tr>
 
                 <!-- Full-Text -->
@@ -292,7 +315,7 @@ function generateHTML(p, products) {
         <canvas id="weight-bar-chart"></canvas>
     </div>
 
-    <h2>Weight - Brand Comparison</h2>
+    <h2>Weight Rankings</h2>
     <div class="chart-container-lg">
         <canvas id="weight-rankings-chart"></canvas>
     </div>
@@ -310,7 +333,7 @@ function generateHTML(p, products) {
         <canvas id="volume-bar-chart"></canvas>
     </div>
 
-    <h2>Volume - Brand Comparison</h2>
+    <h2>Volume Rankings</h2>
     <div class="chart-container-lg">
         <canvas id="volume-rankings-chart"></canvas>
     </div>

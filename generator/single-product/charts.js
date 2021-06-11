@@ -552,6 +552,11 @@ new Chart(
             legend: false,
             scales: {
                 xAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Weight (oz)',
+                        fontSize: 16,
+                    },
                     ticks: {
                         beginAtZero: true,
                         fontSize: 16,
@@ -604,6 +609,11 @@ new Chart(
             legend: false,
             scales: {
                 xAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Volume (L)',
+                        fontSize: 16,
+                    },
                     ticks: {
                         beginAtZero: true,
                         fontSize: 16,

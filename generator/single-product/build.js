@@ -6,6 +6,8 @@ const BASE_URL = "./pages";
 const SKUS = [
     134072,     // osprey atmos 65
     177492,     // osprey aether 55
+
+    /*
     126707,     // osprey atmos 50
     177493,     // osprey aether 65
     126705,     // osprey exos 48
@@ -15,6 +17,8 @@ const SKUS = [
     177498,     // osprey ariel 55
     177499,     // osprey ariel 65
     184887,     // osprey talon 44
+    186383,     // osprey daylite plus
+    */
 ];
 
 (async () => {
@@ -23,8 +27,7 @@ const SKUS = [
     const allProducts = await loadProductsData(filePath);
 
     for (const sku of SKUS) {
-        generate(sku, allProducts);
-        break;
+        await generate(sku, allProducts);
     }
 })();
 
@@ -54,4 +57,5 @@ async function generate(sku, products) {
     const name = product.name.toLowerCase().replace(/ /g, "-");
     const fileName = `${BASE_URL}/${name}.html`;
     await fs.writeFile(fileName, html);
+    console.log(`✅ ${fileName}...`);
 }
