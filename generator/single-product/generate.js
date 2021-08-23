@@ -109,14 +109,14 @@ function generateMadlibsWeight(p, products) {
     var clause = null;
     if (p.gender == 'male') {
         const weight = getStats(p, segmentByWeight(p.gender, products));
-        clause = `making it the ${ordinal(weight.position)} lightest backpacking backpack for men`;
+        clause = `making it the ${ordinal(weight.position)} lightest backpacking backpack for men in our database`;
     } else if (p.gender == 'female') {
         const weight = getStats(p, segmentByWeight(p.gender, products));
-        clause = `making it the ${ordinal(weight.position)} lightest backpacking backpack for women`;
+        clause = `making it the ${ordinal(weight.position)} lightest backpacking backpack for women in our database`;
     } else {    // unisex
         const weightFemale= getStats(p, segmentByWeight('female', products));
         const weightMale = getStats(p, segmentByWeight('male', products));
-        clause = `making it the ${ordinal(weightMale.position)} lightest backpacking backpack for men and the ${ordinal(weightFemale.position)} lightest backpack for women`;
+        clause = `making it the ${ordinal(weightMale.position)} lightest backpacking backpack for men and the ${ordinal(weightFemale.position)} lightest backpack for women in our database`;
     }
 
     return `<p>See the weight breakdown for the ${p.name}.</p>

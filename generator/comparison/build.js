@@ -1,5 +1,6 @@
 const GeneratorVs = require("./generate-vs.js");
 const fs = require("fs").promises;
+const path = require("path");
 
 const BASE_URL = "./pages";
 const PAIRS = [
@@ -37,15 +38,25 @@ const PAIRS = [
     //[145651, 145653],       // Gregory Women's Jade 38 Pack    Gregory Women's Jade 63 Pack
 
     // Product A vs Product B
-    [126717, 177499],       //osprey aura 65	osprey ariel 65
-    [126716, 177498],       //osprey aura 50	osprey ariel 55
-    [177493, 125754],       //osprey aether 65	gregory baltoro 65
-    [134072, 125754],       //osprey atmos 65	gregory baltoro 65
-    [126709, 126707],       //osprey exos 58	osprey atmos 50
-    [177493, 134072],       //osprey aether 65	osprey atmos 65
-    [126709, 134072],       //osprey exos 58	osprey atmos 65
-    [177495, 123205],       //Osprey Men's Aether Plus 70 Pack	gregory baltoro 75
-    [164404, 147418],       //osprey poco	deuter kid comfort active
+    //[126717, 177499],       //osprey aura 65	osprey ariel 65
+    //[126716, 177498],       //osprey aura 50	osprey ariel 55
+    //[177493, 125754],       //osprey aether 65	gregory baltoro 65
+    //[134072, 125754],       //osprey atmos 65	gregory baltoro 65
+    //[126709, 126707],       //osprey exos 58	osprey atmos 50
+    //[177493, 134072],       //osprey aether 65	osprey atmos 65
+    //[126709, 134072],       //osprey exos 58	osprey atmos 65
+    //[177495, 123205],       //Osprey Men's Aether Plus 70 Pack	gregory baltoro 75
+    //[164404, 147418],       //osprey poco	deuter kid comfort active
+    //[141492, 126716],       // Osprey Women's Kyte 46 Pack, osprey aura 50
+    //[141492, 177498],       // Osprey Women's Kyte 46 Pack, osprey ariel 55
+    //[126706, 126705],       // Osprey Men's Levity 45 Pack, osprey exos 48
+    //[142359, 134072],       // Osprey Men's Levity 60 Pack    osprey atmos 65
+    //[126705, 141491],       // osprey exos 48    Osprey Men's Kestrel 48 Pack
+    //[177499, 123206],       // osprey ariel 65    Gregory Women's Deva 70 Pack
+    //[125757, 177500],       // Gregory Women's Deva 60 Pack   Osprey Women's Ariel Plus 60 Pack
+    //[177495, 177497],       // Osprey Men's Aether Plus 70 Pack   Osprey Men's Aether Plus 85 Pack
+    
+    [125755, 177497],       // Gregory Men's Baltoro 85 Pack   Osprey Men's Aether Plus 85 Pack
 ];
 
 main();
@@ -73,10 +84,10 @@ async function main() {
 async function getFileName(sku1, sku2) {
     try {
         const p1 = JSON.parse(
-            await fs.readFile(`../data/products/${sku1}.json`, "utf-8")
+            await fs.readFile(path.resolve(__dirname, `../../data/products/${sku1}.json`), "utf-8")
         );
         const p2 = JSON.parse(
-            await fs.readFile(`../data/products/${sku2}.json`, "utf-8")
+            await fs.readFile(path.resolve(__dirname, `../../data/products/${sku2}.json`), "utf-8")
         );
 
         const n1 = p1.name.toLowerCase().replace(/ /g, "-");
